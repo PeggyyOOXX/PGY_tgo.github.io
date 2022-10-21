@@ -1,31 +1,4 @@
 *{box-sizing: border-box}
-.ico60{background-image:url(../images/icons/icons60.png);background-repeat:no-repeat;display:block;margin:0 auto}
-.ico60.ico60-1{width:60px;height:60px;background-position:-5px -5px}
-.ico60.ico60-2{width:60px;height:60px;background-position:-75px -5px}
-.ico60.ico60-3{width:60px;height:60px;background-position:-145px -5px}
-.ico60.ico60-4{width:60px;height:60px;background-position:-215px -5px}
-.ico25{background-image:url(../images/icons/icons25.png);background-repeat:no-repeat;display:block;margin:0 auto}
-.ico25.ico25-0{width:25px;height:25px;background-position:-5px -5px}
-.ico25.ico25-1{width:25px;height:25px;background-position:-40px -5px}
-.ico25.ico25-2{width:25px;height:25px;background-position:-75px -5px}
-.ico25.ico25-3{width:25px;height:25px;background-position:-110px -5px}
-.ico25.ico25-4{width:25px;height:25px;background-position:-145px -5px}
-.ico-load{background-image:url(../images/icons/loading.png);background-repeat:no-repeat;display:block}
-.ico-load.ico-load-1{width:50px;height:50px;background-position:-5px -5px}
-.ico-load.ico-load-2{width:50px;height:50px;background-position:-65px -5px}
-.ico-load.ico-load-3{width:50px;height:50px;background-position:-125px -5px}
-.ico-load.ico-load-4{width:50px;height:50px;background-position:-185px -5px}
-.ico-user{background-image:url(../images/icons/user.png);background-repeat:no-repeat;display:block;margin:0 auto}
-.ico-user.ico-user-1{width:466px;height:449px;background-position:-5px -5px}
-.ico-user.ico-user-2{width:274px;height:445px;background-position:-481px -64px}
-.ico-user.ico-user-3{width:180px;height:275px;background-position:-5px -519px}
-.ico-user.ico-user-4{width:233px;height:252px;background-position:-195px -519px}
-.ico-user.ico-user-5{width:170px;height:241px;background-position:-438px -519px}
-.ico-user.ico-user-6{width:200px;height:230px;background-position:-765px -5px}
-.ico-user.ico-user-7{width:185px;height:175px;background-position:-765px -245px}
-.ico-user.ico-user-8{width:188px;height:188px;background-position:-765px -430px}
-.ico-user.ico-user-9{width:70px;height:71px;background-position:-618px -628px}
-.ico-user.ico-user-10{width:50px;height:49px;background-position:-481px -5px}
 .anim3-up{-webkit-animation:up 3s linear infinite;animation:up 3s linear infinite}
 .anim3-down{-webkit-animation:down 3s linear infinite;animation:down 3s linear infinite}
 @-webkit-keyframes up{
