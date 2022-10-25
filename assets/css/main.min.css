@@ -214,17 +214,6 @@ body.hide{overflow:hidden}
     #loginBox .modal-text1 .forget>a:hover{color:#DC6100}
 }
 #loginBox .modal-text1 .ico-user{position:absolute;bottom:-30px;right:-90px;z-index:1;-webkit-transform:scale(0.8);transform:scale(0.8)}
-#registerBox{max-width:500px}
-#registerBox .modal-text1{padding:60px 0}
-#registerBox .modal-text1>form{margin:0 auto;max-width:360px;width:90%}
-#registerBox .modal-text1 .regulationsBox{margin-top:20px}
-#registerBox .modal-text1 .regulationsBox #regulations{margin-right:5px;display:block;width:25px;height:25px;cursor:pointer}
-#registerBox .modal-text1 .regulationsBox .text{width:calc(100% - 30px);text-align:left;font-size:0.9rem;line-height:1.4rem}
-#registerBox .modal-text1 .regulationsBox .text>a{color:#DC6100}
-@media screen and (min-width: 951px){
-    #registerBox .modal-text1 .regulationsBox .text>a:hover{color:#b14d00;font-weight:600}
-}
-#registerBox .modal-text1 .ico-user{position:absolute;top:0px;left:-110px;z-index:1;-webkit-transform:scale(0.8);transform:scale(0.8)}
 #regulationsBox{max-width:840px;max-height:90%;height:800px}
 #regulationsBox .modal-text1{padding:50px 0;height:calc(100% - 170px)}
 @media screen and (max-width: 950px){
@@ -383,7 +372,7 @@ header .left .btnBox .btn:last-child{
 }
 header .nav{width:100%}
 header .nav .nav-item{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
-header .nav .nav-item:hover .dropdownBox{height:220px !important}
+header .nav .nav-item:hover .dropdownBox{height:280px !important}
 @media screen and (max-width: 1440px){
     header .nav .nav-item:hover .dropdownBox{height:200px !important}
 }
@@ -515,11 +504,12 @@ aside>ul{
     padding: 10px 0;
     border-radius: 10px;
     background-image: url(../img/Background/header.jpg);
+    background-size: cover;
 }
 .container_aside{
     width: 100%;
 }
-aside>ul .nav-item{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
+aside>ul .nav-item{flex:1;text-align:center}
 aside .DepositWithdraw{
     margin: 1px;
     width: 50px;
@@ -529,7 +519,7 @@ aside .DepositWithdraw{
     box-shadow: 0 2px 1px #555;
 }
 aside .DepositWithdraw>p{color:#fff;font-size: 1.2rem}
-aside a{display:inline-block}
+aside a{display:inline-block;color: #fff;}
 aside .title{
     margin:0;
     padding-top:5px;
@@ -540,6 +530,7 @@ aside .title{
     text-shadow: 0 0 5px #000;
 }
 .asideBox{display:none;height:100px}
+aside .nav-item svg{font-size: 1.5em;}
 @media screen and (max-width: 950px){
     aside,.asideBox{display:block}
 }
@@ -623,11 +614,11 @@ aside .title{
     font-size:16px;
     color:#fff;
 }
-.GameOneDiv .navImg{display:block;width:80%;margin:0 auto}
+.GameOneDiv .navImg{display:block;width:100%;margin:0 auto}
 @media screen and (max-width: 1440px){
     .GameOneDiv .navImg{max-width:200px}
 }
-.GameOneDiv .navImg img{max-width:7.5vw}
+.GameOneDiv .navImg img{max-width:150px;}
 @media screen and (max-width: 1440px){
     .GameOneDiv .navImg img{max-width:140px}
 }
@@ -774,9 +765,6 @@ aside .title{
 .hotgames .title{margin:10px 0;color:#dfb77b;font-size:1.8rem;font-weight:600;text-align:center}
 .hotgames .games:first-of-type{margin-bottom:40px}
 .hotgames .hotgame-item img{width:100%;padding:0px 30px}
-@media screen and (max-width: 1024px){
-    .hotgames .hotgame-item img{padding-left:40px}
-}
 .hotgames .hotgame-item p{
     text-align:center;
     margin:0;
@@ -784,9 +772,6 @@ aside .title{
     font-weight:400;
     margin-top: .5em;
     color:#dfb77b;
-}
-@media screen and (max-width: 1024px){
-    .hotgames .hotgame-item p{padding-left:40px}
 }
 .hotgames .hotgame-item:hover img,.hotgames .hotgame-item:active img{
     -webkit-filter:drop-shadow(10px 10px 3px rgba(0,0,0,0.7));
@@ -1417,12 +1402,15 @@ aside .title{
     .pro-deskBox .pro-modal .pro-modalText{padding:20px}
 }
 #loginRegisterBox{margin:0 auto;padding:50px 0;width:100%;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box}
-#loginRegisterBox::after{content:'';position:fixed;top:0;left:0;z-index:1;width:100%;height:100%;background:url(../images/background/bg_login.png) center center fixed no-repeat;background-size:cover;opacity:0.6}#loginRegisterBox::before{content:'';position:fixed;top:0;left:0;z-index:2;width:100%;height:100%;background:-webkit-gradient(linear, left top, left bottom, from(#D2EAFF), color-stop(72%, #5F84A5), to(#97C0E5));background:linear-gradient(180deg, #D2EAFF 0%, #5F84A5 72%, #97C0E5 100%);opacity:0.9}
+#loginRegisterBox::after{content:'';position:fixed;top:0;left:0;z-index:1;width:100%;height:100%;background:url(../images/background/bg_login.png) center center fixed no-repeat;background-size:cover;opacity:0.6}
+#loginRegisterBox::before{content:'';position:fixed;top:0;left:0;z-index:2;width:100%;height:100%;background:-webkit-gradient(linear, left top, left bottom, from(#D2EAFF), color-stop(72%, #5F84A5), to(#97C0E5));background:linear-gradient(180deg, #D2EAFF 0%, #5F84A5 72%, #97C0E5 100%);opacity:0.9}
 #loginRegisterBox .formBox{position:relative;z-index:9;margin:0 auto;max-width:400px;width:90%;text-align:center}
-#loginRegisterBox .formBox .logo{max-width:200px;width:100%}#loginRegisterBox .formBox .nav{margin:40px 0 20px 0}
+#loginRegisterBox .formBox .logo{max-width:200px;width:100%}
+#loginRegisterBox .formBox .nav{margin:40px 0 20px 0}
 #loginRegisterBox .formBox .nav a{padding:10px 0;display:block;color:#fff;font-size:1.3rem;font-weight:600;border-bottom:4px solid #fff;opacity:0.5}
 #loginRegisterBox .formBox .nav a.active{opacity:1}
-#loginRegisterBox .formBox .forget{margin:20px 0;text-align:center}#loginRegisterBox .formBox .forget>a{font-size:1rem;color:#fff}
+#loginRegisterBox .formBox .forget{margin:20px 0;text-align:center}
+#loginRegisterBox .formBox .forget>a{font-size:1rem;color:#fff}
 #loginRegisterBox .formBox .regulationsBox{margin-top:20px}
 #loginRegisterBox .formBox .regulationsBox #regulations{margin-right:5px;display:block;width:25px;height:25px;cursor:pointer}
 #loginRegisterBox .formBox .regulationsBox .text{width:calc(100% - 30px);text-align:left;font-size:0.9rem;line-height:1.4rem}
@@ -1430,7 +1418,8 @@ aside .title{
 .bulletinBox{position:relative;padding:100px 0;background:url(../images/background/bg7.jpg) center center fixed no-repeat;background-size:cover}
 .bulletinBox::before{content:"";position:absolute;top:0;left:0;z-index:1;width:100%;height:100px;background:-webkit-gradient(linear, left bottom, left top, from(#ffffff00), color-stop(69%, #ffffffd9), color-stop(91%, #fff), to(#fff));background:linear-gradient(0deg, #ffffff00 0%, #ffffffd9 69%, #fff 91%, #fff 100%)}
 .bulletinBox::after{content:"";position:absolute;bottom:0;left:0;z-index:1;width:100%;height:100px;background:-webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(69%, #ffffffd9), color-stop(91%, #fff), to(#fff));background:linear-gradient(180deg, #ffffff00 0%, #ffffffd9 69%, #fff 91%, #fff 100%)}
-.bulletinBox>div{margin:0 auto;padding:40px 50px;max-width:1000px;width:95%;background-color:#fff;-webkit-box-shadow:0px 0px 10px #0000004D;box-shadow:0px 0px 10px #0000004D;border-radius:20px;-webkit-box-sizing:border-box;box-sizing:border-box}.bulletinBox>div .tableTop h1{margin:0;color:#3F5468}
+.bulletinBox>div{margin:0 auto;padding:40px 50px;max-width:1000px;width:95%;background-color:#fff;-webkit-box-shadow:0px 0px 10px #0000004D;box-shadow:0px 0px 10px #0000004D;border-radius:20px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.bulletinBox>div .tableTop h1{margin:0;color:#3F5468}
 .bulletinBox>div .tableTop .icons{display:none;margin-left:10px;width:30px;height:30px;line-height:30px;text-align:center;color:#A5A5A5;background-color:#EBEBEB;border-radius:50%;cursor:pointer}
 .bulletinBox>div .tableTop .icons i{font-size:1rem}
 @media screen and (min-width: 951px){
@@ -2917,14 +2906,16 @@ form .disable-from .disable_text{
     border: none;
     border-bottom: #ddd solid 1px;
     background-color: transparent;
+    color: #fff;
 }
 .register_input input:focus{
     outline: none;
-    border-bottom: #dfb77d solid 2px;
+    border-bottom: #dfb77d solid 1px;
 }
 .register_input input::placeholder{
     color: #999;
 }
+.input_necessary input::placeholder{color: #f0e6c2;}
 .register_input .input-text{
     width: 20%;
 }
@@ -2986,7 +2977,9 @@ form .disable-from .disable_text{
 }
 
 .FAcolor-primary{color: #dfb77d;}
-.Remindcolor{color: #777;}
+.Remindcolor{color: #ee7979;}
 .align-left{text-align: left;}
 
 .smalltext{font-size: 14px;}
+
+
