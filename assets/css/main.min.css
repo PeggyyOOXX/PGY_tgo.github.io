@@ -300,13 +300,30 @@ body.hide{overflow:hidden}
 .TopBar>div .right{color:#fff;width:250px;font-size:1rem;text-align:right}
 
 .TopBar .left{width:250px;height:100%}
-.TopBar .left .logoBox{width:100%;height:50px}
-.TopBar .left .logoBox a{color: #fff;}
+.TopBar .left .logoBox{width:100%;height:50px;display: flex;align-items: center;}
+.TopBar .left .logoBox a{color: #fff;font-size: 2em;}
 .TopBar .left .logoBox img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}
-.TopBar .left .btnBox{margin:5px 0;width:100%;text-align:right}
+.TopBar .left .memBox{width:100%;text-align:right;color: #fff;}
+.TopBar .left .memBox .memName{display: inline-block;}
+.TopBar .left .memBox .memPoint{display: inline-block;}
+.TopBar .left .memBox .memPoint button{background: none;color: #fff;border: none;font-size: 1.2em;}
+.TopBar .left .memBox .memPoint button:hover{color: #efd0a1;}
+.TopBar .left .btnBox{width:500px;text-align:right;}
+@media screen and (max-width: 520px){
+    .TopBar .left .logoBox{width:220px;}
+}
+@media screen and (max-width: 455px){
+    .TopBar .left .logoBox{width:180px;}
+    .TopBar .left .btnBox{width:300px;}
+    .TopBar .left .memBox{text-align:center;}
+}
+@media screen and (max-width: 395px){
+    .TopBar .left .logoBox{width:130px;}
+    .TopBar .left .btnBox{width:210px;}
+}
 .TopBar .left .btnBox .btn{
     display:inline-block;
-    width:110px;
+    width:80px;
     height:35px;
     line-height:35px;
     color:#fff;
@@ -460,9 +477,9 @@ header #redpacketInto p{
 }
 @media screen and (max-width: 1200px){
     .TopBar .left{width:100%}
-    .TopBar .left .logoBox{width:auto;height:50px}
+    .TopBar .left .logoBox{height:50px}
     .TopBar .left .logoBox img{width:auto}
-    .TopBar .left .btnBox{width:auto}
+    .TopBar .left .btnBox{}
 
     header .left{width:100%}
     header .left .logoBox{width:auto;margin:5px 0;height:60px}
@@ -472,13 +489,16 @@ header #redpacketInto p{
 }
 @media screen and (max-width: 950px){
     .TopBar .left .logoBox{height:45px}
-    .TopBar .left .btnBox .btn{width:85px;height:30px;line-height:30px}
+    .TopBar .left .btnBox .btn{width:70px;height:30px;line-height:30px}
     
     header .left .logoBox{height:45px}
     header .left .btnBox .btn{width:85px;height:30px;line-height:30px}
     header .nav .nav-item>a{padding:10px 0}
     header .nav .nav-item>a.active::after{height:5px}
     header .nav .nav-item .name{padding-top:5px;font-size:1rem}
+}
+@media screen and (max-width: 455px){
+    .TopBar .left .btnBox .btn{width:50px;}
 }
 aside{
     display: none;
@@ -2903,11 +2923,10 @@ form .disable-from .disable_text{
     border-bottom: #dfb77d solid 2px;
 }
 .register_input input::placeholder{
-    color: #666;
+    color: #999;
 }
 .register_input .input-text{
     width: 20%;
-    margin-left: 5px;
 }
 .register_input .input-btn{
     width: 10%;
@@ -2932,9 +2951,26 @@ form .disable-from .disable_text{
     box-shadow: 0px 2px 1px #555;
     border-radius: 20px;
     border: none;
-    margin: 2em 0;
+    margin: 1em;
+    margin-top: 2em;
 }
 .registerBox .register:hover{position:relative;top:2px;cursor: pointer;}
+.registerBox .register_cancel{
+    width: 200px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+    margin-top: 2em;
+}
+.registerBox .register_cancel:hover{position:relative;top:2px;cursor: pointer;}
+
 @media screen and (max-width: 1440px){
     .register_input input{width: 65%;}
     .register_input .input-text{width: 40%;}
@@ -2945,4 +2981,12 @@ form .disable-from .disable_text{
 }
 @media screen and (max-width: 540px){
     .register_input .input-btn{font-size: .8em;}
+    .registerBox .register{margin-top: 2em;margin-bottom: 0;}
+    .registerBox .register_cancel{margin-top: 1em;margin-bottom: 2em;}
 }
+
+.FAcolor-primary{color: #dfb77d;}
+.Remindcolor{color: #777;}
+.align-left{text-align: left;}
+
+.smalltext{font-size: 14px;}
