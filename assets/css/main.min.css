@@ -48,7 +48,7 @@ body.hide{overflow:hidden}
 .row.justify-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .row.align-center{-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .row.align-end{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}
-.row.wrap{-ms-flex-wrap:wrap;/*flex-wrap:wrap*/}
+.row.wrap{flex-wrap:wrap}
 .row.column{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .row .col-1{-webkit-box-flex:8.3%;-ms-flex:8.3%;flex:8.3%;max-width:8.3%}
 .row .col-2{-webkit-box-flex:16.6%;-ms-flex:16.6%;flex:16.6%;max-width:16.6%}
@@ -956,13 +956,6 @@ aside .nav-item svg{font-size: 1.5em;}
     background:-webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(69%, #ffffffd9), color-stop(91%, #fff), to(#fff));
     background:linear-gradient(180deg, #ffffff00 0%, #ffffffd9 69%, #fff 91%, #fff 100%)
 }
-.gameBox.game-live{background:url(../images/background/bg1.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-sport{background:url(../images/background/bg2.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-slot{background:url(../images/background/bg3.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-lottery{background:url(../images/background/bg4.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-poker{background:url(../images/background/bg5.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-fishing{background:url(../images/background/bg9.jpg) center center fixed no-repeat;background-size:cover}
-.gameBox.game-esport{background:url(../images/background/bg10.jpg) center center fixed no-repeat;background-size:cover}
 .gameBox>div.tab2{padding-bottom:100px}.gameBox>div.tab3{padding-bottom:100px}
 .gameBox .game-item{display:none}
 .gameBox .game-item.active{display:block}
@@ -1072,13 +1065,6 @@ aside .nav-item svg{font-size: 1.5em;}
     background:-webkit-gradient(linear, left top, left bottom, from(#ffffff00), color-stop(69%, #ffffffd9), color-stop(91%, #fff), to(#fff));
     background:linear-gradient(180deg, #ffffff00 0%, #ffffffd9 69%, #fff 91%, #fff 100%)
 }
-.gameHall.game-live{background:url(../images/background/bg1.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-sport{background:url(../images/background/bg2.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-slot{background:url(../images/background/bg3.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-lottery{background:url(../images/background/bg4.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-poker{background:url(../images/background/bg5.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-fishing{background:url(../images/background/bg9.jpg) center center fixed no-repeat;background-size:cover}
-.gameHall.game-esport{background:url(../images/background/bg10.jpg) center center fixed no-repeat;background-size:cover}
 .gameHall .gamepage{position:relative;z-index:1;margin-bottom:60px}
 .gameHall .gamepage button{
     margin:8px 15px;
@@ -3011,7 +2997,7 @@ form .disable-from .disable_text{
     color:#dfb77b;
 }
 .GameRoom .Game-item:hover p,.GameRoom .Game-item:active p{color:#fff}
-.GameRoom .Game-item:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.5));}
+.GameRoom .Game-item:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
 @media screen and (max-width: 900px){
     .GameRoom .title{margin: 1em 0;}
     .GameRoom .Game-item img{padding:0px 20px}
@@ -3019,17 +3005,38 @@ form .disable-from .disable_text{
 @media screen and (max-width: 600px){
     .GameRoom .Game-item img{padding:0px 10px}
 }
-
-
 .GameRoom-M{margin-top: 10px;}
 .GameRoom-M .title{margin:0 0 10px 0;color:#dfb77b;font-size: 1.5em;font-weight:600;text-align:center}
 .GameRoom-M img{width:100%;}
 
+/*外部遊戲大廳*/
+.Slots_lobby{
+    background-image:url(../img/Background/slots_lobby_bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.slots-lobby{margin: 5em 0;}
+.slots-lobby .lobby-logo{margin-bottom: 3em;}
+.slots-lobby .lobby-logo img{max-width: 330px;}
+.slots-lobby .game-item{margin: 1em 0;}
+.slots-lobby .game-item .game_name{font-size: 1.2rem; margin: 1em 0;color:#dfb77b;text-align:center;}
+.slots-lobby .LobbyGames>div:hover .game_name span{color: #fff;}
+.slots-lobby .game-item img{display:block; margin:auto;width: 70%;}
+.slots-lobby .LobbyGames>div:hover .game_box img{transform:scale(1.25);filter: drop-shadow(0 0 20px rgba(255,255,255,1));}
+@media screen and (max-width: 485px){
+    .slots-lobby .game-item{width: 200px;}
+    .slots-lobby .game-item img{width: 90%;}
+}
+@media screen and (max-width: 415px){
+    .slots-lobby .game-item{width: 160px;margin: .5em 0;}
+}
+@media screen and (min-width: 951px){
+    .slots-lobby .LobbyGames>div:hover .game_box{animation:gameBoxAnim 0.8s; color: #fff;}
+    .slots-lobby .LobbyGames>div:hover .game_box img{transform:scale(1.1);filter: drop-shadow(0 0 20px rgba(255,255,255,1));}
+}
 
-
-
-
-
+.slots-lobby .title{margin: 2em 0;color:#dfb77b;font-size: 3em;font-weight:600;text-align:center}
 
 
 
