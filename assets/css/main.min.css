@@ -3008,6 +3008,8 @@ form .disable-from .disable_text{
 .GameRoom-M{margin-top: 10px;}
 .GameRoom-M .title{margin:0 0 10px 0;color:#dfb77b;font-size: 1.5em;font-weight:600;text-align:center}
 .GameRoom-M img{width:100%;}
+.GameRoom-M .GameRoomBox{position: relative;}
+.GameRoom-M .GameRoomName{position:absolute; left:30px; top:20px; color:#000;font-weight: 600;letter-spacing: 2px;}
 
 /*外部遊戲大廳*/
 .Slots_lobby{
