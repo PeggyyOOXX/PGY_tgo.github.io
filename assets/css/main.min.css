@@ -372,9 +372,9 @@ header .left .btnBox .btn:last-child{
 }
 header .nav{width:100%}
 header .nav .nav-item{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
-header .nav .nav-item:hover .dropdownBox{height:280px !important}
+header .nav .nav-item:hover .dropdownBox{height:250px !important}
 @media screen and (max-width: 1440px){
-    header .nav .nav-item:hover .dropdownBox{height:250px !important}
+    header .nav .nav-item:hover .dropdownBox{height:210px !important}
 }
 @media screen and (max-width: 1440px){
     header .nav .nav-item:hover .game-row-2{height:550px !important}
@@ -2987,6 +2987,7 @@ form .disable-from .disable_text{
 .GameRoom{position:relative;padding:50px 0;overflow:hidden}
 .GameRoom .title{margin: 2em 0;color:#dfb77b;font-size: 3em;font-weight:600;text-align:center}
 .GameRoom .games{margin-bottom:40px}
+.GameRoom .Game-item{margin-bottom: 5em;}
 .GameRoom .Game-item img{width:100%;padding:0px 30px}
 .GameRoom .Game-item p{
     text-align:center;
