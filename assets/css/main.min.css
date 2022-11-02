@@ -2985,9 +2985,18 @@ form .disable-from .disable_text{
     background-size: cover;
 }
 .GameRoom{position:relative;padding:50px 0;overflow:hidden}
-.GameRoom .title{margin: 2em 0;color:#dfb77b;font-size: 3em;font-weight:600;text-align:center}
+.GameRoom .title{
+    position:absolute; 
+    margin: 2em 0;
+    color:#dfb77b;
+    font-size: 4em;
+    font-weight:600;
+    text-align:center;
+    background: linear-gradient(to top,#dfb77b,#ae7d35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;}
 .GameRoom .games{margin-bottom:40px}
-.GameRoom .Game-item{margin-bottom: 5em;}
+.GameRoom .Game-item{margin: 3em 0;}
 .GameRoom .Game-item img{width:100%;padding:0px 30px}
 .GameRoom .Game-item p{
     text-align:center;
@@ -3038,8 +3047,58 @@ form .disable-from .disable_text{
     .slots-lobby .LobbyGames>div:hover .game_box{animation:gameBoxAnim 0.8s; color: #fff;}
     .slots-lobby .LobbyGames>div:hover .game_box img{transform:scale(1.1);filter: drop-shadow(0 0 20px rgba(255,255,255,1));}
 }
-
 .slots-lobby .title{margin: 2em 0;color:#dfb77b;font-size: 3em;font-weight:600;text-align:center}
+/*GameRoom live side*/
+.Left_img .img_top{
+    position: fixed;
+    width: 10%;
+    top: 200px;
+    left: 100px;
+    z-index: 20;
+    animation: vertical 5s infinite;
+}
+.Left_img .img_bottom{
+    position: fixed;
+    width: 6%;
+    bottom: 10px;
+    left: 15px;
+    z-index: 20;
+    animation: vertical 8s infinite;
+}
+.Right_img .img_top{
+    position: fixed;
+    width: 10%;
+    top: 200px;
+    right: 50px;
+    z-index: 20;
+    animation: vertical 8s infinite;
+}
+.Right_img .img_bottom{
+    position: fixed;
+    width: 6%;
+    bottom: 10px;
+    right: 10px;
+    z-index: 20;
+    animation: vertical 5s infinite;
+}
+@media screen and (max-width: 1750px){
+    .Left_img .img_top{left: 40px;}
+}
+@media screen and (max-width: 1500px){
+    .Left_img .img_top{left: 0px;top: 250px;}
+    .Right_img .img_top{right: 10px;}
+}
+@media screen and (max-width: 1400px){
+    .Left_img .img_top{display: none;}
+    .Right_img .img_top{display: none;}
+}
+@media screen and (max-width: 950px){
+    .Left_img .img_bottom{display: none;}
+    .Right_img .img_bottom{display: none;}
+}
+@keyframes vertical{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}
+
+
 
 
 
