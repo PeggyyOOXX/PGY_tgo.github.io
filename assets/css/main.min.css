@@ -930,9 +930,9 @@ aside .nav-item svg{font-size: 1.5em;}
     .gameLogoBox ul{width:450px}
     .gameLogoBox ul .ico-item{width:25%}
 }
-#footerNav{margin:20px auto;max-width:1400px;width:97%}
-#footerNav a{margin:0 20px;font-size:0.95rem;color:#ccc}
-#footerNav a:hover{color:#dfb77b;}
+.footerNav{margin:20px auto;max-width:1400px;width:97%;margin-bottom: 3em;}
+.footerNav a{margin:0 20px;font-size:0.95rem;color:#ccc}
+.footerNav a:hover{color:#dfb77b;}
 .gameBox{position:relative;padding:40px 0;width:100%}
 .gameBox::before{
     content:"";
@@ -2959,12 +2959,20 @@ form .disable-from .disable_text{
     .registerBox .register{margin-top: 2em;margin-bottom: 0;}
     .registerBox .register_cancel{margin-top: 1em;margin-bottom: 2em;}
 }
-
-.FAcolor-primary{color: #dfb77d;}
+/*登入註冊頁*/
+.FAcolor-primary{color: #dfb77d;}/*Font Awesome*/
 .Remindcolor{color: #ee7979;}
 .align-left{text-align: left;}
 .smalltext{font-size: 14px;}
-
+/*Game Vendor*/
+.vendorBox{margin:20px 0;position:relative}
+.vendorBox ul{margin:0 auto;width:600px}
+.vendorBox ul .ico-item{width:15%;text-align:center}
+.vendorBox ul .ico-item>img{width:90%}
+@media screen and (max-width: 1200px){
+    .vendorBox ul{width:450px}
+    .vendorBox ul .ico-item{width:25%}
+}
 /*遊戲廳*/
 .Live{
     background-image:url(../img/Background/live_bg.jpg);
@@ -3008,6 +3016,31 @@ form .disable-from .disable_text{
 }
 .GameRoom .Game-item:hover p,.GameRoom .Game-item:active p{color:#fff}
 .GameRoom .Game-item:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
+.GameRoom .Game-item p button{
+    background: linear-gradient(to top,#ff8585,#810000,#ff8585);
+    color: #fff;
+    border: none;
+    box-shadow: 1px 1px 1px #555;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+}
+.GameRoom .Game-item p button:hover{
+    background: linear-gradient(to top,#810000,#ff8585,#810000);
+}
+.GameRoom .Game-item p button:hover::before{
+    position: absolute;
+    top: 0;
+    left: 35px;
+    content: '轉點錢包';
+    font-size: .8em;
+    background: #dfb77b55;
+    padding: 5px;
+    border-radius: 5px;
+}
 @media screen and (max-width: 900px){
     .GameRoom .title{margin: 1em 0;}
     .GameRoom .Game-item img{padding:0px 20px}
