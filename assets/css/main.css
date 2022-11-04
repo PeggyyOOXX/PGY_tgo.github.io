@@ -2992,6 +2992,12 @@ form .disable-from .disable_text{
     background-position: center;
     background-size: cover;
 }
+.Lottery{
+    background-image:url(../img/Background/lottery_bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
 .GameRoom{position:relative;padding:50px 0;overflow:hidden}
 .GameRoom .title{
     position:absolute; 
