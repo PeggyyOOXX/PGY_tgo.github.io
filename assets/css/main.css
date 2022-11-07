@@ -3059,7 +3059,6 @@ form .disable-from .disable_text{
 .GameRoom-M img{width:100%;}
 .GameRoom-M .GameRoomBox{position: relative;}
 .GameRoom-M .GameRoomName{position:absolute; left:30px; top:20px; color:#000;font-weight: 600;letter-spacing: 2px;}
-
 /*外部遊戲大廳*/
 .Slots_lobby{
     background-image:url(../img/Background/slots_lobby_bg.jpg);
@@ -3136,6 +3135,126 @@ form .disable-from .disable_text{
     .Right_img .img_bottom{display: none;}
 }
 @keyframes vertical{0%{-webkit-transform:translateY(0);transform:translateY(0)}50%{-webkit-transform:translateY(-50px);transform:translateY(-50px)}to{-webkit-transform:translateY(0);transform:translateY(0)}}
+/*Member Center*/
+.MemberConter{position:relative;padding:50px 0;overflow:hidden}
+.Mem_basic{margin: 1em 0;}
+.Mem_Account, .Mem_Balance{
+    font-size: 2em;
+    color: #fff;
+    margin: 0 3em 0 0;
+}
+/*存/提/轉點Btn*/
+.Mem_WalletAction{margin: 1em 0;}
+.Mem_WalletAction button{margin: 1em 2em;}
+.Mem_WalletAction .btn{
+    width: 90px;
+    height: 40px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    font-weight: 600;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0 2px 1px #555;
+    border-radius: 5px;
+}
+.Mem_WalletAction .btn:hover{position:relative;top:2px;cursor: pointer;}
+/*頁籤-會員紀錄*/
+.Tab_MemActionRecord{
+    margin-top: 3em;
+    background-color: #fff3;
+}
+.Tab_MemActionRecord_btn{
+    width: 100px;
+    padding: 1em 0;
+    background: none;
+    color: #fff;
+    border: none;
+}
+.Tab_MemActionRecord_btn:hover {background-color: #efd0a155;}
+.Tab_MemActionRecord_btn.active {
+    background-color: #efd0a1aa;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+.MemActionRecord{color: #fff;text-shadow: 0 0 5px #000;margin-top: 2em;}
+/*錢包列表*/
+.Wallet_Box{
+    width: 200px;
+    background-color: #fff8;
+    padding: 1em;
+    margin: .5em;
+    border: #fff solid 1px;
+    border-radius: 5px;
+}
+.Wallet_Box .BoxName{padding: 5px 0;}
+.Wallet_Box .BoxMon{padding: 5px 0;font-size: 1.5em;}
+/*交易紀錄*/
+.Transact_Tab{width: 80vw;border-bottom: #dfb77b solid 1px;}
+.Transact_btn{
+    width: 33.3%;
+    height: 40px;
+    background: none;
+    color: #fff;
+    border: none;
+    float:left;
+}
+.Transact_btn:hover {background-color: #efd0a155;}
+.Transact_btn.active {
+    background-color: #efd0a1aa;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+.Transact_record p{font-size: 1.5em;}
+.Transact_table{
+    width: 80vw;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.Transact_table tr{
+    text-align: center;
+}
+.Transact_table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.Transact_table td{
+    border-bottom: #aaa solid 1px;
+}
+.Transact_table tr th, .Transact_table tr td{padding: 1em 0;}
+/*轉點紀錄*/
+.Transfer_Tab{width: 80vw;border-bottom: #dfb77b solid 1px;}
+.Transfer_btn{
+    width: 33.3%;
+    height: 40px;
+    background: none;
+    color: #fff;
+    border: none;
+    float:left;
+}
+.Transfer_btn:hover {background-color: #efd0a155;}
+.Transfer_btn.active {
+    background-color: #efd0a1aa;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
+.Transfer_record p{font-size: 1.5em;}
+.Transfer_table{
+    width: 80vw;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.Transfer_table tr{
+    text-align: center;
+}
+.Transfer_table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.Transfer_table td{
+    border-bottom: #aaa solid 1px;
+}
+.Transfer_table tr th, .Transfer_table tr td{padding: 1em 0;}
 
 
 
