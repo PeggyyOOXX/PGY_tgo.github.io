@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>天亞</title>
+    <title>天亞 - 會員中心</title>
     <meta name="keywords" content="天亞娛樂城">
     <meta name="description" content="天亞娛樂城">
     <meta name="url" content="#">
@@ -55,7 +55,7 @@
 
 </head>
 
-<body class="Sports">
+<body>
     <div class="TopBar">
         <div class="container row justify-between align-center">
             <div class="left row justify-between align-center">
@@ -169,8 +169,8 @@
             <div class="container row">
                 <div class="tab">
                     <div class="tablinks" onclick="opengameNav(event, 'gameNavHot')"><a>熱門</a></div>
-                    <div class="tablinks" onclick="opengameNav(event, 'gameNavLive')">真人</div>
-                    <div class="tablinks" onclick="opengameNav(event, 'gameNavSport')" id="defaultOpen">體育</div>
+                    <div class="tablinks" onclick="opengameNav(event, 'gameNavLive')" id="defaultOpen">真人</div>
+                    <div class="tablinks" onclick="opengameNav(event, 'gameNavSport')">體育</div>
                     <div class="tablinks" onclick="opengameNav(event, 'gameNavSlot')">電子</div>
                     <div class="tablinks" onclick="opengameNav(event, 'gameNavLottery')">彩票</div>
                     <div class="tablinks" onclick="opengameNav(event, 'gameNavPoker')">棋牌</div>
@@ -402,67 +402,326 @@
       </script>
     </div>
 
-    <div class="desktop GameRoom">
+    <div class="desktop MemberConter">
         <div class="container">
-            <div class="row wrap justify-align-center">
-                <h2 class="title">體育賽事</h2>
-                <img src="./assets/img/GameRoom/sports/title.png" class="img_title">
+            <div class="row wrap justify-align-center Mem_basic">
+                <div class="Mem_Account">
+                    <div>
+                        <span class="FAcolor-primary"><i class="fa-solid fa-user-large"></i></span>
+                        <div style="display: inline-block;">abc123</div>
+                    </div>
+                </div>
+                <div class="Mem_Balance">
+                    <div>
+                        <span class="FAcolor-primary"><i class="fa-solid fa-dollar-sign"></i></span>
+                        <div style="display: inline-block;">00000.0</div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="row wrap justify-align-center">
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/sports/sports-super.png" alt="Sport">
-                    <p>SUPER體育 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-HR.png" alt="Sport"> <p>全壘打體育</p></a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/sports/sports-WIN.png" alt="Sport"> 
-                    <p>贏家體育 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-M8.png" alt="Sport"> <p>M8體育</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-AFB.png" alt="Sport"> <p>AFB體育</p></a>
+            <div class="row wrap justify-align-center Mem_WalletAction">
+                <a href="#"><button class="btn">存款</button></a>
+                <a href="#"><button class="btn">提款</button></a>
+                <a href="#"><button class="btn">轉點</button></a>
             </div>
-        </div>
-        <div class="Left_img">
-            <img src="./assets/img/GameRoom/sports/img_topL.png" class="img_top">
-            <img src="./assets/img/GameRoom/sports/img_chipL.png" class="img_bottom">
-        </div>
-        <div class="Right_img">
-            <img src="./assets/img/GameRoom/sports/img_topR.png" class="img_top">
-            <img src="./assets/img/GameRoom/sports/img_chipR.png" class="img_bottom">
-        </div>
-    </div>
+            <div class="Tab_MemActionRecord">
+                <button class="Tab_MemActionRecord_btn active" onclick="openTab('Wallet')">錢包列表</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Transact')">交易紀錄</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Transfer')">轉點紀錄</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Games')">遊戲紀錄</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Activity')">活動紅利</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Friends')">好友列表</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Chat')">私訊紀錄</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('News')">公告列表</button>
+            </div>
+              
+            <div id="Wallet" class="MemActionRecord" style="display:none;">
+                <div class="row wrap justify-align-center">
+                    <div class="Wallet_Box">
+                        <div class="BoxName">主錢包</div>
+                        <div class="BoxMon"><span class="">50000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館1</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館2</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館3</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館4</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館5</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                    <div class="Wallet_Box">
+                        <div class="BoxName">館6</div>
+                        <div class="BoxMon"><span class="">1000</span></div>
+                    </div>
+                </div>
+            </div>
+            <div id="Transact" class="MemActionRecord" style="display:none;">
+                <div class="row wrap justify-align-center">
+                    <div class="Transact_Tab">
+                        <button class="Transact_btn active" onclick="openTabTransact('Transact_all')">全部</button>
+                        <button class="Transact_btn" onclick="openTabTransact('Transact_deposit')">儲值</button>
+                        <button class="Transact_btn" onclick="openTabTransact('Transact_withdraw')">提款</button>
+                    </div>
+                </div>
+                <div class="row wrap justify-align-center">
+                    <div id="Transact_all" class="Transact_record">
+                        <p>全部紀錄</p>
+                        <table class="Transact_table">
+                            <tr class="thead">
+                              <th>時間</th>
+                              <th>儲值</th>
+                              <th>提款</th>
+                              <th>結餘</th>
+                              <th>結果</th>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>50000</td>
+                              <td> </td>
+                              <td>$$$</td>
+                              <td>已完成</td>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td> </td>
+                              <td>1000</td>
+                              <td>$$$</td>
+                              <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td> </td>
+                                <td>1000</td>
+                                <td>$$$</td>
+                                <td>審核中</td>
+                              </tr>
+                        </table>
+                    </div>
+                    <div id="Transact_deposit" class="Transact_record" style="display:none;">
+                        <p>儲值紀錄</p>
+                        <table class="Transact_table">
+                            <tr class="thead">
+                              <th>時間</th>
+                              <th>儲值</th>
+                              <th>結餘</th>
+                              <th>結果</th>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>50000</td>
+                              <td>$$$</td>
+                              <td>已完成</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="Transact_withdraw" class="Transact_record" style="display:none;">
+                        <p>提款紀錄</p>
+                        <table class="Transact_table">
+                            <tr class="thead">
+                              <th>時間</th>
+                              <th>提款</th>
+                              <th>結餘</th>
+                              <th>結果</th>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>5000</td>
+                              <td>$$$</td>
+                              <td>已完成</td>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>1000</td>
+                              <td>$$$</td>
+                              <td>審核中</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="Transfer" class="MemActionRecord">
+                <div class="row wrap justify-align-center">
+                    <div class="Transfer_Tab">
+                        <button class="Transfer_btn active" onclick="openTabTransfer('Transfer_all')">全部</button>
+                        <button class="Transfer_btn" onclick="openTabTransfer('Transfer_game')">遊戲轉點</button>
+                        <button class="Transfer_btn" onclick="openTabTransfer('Transfer_friend')">好友轉點</button>
+                    </div>
+                </div>
+                <div class="row wrap justify-align-center">
+                    <div id="Transfer_all" class="Transfer_record">
+                        <p>全部紀錄</p>
+                        <table class="Transfer_table">
+                            <tr class="thead">
+                              <th>時間</th>
+                              <th>來源錢包</th>
+                              <th>目的錢包</th>
+                              <th>轉點金額</th>
+                              <th>結果</th>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>主錢包</td>
+                              <td>館1</td>
+                              <td>1000</td>
+                              <td>已完成</td>
+                            </tr>
+                            <tr>
+                              <td>0000/00/00 00:00:00</td>
+                              <td>館1</td>
+                              <td>館2</td>
+                              <td>1000</td>
+                              <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>主錢包</td>
+                                <td>friend1</td>
+                                <td>500</td>
+                                <td>審核中</td>
+                              </tr>
+                        </table>
+                    </div>
+                    <div id="Transfer_game" class="Transfer_record" style="display:none;">
+                        <p>遊戲轉點</p>
+                        <table class="Transfer_table">
+                            <tr class="thead">
+                                <th>時間</th>
+                                <th>來源錢包</th>
+                                <th>目的錢包</th>
+                                <th>轉點金額</th>
+                                <th>結果</th>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>主錢包</td>
+                                <td>館1</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>館2</td>
+                                <td>館1</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="Transfer_friend" class="Transfer_record" style="display:none;">
+                        <p>好友轉點</p>
+                        <table class="Transfer_table">
+                            <tr class="thead">
+                                <th>時間</th>
+                                <th>來源錢包</th>
+                                <th>目的錢包</th>
+                                <th>轉點金額</th>
+                                <th>結果</th>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>主錢包</td>
+                                <td>friend1</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>friend2</td>
+                                <td>主錢包</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-    <div class="vendorBox desktop">
-        <ul class="row justify-align-center wrap">
-            <div class="row justify-align-center wrap footerNav">
-                <a href="#">關於我們</a> 
-                <a href="#">隱私政策</a>
-                <a href="#">服務條款</a> 
-                <a href="#">常見問題</a>
+
+
+
+            <div id="Games" class="MemActionRecord" style="display:none;">
+                <p>遊戲紀錄</p>
             </div>
-            <li class="ico-item"><img src="./assets/img/gameLogo/AB.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/SA.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/DG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/WM.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/OB.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/YB.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/MR.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/QL.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/WG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/HG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/BNG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/RSG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/SUPER.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/M8.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/OG.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/GR.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/AE.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/SIMP.png" alt="廠商logo"></li>
-            <li class="ico-item"><img src="./assets/img/gameLogo/QT.png" alt="廠商logo"></li>
-        </ul>
+
+            <div id="Activity" class="MemActionRecord" style="display:none;">
+                <p>活動贈點紀錄</p>
+            </div>
+
+            <div id="Friends" class="MemActionRecord" style="display:none;">
+                <p>好友列表</p>
+            </div>
+
+            <div id="Chat" class="MemActionRecord" style="display:none;">
+                <p>私訊紀錄</p>
+            </div>
+
+            <div id="News" class="MemActionRecord" style="display:none;">
+                <p>公告列表</p>
+            </div>
+              
+            <script>
+                //頁籤-ALL會員中心
+                function openTab(memAction) {
+                    var i;
+                    var x = document.getElementsByClassName("MemActionRecord");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                    }
+                    document.getElementById(memAction).style.display = "block";
+                }
+                $(document).ready(function() {
+                    $('.Tab_MemActionRecord_btn').on('click', function() {
+                    $('.Tab_MemActionRecord_btn').removeClass('active');
+                    $(this).addClass('active');
+                    });
+                });
+                //頁籤-存提款紀錄
+                function openTabTransact(TransactAction) {
+                    var i;
+                    var x = document.getElementsByClassName("Transact_record");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                    }
+                    document.getElementById(TransactAction).style.display = "block";
+                }
+                $(document).ready(function() {
+                    $('.Transact_btn').on('click', function() {
+                    $('.Transact_btn').removeClass('active');
+                    $(this).addClass('active');
+                    });
+                });
+                //頁籤-轉點紀錄
+                function openTabTransfer(TransferAction) {
+                    var i;
+                    var x = document.getElementsByClassName("Transfer_record");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                    }
+                    document.getElementById(TransferAction).style.display = "block";
+                }
+                $(document).ready(function() {
+                    $('.Transfer_btn').on('click', function() {
+                    $('.Transfer_btn').removeClass('active');
+                    $(this).addClass('active');
+                    });
+                });
+                
+            </script>
+        </div>
+
     </div>
-        
+    
         <footer class="tablet">
             <p>© 2022 天亞娛樂 All Rights Reserved 版權所有</p>
         </footer> 
@@ -506,8 +765,7 @@
             </ul>
         </aside>
         <div class="asideBox"></div>
-        
     </div>
     
 </body>
-</html> 
+</html>
