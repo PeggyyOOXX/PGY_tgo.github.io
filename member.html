@@ -70,6 +70,9 @@
                     <a href="#login_modal" rel="modal:open" class="btn">登入</a> 
                     <a href="./register.html" class="btn">註冊</a>
                 </div>
+                <div class="btnBox" style="display: none;">
+                    <a href="#" class="btn btn-signout">登出</a>
+                </div>
 
                 <div id="login_modal" class="modal">
                     <div class="title">會員登入</div>
@@ -163,8 +166,8 @@
         </div>
     </header>
 
+    <!--
     <div>
-
         <div class="mobile GameRoom-M">
             <div class="container row">
                 <div class="tab">
@@ -401,6 +404,7 @@
         document.getElementById("defaultOpen").click();
       </script>
     </div>
+    -->
 
     <div class="desktop MemberConter">
         <div class="container">
@@ -419,10 +423,60 @@
                 </div>
             </div>
             <div class="row wrap justify-align-center Mem_WalletAction">
-                <a href="#"><button class="btn">存款</button></a>
+                <a href="#"><button class="btn">儲值</button></a>
                 <a href="#"><button class="btn">提款</button></a>
-                <a href="#"><button class="btn">轉點</button></a>
+                <a href="#wallet_transfer_modal" rel="modal:open"><button class="btn">遊戲轉點</button></a>
+                <a href="#p2p_transfer_modal" rel="modal:open"><button class="btn">好友轉點</button></a>
             </div>
+            <!--Modal-遊戲轉點-->
+            <div id="wallet_transfer_modal" class="modal">
+                <div class="title">遊戲轉點</div>
+                <div class="wallet-transfer-way">
+                    來源錢包
+                    <select class="wallet-transfer-select">
+                      <option value="0">選擇轉出錢包</option>
+                      <option value="1">錢包1</option>
+                      <option value="2">錢包2</option>
+                    </select>
+                </div>
+                <div class="wallet-transfer-way">
+                    目的錢包
+                    <select class="wallet-transfer-select">
+                      <option value="0">選擇轉入錢包</option>
+                      <option value="1">錢包1</option>
+                      <option value="2">錢包2</option>
+                    </select>
+                </div>
+                <div class="input-info">
+                    <input type="text" placeholder="輸入金額" maxlength="" name="">
+                </div>
+                <div class="btn-wallet-transfer">
+                    <button class="btn enter">確定</button>
+                    <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                </div>
+            </div>
+            <!--Modal-好友轉點-->
+            <div id="p2p_transfer_modal" class="modal">
+                <div class="title">好友轉點</div>
+                <div class="p2p-transfer-way">
+                    好友轉點
+                    <select class="p2p-transfer-select">
+                      <option value="0">選擇好友</option>
+                      <option value="1">好友1</option>
+                      <option value="2">好友2</option>
+                    </select>
+                </div>
+                <div class="input-info">
+                    <input type="text" placeholder="輸入金額" maxlength="" name="">
+                </div>
+                <div class="btn-p2p-transfer">
+                    <button class="btn enter">確定</button>
+                    <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                </div>
+            </div>
+
+
+
             <div class="Tab_MemActionRecord">
                 <button class="Tab_MemActionRecord_btn active" onclick="openTab('Wallet')">錢包列表</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Transact')">交易紀錄</button>
@@ -434,7 +488,7 @@
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('News')">公告列表</button>
             </div>
               
-            <div id="Wallet" class="MemActionRecord" style="display:none;">
+            <div id="Wallet" class="MemActionRecord">
                 <div class="row wrap justify-align-center">
                     <div class="Wallet_Box">
                         <div class="BoxName">主錢包</div>
@@ -550,7 +604,7 @@
                     </div>
                 </div>
             </div>
-            <div id="Transfer" class="MemActionRecord">
+            <div id="Transfer" class="MemActionRecord" style="display:none;">
                 <div class="row wrap justify-align-center">
                     <div class="Transfer_Tab">
                         <button class="Transfer_btn active" onclick="openTabTransfer('Transfer_all')">全部</button>
@@ -646,28 +700,234 @@
                     </div>
                 </div>
             </div>
-
-
-
-
             <div id="Games" class="MemActionRecord" style="display:none;">
-                <p>遊戲紀錄</p>
+                <div class="row wrap justify-align-center">
+                    <div class="GamesRecord-Box-total">
+                        <div class="BoxName">今日總計</div>
+                        <table class="GamesRecord-table">
+                            <tr>
+                                <td class="GamesRecord-subtitle">投注額</td>
+                                <td class="GamesRecord-count">500000</td>
+                            </tr>
+                            <tr>
+                                <td class="GamesRecord-subtitle">有效投注額</td>
+                                <td class="GamesRecord-count">10000</td>
+                            </tr>
+                            <tr>
+                                <td class="GamesRecord-subtitle">輸贏結果</td>
+                                <td class="GamesRecord-count">1000</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row wrap justify-align-center GamesRecord-down">
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">全部紀錄</div>
+                            <div class="BoxMon"><span class="">1000000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">真人視訊</div>
+                            <div class="BoxMon"><span class="">20000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">體育電競</div>
+                            <div class="BoxMon"><span class="">20000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">電子遊戲</div>
+                            <div class="BoxMon"><span class="">1000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">彩票遊戲</div>
+                            <div class="BoxMon"><span class="">1000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">棋牌遊戲</div>
+                            <div class="BoxMon"><span class="">1000</span></div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="GamesRecord-Box">
+                            <div class="BoxName">捕魚機</div>
+                            <div class="BoxMon"><span class="">1000</span></div>
+                        </div>
+                    </a>
+                </div>
             </div>
-
             <div id="Activity" class="MemActionRecord" style="display:none;">
-                <p>活動贈點紀錄</p>
+                <div class="row wrap justify-align-center">
+                    <div class="Activity-record">
+                        <p>優惠活動贈點紀錄</p>
+                        <table class="Activity-table">
+                            <tr class="thead">
+                                <th>時間</th>
+                                <th>活動名稱</th>
+                                <th>贈點金額</th>
+                                <th>結果</th>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>活動1</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>活動2</td>
+                                <td>1000</td>
+                                <td>已完成</td>
+                            </tr>
+                            <tr>
+                                <td>0000/00/00 00:00:00</td>
+                                <td>活動3</td>
+                                <td>500</td>
+                                <td>審核中</td>
+                              </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-
             <div id="Friends" class="MemActionRecord" style="display:none;">
-                <p>好友列表</p>
+                <div class="row wrap justify-align-center">
+                    <div class="Friends-record">
+                        <p>好友列表</p>
+                        <table class="Friends-table">
+                            <tr class="thead">
+                                <th>好友編號</th>
+                                <th>好友暱稱</th>
+                                <th>好友開始日期</th>
+                                <th>備註</th>
+                                <th>好友等級</th>
+                                <th>好友狀態</th>
+                            </tr>
+                            <tr>
+                                <td>abc001</td>
+                                <td>OO</td>
+                                <td>0000/00/00</td>
+                                <td>*</td>
+                                <td>等級1</td>
+                                <td>好友</td>
+                            </tr>
+                            <tr>
+                                <td>abc002</td>
+                                <td>XX</td>
+                                <td>0000/00/00</td>
+                                <td>*</td>
+                                <td>等級2</td>
+                                <td>好友</td>
+                            </tr>
+                            <tr>
+                                <td>abc003</td>
+                                <td>VV</td>
+                                <td>0000/00/00</td>
+                                <td>*</td>
+                                <td>等級3</td>
+                                <td>等待對方同意中</td>
+                              </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-
             <div id="Chat" class="MemActionRecord" style="display:none;">
-                <p>私訊紀錄</p>
+                <div class="row wrap justify-align-center">
+                    <div class="Chat-record">
+                        <p>私訊紀錄</p>
+                        <table class="Chat-table">
+                            <tr class="thead">
+                                <th>私訊編號</th>
+                                <th>發訊者</th>
+                                <th>發訊者暱稱</th>
+                                <th>收訊者</th>
+                                <th>收訊者暱稱</th>
+                                <th>發私訊來源暱稱</th>
+                                <th>內容</th>
+                                <th>星號標記</th>
+                                <th>是否未讀</th>
+                                <th>發訊日期</th>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>OO</td>
+                                <td>ZZ</td>
+                                <td>HH</td>
+                                <td>YY</td>
+                                <td>~~</td>
+                                <td>123</td>
+                                <td>*</td>
+                                <td>未讀</td>
+                                <td>0000/00/00</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>XX</td>
+                                <td>AA</td>
+                                <td>EE</td>
+                                <td>JJ</td>
+                                <td>!!</td>
+                                <td>456</td>
+                                <td>*</td>
+                                <td>已讀</td>
+                                <td>0000/00/00</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>VV</td>
+                                <td>GG</td>
+                                <td>WW</td>
+                                <td>KK</td>
+                                <td>##</td>
+                                <td>789</td>
+                                <td>*</td>
+                                <td>已讀</td>
+                                <td>0000/00/00</td>
+                              </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-
             <div id="News" class="MemActionRecord" style="display:none;">
-                <p>公告列表</p>
+                <div class="row wrap justify-align-center">
+                    <div class="News-record">
+                        <p>公告列表</p>
+                        <table class="News-table">
+                            <tr class="thead">
+                                <th>公告編號</th>
+                                <th>標題</th>
+                                <th>內容</th>
+                                <th>發佈日期</th>
+                            </tr>
+                            <tr>
+                                <td>001</td>
+                                <td>標題1</td>
+                                <td>內容01</td>
+                                <td>0000/00/00</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>標題2</td>
+                                <td>內容02</td>
+                                <td>0000/00/00</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>標題3</td>
+                                <td>內容03</td>
+                                <td>0000/00/00</td>
+                              </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
               
             <script>
