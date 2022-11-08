@@ -326,6 +326,9 @@ body.hide{overflow:hidden}
 .TopBar .left .btnBox .btn:last-child{
     background:linear-gradient(180deg, #efd0a1 0%, #dca85a 75%, #efd0a1 100%)
 }
+.TopBar .left .btnBox .btn-signout{
+    background:linear-gradient(180deg, #ff8585, #810000, #ff8585)!important;
+}
 
 .marqueeBox a{font-size:1rem;color:#fff}
 .marqueeBox marquee{margin-left:10px;width:calc(100% - 35px)}
@@ -3188,9 +3191,9 @@ form .disable-from .disable_text{
 .Wallet_Box .BoxName{padding: 5px 0;}
 .Wallet_Box .BoxMon{padding: 5px 0;font-size: 1.5em;}
 /*交易紀錄*/
-.Transact_Tab{width: 80vw;border-bottom: #dfb77b solid 1px;}
+.Transact_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transact_btn{
-    width: 33.3%;
+    width: 33.33%;
     height: 40px;
     background: none;
     color: #fff;
@@ -3205,7 +3208,7 @@ form .disable-from .disable_text{
 }
 .Transact_record p{font-size: 1.5em;}
 .Transact_table{
-    width: 80vw;
+    width: 100%;
     table-layout:fixed;
     border-collapse: collapse;
     background-color: #fff5;
@@ -3222,9 +3225,9 @@ form .disable-from .disable_text{
 }
 .Transact_table tr th, .Transact_table tr td{padding: 1em 0;}
 /*轉點紀錄*/
-.Transfer_Tab{width: 80vw;border-bottom: #dfb77b solid 1px;}
+.Transfer_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transfer_btn{
-    width: 33.3%;
+    width: 33.33%;
     height: 40px;
     background: none;
     color: #fff;
@@ -3239,7 +3242,7 @@ form .disable-from .disable_text{
 }
 .Transfer_record p{font-size: 1.5em;}
 .Transfer_table{
-    width: 80vw;
+    width: 100%;
     table-layout:fixed;
     border-collapse: collapse;
     background-color: #fff5;
@@ -3255,6 +3258,108 @@ form .disable-from .disable_text{
     border-bottom: #aaa solid 1px;
 }
 .Transfer_table tr th, .Transfer_table tr td{padding: 1em 0;}
+/*遊戲紀錄*/
+.GamesRecord-Box-total{
+    width: 20em;
+    background-color: #dfb77b44;
+    padding: 1em;
+    margin: .5em;
+    border: #dfb77b solid 1px;
+    border-radius: 5px;
+}
+.GamesRecord-Box-total .BoxName{font-size: 1.5em;margin-bottom:1em;}
+.GamesRecord-table td{padding: .25em;}
+.GamesRecord-subtitle{width:8em; text-align: center;}
+.GamesRecord-count{color: #dfb77b;font-size: 1.5em;}
+.GamesRecord-down{margin-top: 3em;}
+.GamesRecord-Box{
+    color: #fff;
+    width: 12em;
+    background-color: #fff7;
+    padding: 1em;
+    margin: .5em;
+    border: #fff solid 1px;
+    border-radius: 5px;
+}
+.GamesRecord-Box:hover{background-color: #fff9;}
+.GamesRecord-Box .BoxName{padding: 5px 0;}
+.GamesRecord-Box .BoxMon{padding: 5px 0;font-size: 1.5em;}
+/*活動紅利紀錄*/
+.Activity-record p{font-size: 1.5em;}
+.Activity-table{
+    width: 100%;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.Activity-table tr{
+    text-align: center;
+}
+.Activity-table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.Activity-table td{
+    border-bottom: #aaa solid 1px;
+}
+.Activity-table tr th, .Activity-table tr td{padding: 1em 0;}
+/*好友列表*/
+.Friends-record p{font-size: 1.5em;}
+.Friends-table{
+    width: 100%;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.Friends-table tr{
+    text-align: center;
+}
+.Friends-table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.Friends-table td{
+    border-bottom: #aaa solid 1px;
+}
+.Friends-table tr th, .Friends-table tr td{padding: 1em 0;}
+/*私訊列表*/
+.Chat-record p{font-size: 1.5em;}
+.Chat-table{
+    width: 100%;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.Chat-table tr{
+    text-align: center;
+}
+.Chat-table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.Chat-table td{
+    border-bottom: #aaa solid 1px;
+}
+.Chat-table tr th, .Chat-table tr td{padding: 1em 0;}
+/*公告*/
+.News-record p{font-size: 1.5em;}
+.News-table{
+    width: 100%;
+    table-layout:fixed;
+    border-collapse: collapse;
+    background-color: #fff5;
+}
+.News-table tr{
+    text-align: center;
+}
+.News-table th{
+    background-color: #0005;
+    border-bottom: #000 solid 1px;
+}
+.News-table td{
+    border-bottom: #aaa solid 1px;
+}
+.News-table tr th, .News-table tr td{padding: 1em 0;}
 
 
 

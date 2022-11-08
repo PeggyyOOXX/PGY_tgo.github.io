@@ -101,3 +101,91 @@
 .modal-spinner .rect4{-webkit-animation-delay:-0.9s;animation-delay:-0.9s}
 @-webkit-keyframes sk-stretchdelay{0%,40%,100%{-webkit-transform:scaleY(0.5)}20%{-webkit-transform:scaleY(1.0)}}
 @keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(0.5);-webkit-transform:scaleY(0.5)}20%{transform:scaleY(1.0);-webkit-transform:scaleY(1.0)}}
+/*遊戲轉點modal*/
+.wallet-transfer-way{margin-top: 2em;}
+.wallet-transfer-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    color: #666;
+}
+.wallet-transfer-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+#wallet_transfer_modal .input-info input{width: 100%;}
+.btn-wallet-transfer{text-align: center;}
+.modal .btn-wallet-transfer .enter{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .btn-wallet-transfer .cancel{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .enter:hover, .modal .cancel:hover{position:relative;top:2px;cursor: pointer;}
+/*好友轉點modal*/
+.p2p-transfer-way{margin-top: 2em;}
+.p2p-transfer-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    color: #666;
+}
+.p2p-transfer-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+#p2p_transfer_modal .input-info input{width: 100%;}
+.btn-p2p-transfer{text-align: center;}
+.modal .btn-p2p-transfer .enter{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .btn-p2p-transfer .cancel{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .enter:hover, .modal .cancel:hover{position:relative;top:2px;cursor: pointer;}
+
+
