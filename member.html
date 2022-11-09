@@ -67,10 +67,6 @@
                     <div class="memPoint">&nbsp;&nbsp;餘額：0000.0</div>
                 </div>
                 <div class="btnBox">
-                    <a href="#login_modal" rel="modal:open" class="btn">登入</a> 
-                    <a href="./register.html" class="btn">註冊</a>
-                </div>
-                <div class="btnBox" style="display: none;">
                     <a href="#" class="btn btn-signout">登出</a>
                 </div>
 
@@ -423,10 +419,48 @@
                 </div>
             </div>
             <div class="row wrap justify-align-center Mem_WalletAction">
-                <a href="#"><button class="btn">儲值</button></a>
-                <a href="#"><button class="btn">提款</button></a>
+                <a href="#deposit_modal" rel="modal:open"><button class="btn">儲值</button></a>
+                <a href="#withdraw_modal" rel="modal:open"><button class="btn">提款</button></a>
                 <a href="#wallet_transfer_modal" rel="modal:open"><button class="btn">遊戲轉點</button></a>
                 <a href="#p2p_transfer_modal" rel="modal:open"><button class="btn">好友轉點</button></a>
+            </div>
+            <!--Modal-儲值-->
+            <div id="deposit_modal" class="modal">
+                <div class="title">儲值</div>
+                <div class="deposit-way">
+                    儲值方式
+                    <select class="deposit-select">
+                      <option value="0">選擇儲值方式</option>
+                      <option value="1">通道1</option>
+                      <option value="2">通道2</option>
+                    </select>
+                </div>
+                <div class="input-info">
+                    <input type="text" placeholder="儲值金額" maxlength="" name="">
+                </div>
+                <div class="btn-deposit">
+                    <button class="btn enter">確定</button>
+                    <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                </div>
+            </div>
+            <!--Modal-提款-->
+            <div id="withdraw_modal" class="modal">
+                <div class="title">提款申請</div>
+                <div class="withdraw-way">
+                    提款方式
+                    <select class="withdraw-select">
+                      <option value="0">選擇提款方式</option>
+                      <option value="1">通道1</option>
+                      <option value="2">通道2</option>
+                    </select>
+                </div>
+                <div class="input-info">
+                    <input type="text" placeholder="提款金額" maxlength="" name="">
+                </div>
+                <div class="btn-withdraw">
+                    <button class="btn enter">確定</button>
+                    <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                </div>
             </div>
             <!--Modal-遊戲轉點-->
             <div id="wallet_transfer_modal" class="modal">
