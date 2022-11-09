@@ -187,5 +187,88 @@
     margin: 1em;
 }
 .modal .enter:hover, .modal .cancel:hover{position:relative;top:2px;cursor: pointer;}
-
+/*儲值modal*/
+.deposit-way{margin-top: 2em;}
+.deposit-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    color: #666;
+}
+.deposit-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+#deposit_modal .input-info input{width: 100%;}
+.btn-deposit{text-align: center;}
+.modal .btn-deposit .enter{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .btn-deposit .cancel{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+/*提款modal*/
+.withdraw-way{margin-top: 2em;}
+.withdraw-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    color: #666;
+}
+.withdraw-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+#withdraw_modal .input-info input{width: 100%;}
+.btn-withdraw{text-align: center;}
+.modal .btn-withdraw .enter{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
+.modal .btn-withdraw .cancel{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+}
 
