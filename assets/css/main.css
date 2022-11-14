@@ -36,9 +36,14 @@
 }
 body{
     background-image:url(../img/Background/main_bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     min-width:360px;
     font-family:Arial, Helvetica, sans-serif;
 }
+html, body {height: 100%;margin: 0;color: #fff;}
+.wrapper {min-height: calc(100% - 52px); /*減去footer(footer貼底)*/}
 body.hide{overflow:hidden;height: 100%;margin: 0;}
 .container{margin:0 auto;max-width:1400px;width:97%}
 .w100{width:100%}
@@ -289,15 +294,37 @@ body.hide{overflow:hidden;height: 100%;margin: 0;}
 .TopBar>div .right{color:#fff;width:250px;font-size:1rem;text-align:right}
 
 .TopBar .left{width:250px;height:100%}
+
 .TopBar .left .logoBox{width:100%;height:50px;display: flex;align-items: center;}
 .TopBar .left .logoBox a{color: #fff;font-size: 2em;}
 .TopBar .left .logoBox img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}
 .TopBar .left .memBox{width:100%;text-align:right;color: #fff;}
 .TopBar .left .memBox .memName{display: inline-block;}
 .TopBar .left .memBox .memPoint{display: inline-block;}
-.TopBar .left .memBox .memPoint button{background: none;color: #fff;border: none;font-size: 1.2em;}
-.TopBar .left .memBox .memPoint button:hover{color: #efd0a1;}
+.TopBar .left .txtBox{width:100%;text-align:right;color: #fff;}
+.txtBox input{
+    padding: 5px;
+    padding-left: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    background-color: #fff3;
+    color: #fff;
+}
+.txtBox input:focus{
+    outline: none;
+    border: #dfb77d solid 1px;
+}
+.txtBox input::placeholder{
+    color: #ccc;
+}
+
 .TopBar .left .btnBox{width:500px;text-align:right;}
+@media screen and (max-width: 1095px){
+    .txtBox input{width: 150px;}
+}
+@media screen and (max-width: 820px){
+    .txtBox input{width: 130px;}
+}
 @media screen and (max-width: 520px){
     .TopBar .left .logoBox{width:220px;}
 }
@@ -309,25 +336,6 @@ body.hide{overflow:hidden;height: 100%;margin: 0;}
 @media screen and (max-width: 395px){
     .TopBar .left .logoBox{width:130px;}
     .TopBar .left .btnBox{width:210px;}
-}
-.TopBar .left .btnBox .btn{
-    display:inline-block;
-    width:80px;
-    height:35px;
-    line-height:35px;
-    color:#fff;
-    font-weight: 600;
-    text-shadow: 0 0 5px #000;
-    text-align: center;
-    background:linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
-    box-shadow:0px 2px 1px #555;
-    border-radius:5px
-}
-.TopBar .left .btnBox .btn:last-child{
-    background:linear-gradient(180deg, #efd0a1 0%, #dca85a 75%, #efd0a1 100%)
-}
-.TopBar .left .btnBox .btn-signout{
-    background:linear-gradient(180deg, #ff8585, #810000, #ff8585)!important;
 }
 
 .marqueeBox a{font-size:1rem;color:#fff}
@@ -733,10 +741,8 @@ aside .nav-item svg{font-size: 1.5em;}
 }
 .gameNav.desktop{margin:30px 0}
 .gameNav.desktop .game-item{margin:10px 0;-webkit-box-flex:1;-ms-flex:1;flex:1;display:block;text-align:center}
-.gameNav.desktop .game-item>img{width:220px}
-@media screen and (min-width: 951px){
-    .gameNav.desktop .game-item:hover>img{-webkit-transition:0.8s;transition:0.8s;-webkit-transform:rotateY(360deg);transform:rotateY(360deg)}
-}
+.gameNav.desktop .game-item>img{width:300px;}
+.gameNav.desktop .game-item p{color: #dfb77b;font-size: 1.5rem;font-weight: 600;letter-spacing: 6px;}
 .gameNav.mobile{margin-top:10px}
 .gameNav.mobile .nav{margin-right:10px;margin-left: 10px;}
 .gameNav.mobile .nav .nav-item{
@@ -2646,6 +2652,7 @@ article.vipContent{margin:60px 0 30px;display:-webkit-box;display:-ms-flexbox;di
     .back-top{right:10px;width:40px;height:40px;font-size:2rem}
 }
 footer{
+    height: 50px;
     line-height: 50px;
     background-image:url(../img/Background/bar.jpg);
     border-top: solid 2px;
@@ -2870,6 +2877,7 @@ form .disable-from .disable_text{
     box-sizing:border-box
 }
 .mobile{display:none}
+.desktop-hidden{display:none!important}
 @media screen and (max-width: 950px){
     .tablet{display:none}
 }
@@ -2882,7 +2890,7 @@ form .disable-from .disable_text{
     text-align: center;
 }
 .register_title{
-    margin-top: 7em;
+    padding-top: 7em;
     color: #dfb77b;
     font-size: 1.5em;
 }
@@ -2955,7 +2963,7 @@ form .disable-from .disable_text{
     .register_input .input-btn{width: 25%;}
 }
 @media screen and (max-width: 1024px){
-    .register_title{margin-top: 3em;}
+    .register_title{padding-top: 3em;}
 }
 @media screen and (max-width: 540px){
     .register_input .input-btn{font-size: .8em;}
@@ -3146,6 +3154,7 @@ form .disable-from .disable_text{
     color: #fff;
     margin: 0 3em 0 0;
 }
+.Mem_AccountName, .Mem_BalanceNum{display: inline-block;}
 /*存/提/轉點Btn*/
 .Mem_WalletAction{margin: 1em 0;}
 .Mem_WalletAction button{margin: 1em 2em;}
@@ -3162,6 +3171,9 @@ form .disable-from .disable_text{
     border-radius: 5px;
 }
 .Mem_WalletAction .btn:hover{position:relative;top:2px;cursor: pointer;}
+.MemberConter-M .Mem_WalletAction{margin: 0;}
+.MemberConter-M .Mem_WalletAction button{margin: 5px;}
+.MemberConter-M .Mem_WalletAction .btn{width: 80px;}
 /*頁籤-會員紀錄*/
 .Tab_MemActionRecord{
     margin-top: 3em;
@@ -3362,19 +3374,271 @@ form .disable-from .disable_text{
     border-bottom: #aaa solid 1px;
 }
 .News-table tr th, .News-table tr td{padding: 1em 0;}
-
-
-
-
-
-html, body {
+/*手機版-會員紀錄*/
+@media screen and (max-width: 480px){
+    .MemberConter{padding: 0;}
+    .Mem_Account, .Mem_Balance{font-size: 1.5em;}
+    .MemberConter .FAicon svg{width: 32px;}
+    .Mem_WalletAction{margin: 0;}
+    .Mem_WalletAction button{margin: 5px;}
+    .Mem_WalletAction .btn{width: 80px;}
+    .Tab_MemActionRecord{width: 100%;margin-top: 2em;}
+    .Tab_MemActionRecord_btn{width: 49%;padding: .5em 0;border-bottom: 1px solid #fff1;margin:0;}
+    .MemActionRecord{margin-top: 1em;}
+    .Wallet_Box{width: 110px;}
+    .GamesRecord-Box{width: 150px;}
+    .GamesRecord-down{margin-top: 1em;}
+}
+/*TopBar*/
+.TopBar .logoBox{width:10em;height:50px;display: flex;align-items: center;}
+.TopBar .logoBox a{color: #fff;font-size: 2em;}
+.TopBar .btnBox .btn{
+    display:inline-block;
+    width:80px;
+    height:35px;
+    line-height:35px;
+    color:#fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background:linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow:0px 2px 1px #555;
+    border-radius:5px
+}
+.TopBar .btnBox .btn:last-child{
+    background:linear-gradient(180deg, #efd0a1 0%, #dca85a 75%, #efd0a1 100%)
+}
+.TopBar .btnBox .btn-signout{
+    background:linear-gradient(180deg, #ff8585, #810000, #ff8585)!important;
+}
+.TopBar .login-box, .TopBar .signout-box{position: absolute;right: 6em;}
+.TopBar .login-box .txtBox, .TopBar .login-box .btnBox,
+.TopBar .signout-box .memBox, .TopBar .signout-box .btnBox{display: inline-block;}
+.TopBar .signout-box .memName, .TopBar .signout-box .memPoint{color: #fff;display:inline-block;margin: 0 1em;}
+.TopBar .mobile .btn{width: 4em;}
+@media screen and (max-width: 480px){
+    .TopBar .signout-box .memName, .TopBar .signout-box .memPoint{margin: 0 3px;}
+}
+.forgetpassword{
+    font-size: .8em;
+    line-height: 26px;
+    color: #dfb77b;
+    cursor: pointer;
+}
+/*語系選擇*/
+.TopBar-language {
+    position: absolute;
+    right: 1em;
+    display: inline-block;
+}
+.main-language {
+    background:none;
+    color: white;
+    padding: 6px;
+    font-size: 12px;
+    border: #dfb77b solid 1px;
+    cursor: pointer;
+    width:65px;
+}
+.language-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    width: 65px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+.language-content a {
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    font-size: 10px;
+}
+.language-content a:hover {background-color: #ff9a00}
+.TopBar-language:hover .language-content {
+    display: block;
+}
+.TopBar-language:hover .main-language {
+    background-color: #dfb77b55;
+}
+/*錯誤訊息彈跳*/
+.login-error-dialog.WarningActive {
+    display: block;
+}
+.login-error-dialog {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.error-dialog-box {
+    width: 100%;
     height: 100%;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    position: relative;
 }
-.wrapper {
-    min-height: calc(100% - 50px); /*減去footer高度*/
+.error-dialog-body {
+    min-width: 300px;
+    padding: 2em 0 0;
+    background-color: #fef1f2;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
 }
-footer {
-    height: 50px; /*設定footer本身高度*/
-    background-color: yellow;
+.error-dialog-icon {
+    padding-bottom: 2em;
 }
+.error-dialog-icon.warning span {
+    color: #e75351;
+}
+.error-dialog-icon span {
+    font-size: 3em;
+}
+.error-dialog-content {
+    display: inline-block;
+    padding: 0 1em 1em;
+    color: #000;
+}
+.error-dialog-btn {
+    display: flex;
+}
+.error-dialog-btn>div.enter {
+    background-color: #e75351;
+}
+.error-dialog-btn>div.enter:hover {
+    background-color: #b50200;
+}
+.error-dialog-btn>div {
+    flex: 1;
+    height: 3em;
+    line-height: 3em;
+    cursor: pointer;
+}
+.error-dialog-btn>div span {
+    color: #fff;
+}
+.error-dialog-cover {
+    background-color: rgba(0,0,0,.75);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+/*遊戲維護頁*/
+.Maintena{
+    background-image:url(../img/Background/maintenance_bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.maintenance{
+    text-align: center;
+}
+.maintenance_title{
+    padding-top: 5em;
+    color: #dfb77b;
+    font-size: 3em;
+    letter-spacing: 1em;
+}
+.maintenance_content{
+    padding: 2em 0;
+    font-size: 2em;
+}
+.maintenance .maintenance_cancel{
+    width: 200px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ccc 0%, #999 75%, #ccc 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 20px;
+    border: none;
+    margin: 1em;
+    margin-top: 2em;
+}
+.maintenance .maintenance_cancel:hover{position:relative;top:2px;cursor: pointer;}
+/*快速存提款*/
+.quick-deposit{
+    background-color: #f00;
+    position:fixed;
+    left:10px;
+    top:40%;
+    z-index:999;
+    width: 50px;
+    height: 50px;
+    font-size:2em;
+    color:#fff;
+    cursor:pointer;
+    border-radius:50%;
+    background-color: #ffd016cc;
+    border: #ffd016 solid 2px;
+}
+.quick-deposit:hover{
+    background-color: #ffd016;
+    box-shadow: 0 0 10px #fff;
+}
+.quick-deposit-icon{
+    text-align: center;
+    text-shadow: 0 0 5px;
+    line-height: 1.4em;
+}
+.quick-deposit-txt{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0;
+}
+.quick-withdraw{
+    background-color: #f00;
+    position:fixed;
+    left:10px;
+    top:48%;
+    z-index:999;
+    width: 50px;
+    height: 50px;
+    font-size:2em;
+    color:#fff;
+    cursor:pointer;
+    border-radius:50%;
+    background-color: #3cabe2cc;
+    border: #3cabe2 solid 2px;
+}
+.quick-withdraw:hover{
+    background-color: #3cabe2;
+    box-shadow: 0 0 10px #fff;
+}
+.quick-withdraw-icon{
+    text-align: center;
+    line-height: 1.4em;
+}
+.quick-withdraw-txt{
+    font-size: 16px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
