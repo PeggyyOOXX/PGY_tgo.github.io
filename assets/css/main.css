@@ -293,51 +293,6 @@ body.hide{overflow:hidden;height: 100%;margin: 0;}
 .TopBar>div .left{width:100%}
 .TopBar>div .right{color:#fff;width:250px;font-size:1rem;text-align:right}
 
-.TopBar .left{width:250px;height:100%}
-
-.TopBar .left .logoBox{width:100%;height:50px;display: flex;align-items: center;}
-.TopBar .left .logoBox a{color: #fff;font-size: 2em;}
-.TopBar .left .logoBox img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}
-.TopBar .left .memBox{width:100%;text-align:right;color: #fff;}
-.TopBar .left .memBox .memName{display: inline-block;}
-.TopBar .left .memBox .memPoint{display: inline-block;}
-.TopBar .left .txtBox{width:100%;text-align:right;color: #fff;}
-.txtBox input{
-    padding: 5px;
-    padding-left: 10px;
-    border: #ddd solid 1px;
-    border-radius: 5px;
-    background-color: #fff3;
-    color: #fff;
-}
-.txtBox input:focus{
-    outline: none;
-    border: #dfb77d solid 1px;
-}
-.txtBox input::placeholder{
-    color: #ccc;
-}
-
-.TopBar .left .btnBox{width:500px;text-align:right;}
-@media screen and (max-width: 1095px){
-    .txtBox input{width: 150px;}
-}
-@media screen and (max-width: 820px){
-    .txtBox input{width: 130px;}
-}
-@media screen and (max-width: 520px){
-    .TopBar .left .logoBox{width:220px;}
-}
-@media screen and (max-width: 455px){
-    .TopBar .left .logoBox{width:180px;}
-    .TopBar .left .btnBox{width:300px;}
-    .TopBar .left .memBox{text-align:center;}
-}
-@media screen and (max-width: 395px){
-    .TopBar .left .logoBox{width:130px;}
-    .TopBar .left .btnBox{width:210px;}
-}
-
 .marqueeBox a{font-size:1rem;color:#fff}
 .marqueeBox marquee{margin-left:10px;width:calc(100% - 35px)}
 .marqueeBox marquee .ann{color:#fff;margin:0 5px;font-size:0.9rem;padding:3px 5px}
@@ -364,23 +319,6 @@ header{
 header .left{width:250px;height:100%}
 header .left .logoBox{width:100%;height:65px}
 header .left .logoBox img{width:100%;height:100%;-o-object-fit:contain;object-fit:contain}
-header .left .btnBox{margin:5px 0;width:100%;text-align:center}
-header .left .btnBox .btn{
-    display:inline-block;
-    width:110px;
-    height:35px;
-    line-height:35px;
-    color:#fff;
-    background-color:#dfb77b;
-    border-radius:10px
-}
-header .left .btnBox .btn:last-child{
-    background-color:#efd0a1;
-}
-@media screen and (min-width: 951px){
-    header .left .btnBox .btn:hover{position:relative;top:2px;}
-    .TopBar .left .btnBox .btn:hover{position:relative;top:2px;}
-}
 header .nav{width:100%}
 header .nav .nav-item{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
 header .nav .nav-item:hover .dropdownBox{height:250px !important}
@@ -479,7 +417,6 @@ header #redpacketInto p{
     .TopBar .left{width:100%}
     .TopBar .left .logoBox{height:50px}
     .TopBar .left .logoBox img{width:auto}
-    .TopBar .left .btnBox{}
 
     header .left{width:100%}
     header .left .logoBox{width:auto;margin:5px 0;height:60px}
@@ -641,12 +578,12 @@ aside .nav-item svg{font-size: 1.5em;}
 .navRebateTxt h3{font-size:30px;color:#6488a8}
 
 @media screen and (max-width: 768px){
-    .slick_BANNER .banner_desktop{display:none}
-    .slick_BANNER .banner_mobile{display:block}
+    .slick-BANNER .banner-desktop{display:none}
+    .slick-BANNER .banner-mobile{display:block}
 }
 @media screen and (min-width: 769px){
-    .slick_BANNER .banner_desktop{display:block}
-    .slick_BANNER .banner_mobile{display:none}
+    .slick-BANNER .banner-desktop{display:block}
+    .slick-BANNER .banner-mobile{display:none}
 }
 
 .tab {
@@ -709,10 +646,10 @@ aside .nav-item svg{font-size: 1.5em;}
     .swiper-container:hover .swiper-btn.swiper-button-prev{left:0}
     .swiper-container:hover .swiper-btn.swiper-button-next{right:0}
 }
-.swiper-container .banner_mobile{display:none}
+.swiper-container .banner-mobile{display:none}
 @media screen and (max-width: 768px){
-    .swiper-container .banner_desktop{display:none}
-    .swiper-container .banner_mobile{display:block}
+    .swiper-container .banner-desktop{display:none}
+    .swiper-container .banner-mobile{display:block}
 }
 .swiper-container .swiper-slide{-webkit-transform:translate3d(0, 0, 0)}
 .userBox{margin:30px 10px;font-size:1.4rem;background-color:#fff}
@@ -741,7 +678,8 @@ aside .nav-item svg{font-size: 1.5em;}
 }
 .gameNav.desktop{margin:30px 0}
 .gameNav.desktop .game-item{margin:10px 0;-webkit-box-flex:1;-ms-flex:1;flex:1;display:block;text-align:center}
-.gameNav.desktop .game-item>img{width:300px;}
+.gameNav.desktop .game-item>img{width:90%;}
+.gameNav.desktop .game-item:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
 .gameNav.desktop .game-item p{color: #dfb77b;font-size: 1.5rem;font-weight: 600;letter-spacing: 6px;}
 .gameNav.mobile{margin-top:10px}
 .gameNav.mobile .nav{margin-right:10px;margin-left: 10px;}
@@ -2877,14 +2815,17 @@ form .disable-from .disable_text{
     box-sizing:border-box
 }
 .mobile{display:none}
-.desktop-hidden{display:none!important}
 @media screen and (max-width: 950px){
     .tablet{display:none}
 }
 @media screen and (max-width: 480px){
-    .desktop{display:none}
+    .desktop{display:none!important}
     .mobile{display:block}
 }
+@media screen and (min-width: 480px){
+    .desktop-hidden{display:none!important}
+}
+.btn:hover{position:relative;top:2px;cursor: pointer;}
 /* Register Page */
 .registerBox{
     text-align: center;
@@ -3009,7 +2950,7 @@ form .disable-from .disable_text{
     background-position: center;
     background-size: cover;
 }
-.GameRoom{position:relative;padding:50px 0;overflow:hidden}
+.GameRoom{position:relative;padding-bottom:50px;overflow:hidden}
 .GameRoom .title{
     position:absolute; 
     margin: 2em 0;
@@ -3019,11 +2960,18 @@ form .disable-from .disable_text{
     text-align:center;
     background: linear-gradient(to top,#dfb77b,#ae7d35);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;}
+    -webkit-text-fill-color: transparent;
+}
 .GameRoom .games{margin-bottom:40px}
-.GameRoom .Game-item{margin: 3em 0;}
-.GameRoom .Game-item img{width:100%;padding:0px 30px}
-.GameRoom .Game-item p{
+.GameRoom .GameRoom-imgBox p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:400;
+    
+}
+.GameRoom .GameRoom-imgBox{margin: 3em 0;color:#dfb77b;}
+.GameRoom .GameRoom-imgBox img{width:100%;padding:0px 30px}
+.GameRoom .GameRoom-imgBox p{
     text-align:center;
     margin:0;
     font-size: 1.2rem;
@@ -3031,10 +2979,12 @@ form .disable-from .disable_text{
     margin-top: .5em;
     color:#dfb77b;
 }
-.GameRoom .Game-item:hover p,.GameRoom .Game-item:active p{color:#fff}
-.GameRoom .Game-item:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
-.GameRoom .Game-item p button{
-    background: linear-gradient(to top,#ff8585,#810000,#ff8585);
+.GameRoom .GameRoom-imgBox:hover p,.GameRoom .GameRoom-imgBox:active p{color:#fff}
+.GameRoom .GameRoom-imgBox p a{color:#dfb77b;}
+.GameRoom .GameRoom-imgBox:hover p a,.GameRoom .GameRoom-imgBox:active p a{color:#fff}
+.GameRoom .GameRoom-imgBox:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
+.transfertogame-btn{
+    background-color: #810000;
     color: #fff;
     border: none;
     box-shadow: 1px 1px 1px #555;
@@ -3043,21 +2993,22 @@ form .disable-from .disable_text{
     width: 30px;
     font-size: 1em;
     cursor: pointer;
-    position: relative;
 }
-.GameRoom .Game-item p button:hover{
-    background: linear-gradient(to top,#810000,#ff8585,#810000);
+.transfertogame-btn:hover{
+    background-color: #ff8585;
 }
-.GameRoom .Game-item p button:hover::before{
+/*
+.transfertogame-btn:hover::before{
     position: absolute;
     top: 0;
     left: 35px;
     content: '轉點錢包';
-    font-size: .8em;
+    font-size: 1em;
     background: #dfb77b55;
     padding: 5px;
     border-radius: 5px;
 }
+*/
 @media screen and (max-width: 900px){
     .GameRoom .title{margin: 1em 0;}
     .GameRoom .Game-item img{padding:0px 20px}
@@ -3069,7 +3020,7 @@ form .disable-from .disable_text{
 .GameRoom-M .title{margin:0 0 10px 0;color:#dfb77b;font-size: 1.5em;font-weight:600;text-align:center}
 .GameRoom-M img{width:100%;}
 .GameRoom-M .GameRoomBox{position: relative;}
-.GameRoom-M .GameRoomName{position:absolute; left:30px; top:20px; color:#000;font-weight: 600;letter-spacing: 2px;}
+.GameRoom-M .GameRoomName{position:absolute; left:30px; top:60px; color:#fff;font-weight: 600;letter-spacing: 2px;}
 /*外部遊戲大廳*/
 .Slots_lobby{
     background-image:url(../img/Background/slots_lobby_bg.jpg);
@@ -3101,7 +3052,7 @@ form .disable-from .disable_text{
 .Left_img .img_top{
     position: fixed;
     width: 10%;
-    top: 200px;
+    top: 400px;
     left: 100px;
     z-index: 20;
     animation: vertical 5s infinite;
@@ -3117,7 +3068,7 @@ form .disable-from .disable_text{
 .Right_img .img_top{
     position: fixed;
     width: 10%;
-    top: 200px;
+    top: 400px;
     right: 50px;
     z-index: 20;
     animation: vertical 8s infinite;
@@ -3152,14 +3103,15 @@ form .disable-from .disable_text{
 .Mem_Account, .Mem_Balance{
     font-size: 2em;
     color: #fff;
-    margin: 0 3em 0 0;
+    margin: .3em 3em 0 0;
 }
 .Mem_AccountName, .Mem_BalanceNum{display: inline-block;}
-/*存/提/轉點Btn*/
+/*會員操作Btn*/
 .Mem_WalletAction{margin: 1em 0;}
 .Mem_WalletAction button{margin: 1em 2em;}
 .Mem_WalletAction .btn{
-    width: 90px;
+    font-size: 1.2em;
+    width: 150px;
     height: 40px;
     line-height: 40px;
     color: #fff;
@@ -3170,7 +3122,6 @@ form .disable-from .disable_text{
     border: none;
     border-radius: 5px;
 }
-.Mem_WalletAction .btn:hover{position:relative;top:2px;cursor: pointer;}
 .MemberConter-M .Mem_WalletAction{margin: 0;}
 .MemberConter-M .Mem_WalletAction button{margin: 5px;}
 .MemberConter-M .Mem_WalletAction .btn{width: 80px;}
@@ -3179,6 +3130,7 @@ form .disable-from .disable_text{
     margin-top: 3em;
     background-color: #fff3;
 }
+.MemberConter .FAicon svg{width: 32px;}
 .Tab_MemActionRecord_btn{
     width: 100px;
     padding: 1em 0;
@@ -3204,6 +3156,47 @@ form .disable-from .disable_text{
 }
 .Wallet_Box .BoxName{padding: 5px 0;}
 .Wallet_Box .BoxMon{padding: 5px 0;font-size: 1.5em;}
+.Wallet-Box-total{
+    width: 20em;
+    background-color: #dfb77b44;
+    padding: 1em;
+    margin: .5em;
+    border: #dfb77b solid 1px;
+    border-radius: 5px;
+}
+.Wallet-Box-total .BoxName{font-size: 1.5em;padding: 5px 0;}
+.Wallet-Box-total .BoxMon{font-size: 1.5em;padding: 5px 0;}
+.Wallet-TakeBack{text-align: right;}
+.Wallet-TakeBack .btn{
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    background: linear-gradient(180deg, #efd0a1 0%, #dca85a 50%, #efd0a1 100%);
+    box-shadow: 0 2px 1px #555;
+    border: none;
+    border-radius: 5px;
+}
+.WalletAction{margin-left: 2em;}
+@media screen and (max-width: 713px) {
+    .WalletAction{margin-left: 0;}
+}
+.WalletAction .btn.transfer {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    font-weight: 600;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0 2px 1px #555;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    margin-right: 5px;
+}
+.WalletAll{margin: 2em 0;}
 /*交易紀錄*/
 .Transact_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transact_btn{
@@ -3318,7 +3311,20 @@ form .disable-from .disable_text{
 }
 .Activity-table tr th, .Activity-table tr td{padding: 1em 0;}
 /*好友列表*/
-.Friends-record p{font-size: 1.5em;}
+.Friends-record p{font-size: 1.5em;display: inline-block;}
+.Friends-record .addfriends{
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        text-shadow: 0 0 5px #000;
+        background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+        box-shadow: 0 2px 1px #555;
+        border: none;
+        border-radius: 10px;
+        font-size: 1em;
+        margin-left: 2em;
+}
 .Friends-table{
     width: 100%;
     table-layout:fixed;
@@ -3355,6 +3361,16 @@ form .disable-from .disable_text{
     border-bottom: #aaa solid 1px;
 }
 .Chat-table tr th, .Chat-table tr td{padding: 1em 0;}
+
+.Chat-table-starmark {
+    position: relative;
+  }
+.Chat-table-starmark::before {
+    content: '\f0c2';
+  font-family: 'Font Awesome 6 free';
+  font-weight: 900;
+  }
+.Chat-table-content{width: 20em;}
 /*公告*/
 .News-record p{font-size: 1.5em;}
 .News-table{
@@ -3378,7 +3394,6 @@ form .disable-from .disable_text{
 @media screen and (max-width: 480px){
     .MemberConter{padding: 0;}
     .Mem_Account, .Mem_Balance{font-size: 1.5em;}
-    .MemberConter .FAicon svg{width: 32px;}
     .Mem_WalletAction{margin: 0;}
     .Mem_WalletAction button{margin: 5px;}
     .Mem_WalletAction .btn{width: 80px;}
@@ -3392,35 +3407,143 @@ form .disable-from .disable_text{
 /*TopBar*/
 .TopBar .logoBox{width:10em;height:50px;display: flex;align-items: center;}
 .TopBar .logoBox a{color: #fff;font-size: 2em;}
-.TopBar .btnBox .btn{
-    display:inline-block;
-    width:80px;
-    height:35px;
-    line-height:35px;
-    color:#fff;
+.TopBar .btnBox .btn.login {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
     font-weight: 600;
     text-shadow: 0 0 5px #000;
     text-align: center;
-    background:linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
-    box-shadow:0px 2px 1px #555;
-    border-radius:5px
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
 }
-.TopBar .btnBox .btn:last-child{
-    background:linear-gradient(180deg, #efd0a1 0%, #dca85a 75%, #efd0a1 100%)
+.TopBar .btnBox .btn.register{
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background:linear-gradient(180deg, #efd0a1 0%, #dca85a 75%, #efd0a1 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
 }
 .TopBar .btnBox .btn-signout{
-    background:linear-gradient(180deg, #ff8585, #810000, #ff8585)!important;
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background:linear-gradient(180deg, #ff8585, #810000, #ff8585);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
+}
+.TopBar .btnBox .deposit{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ffaa16 0%, #ffd016 70%, #ffaa16 100%);
+    box-shadow: 0px 2px 1px #555;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+.TopBar .btnBox .withdraw{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #3c73e2 0%, #3cabe2 70%, #3c73e2 100%);
+    box-shadow: 0px 2px 1px #555;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-right: 2em;
+}
+.TopBar .btnBox .btn.bind {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
+}
+#deposit_modal .title{display: inline-block;}
+#deposit_modal .account-bind{display: inline-block;position:absolute; right: 4em;top: 2em;}
+#deposit_modal .btnBox .btn.bind {
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
 }
 .TopBar .login-box, .TopBar .signout-box{position: absolute;right: 6em;}
 .TopBar .login-box .txtBox, .TopBar .login-box .btnBox,
 .TopBar .signout-box .memBox, .TopBar .signout-box .btnBox{display: inline-block;}
 .TopBar .signout-box .memName, .TopBar .signout-box .memPoint{color: #fff;display:inline-block;margin: 0 1em;}
-.TopBar .mobile .btn{width: 4em;}
+.TopBar .mobile .btn{width: 50px;}
+.txtBox input{
+    padding: 5px;
+    padding-left: 10px;
+    border: #ddd solid 1px;
+    border-radius: 5px;
+    background-color: #fff3;
+    color: #fff;
+}
+.txtBox input:focus{
+    outline: none;
+    border: #dfb77d solid 1px;
+}
+.txtBox input::placeholder{
+    color: #ccc;
+}
+@media screen and (max-width: 1095px){
+    .txtBox input{width: 150px;}
+}
+@media screen and (max-width: 820px){
+    .txtBox input{width: 130px;}
+}
 @media screen and (max-width: 480px){
     .TopBar .signout-box .memName, .TopBar .signout-box .memPoint{margin: 0 3px;}
 }
+@media (min-width: 480px) and (max-width: 950px){
+    .TopBar .btnBox .btn.login, .TopBar .btnBox .btn.register{width: 40px;}
+    .txtBox input{width: 120px;font-size: .9em;padding-left: 5px;}
+    .TopBar .login-box, .TopBar .signout-box{position: absolute;right: 3em;}
+}
+@media (min-width: 480px) and (max-width: 530px){
+    .txtBox input{width: 95px;font-size: .9em;padding-left: 5px;}
+}
 .forgetpassword{
-    font-size: .8em;
+    font-size: .7em;
     line-height: 26px;
     color: #dfb77b;
     cursor: pointer;
@@ -3462,6 +3585,10 @@ form .disable-from .disable_text{
 }
 .TopBar-language:hover .main-language {
     background-color: #dfb77b55;
+}
+@media (min-width: 480px) and (max-width: 950px){
+    .TopBar-language{right: .3em;}
+    .main-language{width: 40px;}
 }
 /*錯誤訊息彈跳*/
 .login-error-dialog.WarningActive {
@@ -3527,13 +3654,110 @@ form .disable-from .disable_text{
 .error-dialog-btn>div span {
     color: #fff;
 }
-.error-dialog-cover {
+.warning-dialog-cover {
     background-color: rgba(0,0,0,.75);
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
+}
+/*一般訊息彈跳*/
+.message-remind-dialog.WarningActive {
+    display: block;
+}
+.message-remind-dialog {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.remind-dialog-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    position: relative;
+}
+.remind-dialog-body {
+    min-width: 300px;
+    padding: 2em 0 0;
+    background-color: #f1fef7;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 9;
+    position: relative;
+}
+.remind-dialog-icon {
+    padding-bottom: 2em;
+}
+.remind-dialog-icon.warning span {
+    color: #31945f;
+}
+.remind-dialog-icon span {
+    font-size: 3em;
+}
+.remind-dialog-content {
+    display: inline-block;
+    padding: 0 1em 1em;
+    color: #000;
+}
+.remind-dialog-btn {
+    display: flex;
+}
+.remind-dialog-btn>div.enter {
+    background-color: #31945f;
+}
+.remind-dialog-btn>div.enter:hover {
+    background-color: #005025;
+}
+.remind-dialog-btn>div {
+    flex: 1;
+    height: 3em;
+    line-height: 3em;
+    cursor: pointer;
+}
+.remind-dialog-btn>div span {
+    color: #fff;
+}
+/*會員登入提示彈跳*/
+.MemLogin-error-dialog.WarningActive {
+    display: block;
+}
+.MemLogin-error-dialog {
+    display: none;
+    z-index: 500;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 135px;
+    bottom: 0;
+}
+.MemLogin-error-dialog .error-dialog-body {
+    padding: 2em 0;
+}
+.MemLogin-error-dialog .remind-dialog-body {
+    padding: 2em 0;
+}
+.warning-dialog-cover {
+    background-color: rgba(0,0,0,1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+@media screen and (max-width: 950px){
+    .MemLogin-error-dialog {top: 110px;bottom: -200px;}
+}
+@media screen and (max-width: 480px){
+    .MemLogin-error-dialog {top: 52px;}
 }
 /*遊戲維護頁*/
 .Maintena{
@@ -3577,8 +3801,8 @@ form .disable-from .disable_text{
     left:10px;
     top:40%;
     z-index:999;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     font-size:2em;
     color:#fff;
     cursor:pointer;
@@ -3593,7 +3817,7 @@ form .disable-from .disable_text{
 .quick-deposit-icon{
     text-align: center;
     text-shadow: 0 0 5px;
-    line-height: 1.4em;
+    line-height: 50px;
 }
 .quick-deposit-txt{
     font-size: 16px;
@@ -3606,8 +3830,8 @@ form .disable-from .disable_text{
     left:10px;
     top:48%;
     z-index:999;
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     font-size:2em;
     color:#fff;
     cursor:pointer;
@@ -3621,18 +3845,83 @@ form .disable-from .disable_text{
 }
 .quick-withdraw-icon{
     text-align: center;
-    line-height: 1.4em;
+    line-height: 50px;
 }
 .quick-withdraw-txt{
     font-size: 16px;
     text-align: center;
     padding: 5px 0;
 }
+/*綁定銀行帳號*/
+.AccountBind{overflow:hidden}
+.AccountBind-Box{width: 50em;}
+.AccountBind-Box .title{font-size: 1.5em;margin: 2em 0;}
+@media screen and (max-width: 480px){
+    .AccountBind-Box .title{margin: 1em 0;}
+}
+.AccountBind-Tab{width: 100%;border-bottom: #dfb77b solid 1px;font-size: 1.2em;}
+.AccountBind-btn{
+    width: 50%;
+    height: 40px;
+    background: none;
+    color: #fff;
+    border: none;
+    float:left;
+}
+.AccountBind-btn:hover {background-color: #efd0a155;}
+.AccountBind-btn.active {
+    background-color: #efd0a1aa;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+}
 
-
-
-
-
+.AccountBind-content p{font-size: 1.2em;text-align: left;}
+.AccountBind-content-way{margin-bottom: 1em;}
+.AccountBind-content-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ddd;
+}
+.AccountBind-content-select option{color: #000;}
+.AccountBind-content-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+.AccountBind-input-info input{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: #ddd solid 1px;
+    background-color: transparent;
+    color: #fff;
+    margin-bottom: 1em;
+}
+.AccountBind-input-info input:focus{
+    outline: none;
+    border-bottom: #dfb77d solid 1px;
+}
+.AccountBind-input-info input::placeholder{
+    color: #ddd;
+}
+.AccountBind-upload .upload{
+    width: 150px;
+    height: 40px;
+    line-height: 35px;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 10px;
+    border: none;
+    margin: 2em 0;
+}
+.AccountBind-upload .upload:hover{position:relative;top:2px;cursor: pointer;}
+.AccountBind-img{max-width: 600px;height: auto;}
 
 
 
