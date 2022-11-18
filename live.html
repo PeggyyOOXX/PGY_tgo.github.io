@@ -55,22 +55,58 @@
 
 </head>
 
-<body class="Live">
+<body>
     <div class="TopBar">
         <div class="container row justify-between align-center">
-            <div class="left row justify-between align-center">
+            <div class="row justify-between align-center">
                 <div class="logoBox">
                     <a href="./index.html">天亞</a>
                 </div>
-                <div class="memBox">
-                    <div class="memName">abc123</div>
-                    <div class="memPoint">&nbsp;&nbsp;餘額：0000.0</div>
-                </div>
-                <div class="btnBox">
-                    <a href="#login_modal" rel="modal:open" class="btn">登入</a> 
-                    <a href="./register.html" class="btn">註冊</a>
-                </div>
 
+                <!--PC-->
+                <!--登入-->
+                <div class="login-box desktop">
+                    <div class="txtBox">
+                        <input class="login-account" placeholder="帳號 / 手機號碼" maxlength="50">
+                        <input class="login-password" placeholder="密碼" type="password">
+                        <a href=""><span class="forgetpassword">忘記密碼?</span></a>
+                    </div>
+                    <div class="btnBox">
+                        <a href="#" class="btn login">登入</a> 
+                        <a href="./register.html" class="btn register">註冊</a>
+                    </div>
+                </div>
+                <!--//登入-->
+                <!--登出-->
+                <div class="signout-box desktop" style="display: none;">
+                    <div class="memName">abc123</div>
+                    <div class="memPoint">餘額：0000.0</div>
+                    <div class="btnBox">
+                        <a href="#" class="btn btn-signout">登出</a>
+                    </div>
+                </div>
+                <!--//登出-->
+                <!--//PC-->
+
+                <!--mobile-->
+                <!--登入-->
+                <div class="login-box mobile desktop-hidden">
+                    <div class="btnBox">
+                        <a href="#login_modal" rel="modal:open" class="btn">登入</a> 
+                        <a href="./register.html" class="btn">註冊</a>
+                    </div>
+                </div>
+                <!--//登入-->
+                <!--登出-->
+                <div class="signout-box mobile desktop-hidden" style="display: none;">
+                    <div class="memName">abc123</div>
+                    <div class="memPoint">餘額：0000.0</div>
+                    <div class="btnBox">
+                        <a href="#" class="btn btn-signout">登出</a>
+                    </div>
+                </div>
+                <!--//登出-->
+                <!--登入modal-->
                 <div id="login_modal" class="modal">
                     <div class="title">會員登入</div>
                     <span class="smalltext Remindcolor">* 為必填</span>
@@ -78,7 +114,7 @@
                         <span class="FAcolor-primary">
                             <i class="fa-solid fa-user"></i>
                         </span>
-                        <input type="text" placeholder="* 帳號 / 手機號" maxlength="50" name="memberName">
+                        <input type="text" placeholder="* 帳號 / 手機號" maxlength="50" name="memberAccount">
                     </div>
                     <div class="input-info">
                         <span class="FAcolor-primary">
@@ -87,10 +123,38 @@
                         <input type="text" placeholder="* 密碼" maxlength="30" name="memberPassword">
                         <br><a href="#" class="smalltext">忘記密碼</a>
                     </div>
-                    
+
                     <div class="btn-login">
                         <button class="btn login">登入</button>
                     </div>
+                </div>
+                <!--//登入modal-->
+                <!--//mobile-->
+
+                <div class="TopBar-language">
+                    <button class="main-language">中文繁體</button>
+                    <div class="language-content">
+                        <a href="#">English</a>
+                        <a href="#">中文繁體</a>
+                        <a href="#">中文簡体</a>
+                        <a href="#">Việt Nam</a>
+                    </div>
+                </div>
+            </div>
+            <div id="customDialog" class="login-error-dialog">
+                <div class="error-dialog-box">
+                    <div class="error-dialog-body">
+                        <div class="error-dialog-icon warning">
+                            <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+                        </div>
+                        <div class="error-dialog-content">帳號或密碼錯誤，請重新輸入！</div>
+                        <div class="error-dialog-btn">
+                            <div class="enter">
+                                <span>確定</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error-dialog-cover"></div>
                 </div>
             </div>
         </div>
@@ -99,12 +163,6 @@
     <header>
         <div class="container row justify-between align-center wrap">
             <ul class="nav row desktop">
-                <li class="nav-item nav-index tablet">
-                    <a href="./index.html" class="active">
-                        <p class="name">首頁</p> 
-                        <div class="engName">HOME</div>
-                    </a>
-                </li> 
                 <li class="nav-item nav-live">
                     <a href="./live.html">
                         <p class="name">真人視訊</p> 
@@ -146,12 +204,6 @@
                         <p class="name">優惠活動</p> 
                         <div class="engName">PROMOTIONS</div>
                     </a>
-                </li> 
-                <li class="nav-item tablet">
-                    <a href="#">
-                        <p class="name">最新公告</p> 
-                        <div class="engName">NEWS</div>
-                    </a>
                 </li>
                 <li class="nav-item tablet">
                     <a href="./member.html">
@@ -163,8 +215,8 @@
         </div>
     </header>
 
+    <!--
     <div>
-
         <div class="mobile GameRoom-M">
             <div class="container row">
                 <div class="tab">
@@ -401,39 +453,94 @@
         document.getElementById("defaultOpen").click();
       </script>
     </div>
+    -->
+
+    <div class="slick-BANNER">
+        <div>
+            <img src="./assets/img/GameRoom/live/title.jpg" class="img_title" style="width: 100%;">
+        </div>
+    </div>
 
     <div class="desktop GameRoom">
         <div class="container">
             <div class="row wrap justify-align-center">
-                <h2 class="title">真人視訊</h2>
-                <img src="./assets/img/GameRoom/live/title.png" class="img_title">
-            </div>
-            <div class="row wrap justify-align-center">
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-AB.png" alt="Live Casino"> <p>歐博真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-SA.png" alt="Live Casino"> <p>SA真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-DG.png" alt="Live Casino"> <p>DG真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-WM.png" alt="Live Casino"> <p>WM真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-OB.png" alt="Live Casino"> <p>OB真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-HG.png" alt="Live Casino"> <p>鴻鑫真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-BE.png" alt="Live Casino"> <p>BE真人</p></a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/live/live-QL.png" alt="Live Casino">
-                    <p>全利真人 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/live/live-MR.png" alt="Live Casino">
-                    <p>名人廳真人 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-OG.png" alt="Live Casino"> <p>OG真人</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/live/live-YB.png" alt="Live Casino"> <p>億博真人</p></a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/live/live-WG.png" alt="Live Casino">
-                    <p>贏家真人 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/live/live-MC.png" alt="Live Casino">
-                    <p>蒙地卡羅真人 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('AB')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-AB.png" alt="Live Casino"> <p>歐博真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('SA')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-SA.png" alt="Live Casino"> <p>SA真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('DG')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-DG.png" alt="Live Casino"> <p>DG真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('WM')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-WM.png" alt="Live Casino"> <p>WM真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('OBLIVE')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-OB.png" alt="Live Casino"> <p>OB真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('HS')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-HG.png" alt="Live Casino"> <p>鴻鑫真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame2('BE','101')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-BE.png" alt="Live Casino"> <p>BE真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame3('QL',amount)";return false;>
+                        <img src="./assets/img/GameRoom/live/live-QL.png" alt="Live Casino">
+                        <p>全利真人 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-arrows-turn-to-dots"></i></button></a>
+                        </p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame3('MRT',amount)";return false;>
+                        <img src="./assets/img/GameRoom/live/live-MR.png" alt="Live Casino">
+                        <p>名人廳真人 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-arrows-turn-to-dots"></i></button></a>
+                        </p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('OG')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-OG.png" alt="Live Casino"> <p>OG真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame('YB')";return false;>
+                        <img src="./assets/img/GameRoom/live/live-YB.png" alt="Live Casino"> <p>億博真人</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame3('WG',amount)";return false;>
+                        <img src="./assets/img/GameRoom/live/live-WG.png" alt="Live Casino">
+                        <p>贏家真人 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-arrows-turn-to-dots"></i></button></a>
+                        </p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item" onclick="startgame3('MC',amount)";return false;>
+                        <img src="./assets/img/GameRoom/live/live-MC.png" alt="Live Casino">
+                        <p>蒙地卡羅真人 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-arrows-turn-to-dots"></i></button></a>
+                        </p>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="Left_img">
@@ -445,6 +552,29 @@
             <img src="./assets/img/GameRoom/live/img_chipR.png" class="img_bottom">
         </div>
     </div>
+
+    <div id="transfertogame_modal" class="modal">
+        <div class="title">主錢包轉點進入遊戲</div>
+        <div class="input-info">
+            <input type="text" placeholder="輸入轉點金額" maxlength="" name="">
+        </div>
+        <div class="btn-transfertogame">
+            <button class="btn amount">$ 50</button>
+            <button class="btn amount">$ 100</button>
+            <button class="btn amount">$ 500</button>
+            <button class="btn amount">$ 1000</button>
+        </div>
+        <div class="btn-transfertogame">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+        </div>
+    </div>
+
+    
+
+
+
+
     
     <div class="vendorBox desktop">
         <ul class="row justify-align-center wrap">

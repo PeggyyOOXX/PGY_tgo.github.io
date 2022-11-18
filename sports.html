@@ -99,12 +99,6 @@
     <header>
         <div class="container row justify-between align-center wrap">
             <ul class="nav row desktop">
-                <li class="nav-item nav-index tablet">
-                    <a href="./index.html" class="active">
-                        <p class="name">首頁</p> 
-                        <div class="engName">HOME</div>
-                    </a>
-                </li> 
                 <li class="nav-item nav-live">
                     <a href="./live.html">
                         <p class="name">真人視訊</p> 
@@ -146,12 +140,6 @@
                         <p class="name">優惠活動</p> 
                         <div class="engName">PROMOTIONS</div>
                     </a>
-                </li> 
-                <li class="nav-item tablet">
-                    <a href="#">
-                        <p class="name">最新公告</p> 
-                        <div class="engName">NEWS</div>
-                    </a>
                 </li>
                 <li class="nav-item tablet">
                     <a href="./member.html">
@@ -163,8 +151,8 @@
         </div>
     </header>
 
+    <!--
     <div>
-
         <div class="mobile GameRoom-M">
             <div class="container row">
                 <div class="tab">
@@ -401,6 +389,7 @@
         document.getElementById("defaultOpen").click();
       </script>
     </div>
+    -->
 
     <div class="desktop GameRoom">
         <div class="container">
@@ -410,17 +399,37 @@
             </div>
             
             <div class="row wrap justify-align-center">
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/sports/sports-super.png" alt="Sport">
-                    <p>SUPER體育 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-HR.png" alt="Sport"> <p>全壘打體育</p></a>
-                <a href="javascript:;" class="Game-item">
-                    <img src="./assets/img/GameRoom/sports/sports-WIN.png" alt="Sport"> 
-                    <p>贏家體育 <button><i class="fa-solid fa-circle-dollar-to-slot"></i></button></p>
-                </a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-M8.png" alt="Sport"> <p>M8體育</p></a>
-                <a href="javascript:;" class="Game-item"><img src="./assets/img/GameRoom/sports/sports-AFB.png" alt="Sport"> <p>AFB體育</p></a>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item">
+                        <img src="./assets/img/GameRoom/sports/sports-super.png" alt="Sports">
+                        <p>SUPER體育 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-circle-dollar-to-slot"></i></button></a>
+                        </p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item">
+                        <img src="./assets/img/GameRoom/sports/sports-HR.png" alt="Sports"> <p>全壘打體育</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item">
+                        <img src="./assets/img/GameRoom/sports/sports-WIN.png" alt="Sports"> 
+                        <p>贏家體育 
+                            <a href="#transfertogame_modal" rel="modal:open"><button class="transfertogame-btn"><i class="fa-solid fa-circle-dollar-to-slot"></i></button></a>
+                        </p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item">
+                        <img src="./assets/img/GameRoom/sports/sports-M8.png" alt="Sports"> <p>M8體育</p>
+                    </a>
+                </div>
+                <div class="GameRoom-imgBox">
+                    <a href="#" class="Game-item">
+                        <img src="./assets/img/GameRoom/sports/sports-AFB.png" alt="Sports"> <p>AFB體育</p>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="Left_img">
@@ -430,6 +439,23 @@
         <div class="Right_img">
             <img src="./assets/img/GameRoom/sports/img_topR.png" class="img_top">
             <img src="./assets/img/GameRoom/sports/img_chipR.png" class="img_bottom">
+        </div>
+    </div>
+
+    <div id="transfertogame_modal" class="modal">
+        <div class="title">主錢包轉點進入遊戲</div>
+        <div class="input-info">
+            <input type="text" placeholder="輸入轉點金額" maxlength="" name="">
+        </div>
+        <div class="btn-transfertogame">
+            <button class="btn amount">$ 50</button>
+            <button class="btn amount">$ 100</button>
+            <button class="btn amount">$ 500</button>
+            <button class="btn amount">$ 1000</button>
+        </div>
+        <div class="btn-transfertogame">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
         </div>
     </div>
 
