@@ -63,6 +63,18 @@
                     <div class="logoBox">
                         <a href="./index.html">天亞</a>
                     </div>
+                    <div class="marqueeBox tablet">
+                        <div class="container row justify-between align-center">
+                            <div class="row align-center">
+                                <marquee>
+                                    <a>歡迎光臨天亞遊戲網，遊戲最多，勝率最高，歡迎加入天亞會員獲得更多優惠。</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a>天亞與您一起幫2022卡達世界盃足球賽隊伍加油！</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                </marquee>
+                            </div>
+                        </div>
+                    </div>
 
                     <!--PC-->
                     <!--登入-->
@@ -81,15 +93,18 @@
                     <!--登出-->
                     <div class="signout-box desktop">
                         <div class="memName">abc123</div>
-                        <div class="memPoint">餘額：0000.0</div>
+                        <div class="memPoint">$50799 / $0 </div> <a><i class="fa-solid fa-arrows-rotate"></i></a>
                         <div class="btnBox account-bind">
-                            <a href="./account_bind.html" class="btn bind">綁定帳號</a>
+                            <a href="./account_bind.html" class="btn bind">綁定帳戶</a>
+                        </div>
+                        <div class="btnBox wallet-transfer">
+                            <a href="#wallet_transfer_modal" rel="modal:open" class="btn transfer">轉點</a>
                         </div>
                         <div class="btnBox wallet-deposit">
-                            <a href="#deposit_modal" rel="modal:open" class="btn deposit">存款</a>
+                            <a href="#deposit_modal" rel="modal:open" class="btn deposit">儲值</a>
                         </div>
                         <div class="btnBox wallet-withdraw">
-                            <a href="#withdraw_modal" rel="modal:open" class="btn withdraw">提款</a>
+                            <a href="#withdraw_modal" rel="modal:open" class="btn withdraw">托售</a>
                         </div>
                         <div class="btnBox">
                             <a href="#" class="btn btn-signout">登出</a>
@@ -251,136 +266,106 @@
         <div class="container wrap justify-align-center">
             <div class="Tab_MemActionRecord">
                 <button class="Tab_MemActionRecord_btn active" onclick="openTab('Wallet')">錢包管理</button>
-                <button class="Tab_MemActionRecord_btn" onclick="openTab('Transact')">存提紀錄</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Transfer')">轉點紀錄</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('Transact')">儲值紀錄</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Games')">遊戲紀錄</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Activity')">活動紅利</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Friends')">好友列表</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Chat')">私訊紀錄</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('News')">公告列表</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('CoinP')" style="cursor:pointer;">活動幣說明</button>
+                <button class="Tab_MemActionRecord_btn" onclick="location='./account_bind.html'">USDT錢包</button>
+                <button class="Tab_MemActionRecord_btn" onclick="openTab('PersonalInfo')" style="cursor:pointer;">個人資訊</button>
             </div>
               
-            <div id="Wallet" class="MemActionRecord" style="display:none;">
+            <div id="Wallet" class="MemActionRecord">
                 <div class="row wrap justify-align-center">
                     <div class="Wallet-Box-total">
                         <div class="BoxName">主錢包</div>
-                        <div>剩餘點數：<span class="BoxMon">50000</span></div>
-                        <div class="Wallet-TakeBack"><button class="btn">一鍵轉回</button></div>
+                        <div class="Wallet-Bal-text">餘額：<span class="BoxMon">50000</span></div>
+                        <div class="Wallet-Act-text">活動幣：<span class="BoxMon">50000</span></div>
+                        <div class="Wallet-UpdateBal"><button class="btn">更新全部餘額</button></div>
+                        <div class="Wallet-TakeBack"><button class="btn">全部轉回主錢包</button></div>
                     </div>
-                    <!--存款/提款 Btn-->
-                    <div class="WalletAction">
-                        <a href="#wallet_transfer_modal" rel="modal:open"><button class="btn transfer">遊戲轉點</button></a>
-                    </div>
-                    <!--Modal-存款-->
-                    <div id="deposit_modal" class="modal">
-                        <div class="title">存款</div>
-                        <div class="btnBox account-bind">
-                            <a href="./account_bind.html" class="btn bind">綁定帳號</a>
-                        </div>
-                        <div class="deposit-way">
-                            存款方式
-                            <select class="deposit-select">
-                              <option value="0">選擇存款方式</option>
-                              <option value="1">通道1</option>
-                              <option value="2">通道2</option>
-                            </select>
-                        </div>
-                        <div class="input-info">
-                            <input type="text" placeholder="存款金額" maxlength="" name="">
-                        </div>
-                        <div class="btn-deposit">
-                            <button class="btn enter">確定</button>
-                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
-                        </div>
-                    </div>
-                    <!--Modal-提款-->
-                    <div id="withdraw_modal" class="modal">
-                        <div class="title">提款申請</div>
-                        <div class="withdraw-way">
-                            提款方式
-                            <select class="withdraw-select">
-                                <option value="0">選擇提款方式</option>
-                                <option value="1">通道1</option>
-                                <option value="2">通道2</option>
-                            </select>
-                        </div>
-                        <div class="input-info">
-                            <input type="text" placeholder="提款金額" maxlength="" name="">
-                        </div>
-                        <div class="btn-withdraw">
-                            <button class="btn enter">確定</button>
-                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
-                        </div>
-                    </div>
-                    <!--Modal-遊戲轉點-->
-                    <div id="wallet_transfer_modal" class="modal">
-                        <div class="title">遊戲轉點</div>
-                        <div class="wallet-transfer-way">
-                            來源錢包
-                            <select class="wallet-transfer-select">
-                                <option value="0">選擇轉出錢包</option>
-                                <option value="1">錢包1</option>
-                                <option value="2">錢包2</option>
-                            </select>
-                        </div>
-                        <div class="wallet-transfer-way">
-                            目的錢包
-                            <select class="wallet-transfer-select">
-                                <option value="0">選擇轉入錢包</option>
-                                <option value="1">錢包1</option>
-                                <option value="2">錢包2</option>
-                            </select>
-                        </div>
-                        <div class="input-info">
-                            <input type="text" placeholder="輸入金額" maxlength="" name="">
-                        </div>
-                        <div class="btn-wallet-transfer">
-                            <button class="btn enter">確定</button>
-                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
-                        </div>
+                    <div class="Wallet-iconnotes">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>：轉入遊戲錢包&emsp;
+                        <i class="fa-solid fa-share-from-square"></i>：轉回主錢包&emsp;
+                        <i class="fa-solid fa-arrows-rotate"></i>：更新遊戲餘額
                     </div>
                 </div>
 
                 <div class="row wrap justify-align-center WalletAll">
                     <div class="Wallet_Box">
-                        <div class="BoxName">館1</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
+                        <div>
+                            <div class="BoxName">館1</div>
+                            <div class="Wallet-turntogame" title="轉入遊戲錢包">
+                                <a href="#wallet_transfer_modal" rel="modal:open"><i class="fa-solid fa-circle-dollar-to-slot"></i></a>
+                            </div>
+                            <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
+                        </div>
+                        <div>
+                            <div class="BoxMon"><span>1000</span></div>
+                            <div class="Wallet-renew" title="更新遊戲餘額"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        </div>
+                        <div class="Wallet-gotogame">
+                            <button class="btn gotogame">進入遊戲</button>
+                        </div>
                     </div>
                     <div class="Wallet_Box">
-                        <div class="BoxName">館2</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
+                        <div>
+                            <div class="BoxName">館2</div>
+                            <div class="Wallet-turntogame" title="轉入遊戲錢包"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                            <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
+                        </div>
+                        <div>
+                            <div class="BoxMon"><span>2000</span></div>
+                            <div class="Wallet-renew" title="更新遊戲餘額"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        </div>
+                        <div class="Wallet-gotogame">
+                            <button class="btn gotogame">進入遊戲</button>
+                        </div>
                     </div>
                     <div class="Wallet_Box">
-                        <div class="BoxName">館3</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
+                        <div>
+                            <div class="BoxName">館3</div>
+                            <div class="Wallet-turntogame" title="轉入遊戲錢包"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                            <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
+                        </div>
+                        <div>
+                            <div class="BoxMon"><span>3000</span></div>
+                            <div class="Wallet-renew" title="更新遊戲餘額"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        </div>
+                        <div class="Wallet-gotogame">
+                            <button class="btn gotogame">進入遊戲</button>
+                        </div>
                     </div>
                     <div class="Wallet_Box">
-                        <div class="BoxName">館4</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
+                        <div>
+                            <div class="BoxName">館4</div>
+                            <div class="Wallet-turntogame" title="轉入遊戲錢包"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                            <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
+                        </div>
+                        <div>
+                            <div class="BoxMon"><span>4000</span></div>
+                            <div class="Wallet-renew" title="更新遊戲餘額"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        </div>
+                        <div class="Wallet-gotogame">
+                            <button class="btn gotogame">進入遊戲</button>
+                        </div>
                     </div>
                     <div class="Wallet_Box">
-                        <div class="BoxName">館5</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
-                    </div>
-                    <div class="Wallet_Box">
-                        <div class="BoxName">館6</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
-                    </div>
-                    <div class="Wallet_Box">
-                        <div class="BoxName">館7</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
-                    </div>
-                    <div class="Wallet_Box">
-                        <div class="BoxName">館8</div>
-                        <div class="BoxMon"><span class="">1000</span></div>
-                    </div>
-                    <div class="Wallet_Box">
-                        <div class="BoxName">館9</div>
-                        <div class="BoxMon"><span class="">0</span></div>
-                    </div>
-                    <div class="Wallet_Box">
-                        <div class="BoxName">館10</div>
-                        <div class="BoxMon"><span class="">0</span></div>
+                        <div>
+                            <div class="BoxName">館5</div>
+                            <div class="Wallet-turntogame" title="轉入遊戲錢包"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+                            <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
+                        </div>
+                        <div>
+                            <div class="BoxMon"><span>5000</span></div>
+                            <div class="Wallet-renew" title="更新遊戲餘額"><i class="fa-solid fa-arrows-rotate"></i></div>
+                        </div>
+                        <div class="Wallet-gotogame">
+                            <button class="btn gotogame">進入遊戲</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -388,50 +373,60 @@
                 <div class="row wrap justify-align-center">
                     <div class="Transact_Tab">
                         <button class="Transact_btn active" onclick="openTabTransact('Transact_all')">全部</button>
-                        <button class="Transact_btn" onclick="openTabTransact('Transact_deposit')">存款</button>
-                        <button class="Transact_btn" onclick="openTabTransact('Transact_withdraw')">提款</button>
+                        <button class="Transact_btn" onclick="openTabTransact('Transact_deposit')">儲值</button>
+                        <button class="Transact_btn" onclick="openTabTransact('Transact_withdraw')">托售</button>
                     </div>
                 </div>
                 <div class="row wrap justify-align-center">
                     <div id="Transact_all" class="Transact_record">
                         <p>全部紀錄</p>
-                        <table class="Transact_table">
+                        <div class="Date-Box">
+                            <input type="date" value="2022-01-01" /> ~
+                            <input type="date" value="2022-01-01" />
+                            <button class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i> 查詢</button>
+                            <button class="btn DateRange-btn">今日</button>
+                            <button class="btn DateRange-btn">昨日</button>
+                            <button class="btn DateRange-btn">本週</button>
+                            <button class="btn DateRange-btn">上週</button>
+                            <button class="btn DateRange-btn">本月</button>
+                            <button class="btn DateRange-btn">上月</button>
+                        </div>
+                        <table class="Transact-table">
                             <tr class="thead">
-                              <th>時間</th>
-                              <th>存款</th>
-                              <th>提款</th>
-                              <th>結餘</th>
-                              <th>結果</th>
+                                <th>單號(點擊可以複製)</th>
+                                <th>時間</th>
+                                <th>類別</th>
+                                <th>通道</th>
+                                <th>金額</th>
+                                <th>狀態</th>
+                                <th>備註</th>
                             </tr>
-                            <tr>
-                              <td>0000/00/00 00:00:00</td>
-                              <td>50000</td>
-                              <td> </td>
-                              <td>$$$</td>
-                              <td>已完成</td>
+                            <tr class="data_grid">
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
+                                <td>*</td>
                             </tr>
-                            <tr>
-                              <td>0000/00/00 00:00:00</td>
-                              <td> </td>
-                              <td>1000</td>
-                              <td>$$$</td>
-                              <td>已完成</td>
+                            <tr class="data_grid">
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
                             </tr>
-                            <tr>
-                                <td>0000/00/00 00:00:00</td>
-                                <td> </td>
-                                <td>1000</td>
-                                <td>$$$</td>
-                                <td>審核中</td>
-                              </tr>
                         </table>
                     </div>
                     <div id="Transact_deposit" class="Transact_record" style="display:none;">
-                        <p>存款紀錄</p>
-                        <table class="Transact_table">
+                        <p>儲值紀錄</p>
+                        <table class="Transact-table">
                             <tr class="thead">
                               <th>時間</th>
-                              <th>存款</th>
+                              <th>儲值</th>
                               <th>結餘</th>
                               <th>結果</th>
                             </tr>
@@ -444,11 +439,11 @@
                         </table>
                     </div>
                     <div id="Transact_withdraw" class="Transact_record" style="display:none;">
-                        <p>提款紀錄</p>
-                        <table class="Transact_table">
+                        <p>托售紀錄</p>
+                        <table class="Transact-table">
                             <tr class="thead">
                               <th>時間</th>
-                              <th>提款</th>
+                              <th>托售</th>
                               <th>結餘</th>
                               <th>結果</th>
                             </tr>
@@ -481,33 +476,26 @@
                         <p>全部紀錄</p>
                         <table class="Transfer_table">
                             <tr class="thead">
-                              <th>時間</th>
-                              <th>來源錢包</th>
-                              <th>目的錢包</th>
-                              <th>轉點金額</th>
-                              <th>結果</th>
+                                <th>單號(點擊可以複製)</th>
+                                <th>時間</th>
+                                <th>轉點錢包</th>
+                                <th>金額</th>
+                                <th>備註</th>
                             </tr>
-                            <tr>
-                              <td>0000/00/00 00:00:00</td>
-                              <td>主錢包</td>
-                              <td>館1</td>
-                              <td>1000</td>
-                              <td>已完成</td>
+                            <tr class="data_grid">
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
                             </tr>
-                            <tr>
-                              <td>0000/00/00 00:00:00</td>
-                              <td>館1</td>
-                              <td>館2</td>
-                              <td>1000</td>
-                              <td>已完成</td>
+                            <tr class="data_grid">
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
+                                <td>5</td>
                             </tr>
-                            <tr>
-                                <td>0000/00/00 00:00:00</td>
-                                <td>主錢包</td>
-                                <td>friend1</td>
-                                <td>500</td>
-                                <td>審核中</td>
-                              </tr>
                         </table>
                     </div>
                     <div id="Transfer_game" class="Transfer_record" style="display:none;">
@@ -662,32 +650,14 @@
                     </div>
                 </div>
             </div>
-            <div id="Friends" class="MemActionRecord">
+            <div id="Friends" class="MemActionRecord" style="display:none;">
                 <div class="row wrap justify-align-center">
                     <div class="Friends-record">
                         <div>
                             <p>好友列表</p>
                             <a href="#addfriends_modal" rel="modal:open"><button class="btn addfriends">新增好友</button></a>
                         </div>
-                        <!--Modal-儲值-->
-                        <div id="addfriends_modal" class="modal">
-                            <div class="title">新增好友</div>
-                            <div class="deposit-way">
-                                儲值方式
-                                <select class="deposit-select">
-                                    <option value="0">選擇儲值方式</option>
-                                    <option value="1">通道1</option>
-                                    <option value="2">通道2</option>
-                                </select>
-                            </div>
-                            <div class="input-info">
-                                <input type="text" placeholder="儲值金額" maxlength="" name="">
-                            </div>
-                            <div class="btn-deposit">
-                                <button class="btn enter">確定</button>
-                                <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
-                            </div>
-                        </div>
+                        
                         <table class="Friends-table">
                             <tr class="thead">
                                 <th>好友編號</th>
@@ -729,44 +699,29 @@
                 <div class="row wrap justify-align-center">
                     <div class="Chat-record">
                         <p>私訊紀錄</p>
-                        <table class="Chat-table">
-                            <tr class="thead">
-                                <th></th>
-                                <th>發訊日期</th>
-                                <th>發訊者</th>
-                                <th>收訊者</th>
-                                <th class="Chat-table-content">內容</th>
-                                <th>狀態</th>
-                                <th>刪除</th>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-star"></i></td>
-                                <td>0000/00/00</td>
-                                <td>AA</td>
-                                <td>BB</td>
-                                <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
-                                <td>已讀</td>
-                                <td>刪除</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-star"></i></td>
-                                <td>0000/00/00</td>
-                                <td>AA</td>
-                                <td>BB</td>
-                                <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
-                                <td>已讀</td>
-                                <td>刪除</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-star"></i></td>
-                                <td>0000/00/00</td>
-                                <td>AA</td>
-                                <td>BB</td>
-                                <td>ABCDEFGHIJKLMNOPQRSTUVWXYZ</td>
-                                <td>已讀</td>
-                                <td>刪除</td>
-                              </tr>
-                        </table>
+                            <div class="Date-Box">
+                                <button class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i>更新</button>
+                            </div>
+                            <table class="Chat-table">
+                                <tr class="thead">
+                                    <th><i class="fa-regular fa-star"></i></th>
+                                    <th>發訊日期</th>
+                                    <th>發訊者</th>
+                                    <th>收訊者</th>
+                                    <th class="Chat-table-content">內容</th>
+                                    <th>狀態</th>
+                                    <th>功能</th>
+                                </tr>
+                                <tr class="data_grid">
+                                    <td>1</td>
+                                    <td>2022-09-25 20:18:15</td>
+                                    <td>天下第一</td>
+                                    <td>007007</td>
+                                    <td>內容</td>
+                                    <td>已讀</td>
+                                    <td>星號/刪除</td>
+                                </tr>
+                            </table>
                     </div>
                 </div>
             </div>
@@ -803,6 +758,107 @@
                     </div>
                 </div>
             </div>
+            <div id="PersonalInfo" class="MemActionRecord" style="display:none;">
+                <div class="row wrap justify-align-center">
+                    <div class="personal-info">
+                        <p>個人資訊</p>
+
+                        <table class="personal-info-table">
+                            <tr>
+                                <td>會員等級</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>註冊日</td>
+                                <td>2022/01/01</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>生日</td>
+                                <td>2022/01/01</td>
+                                <td><a href="#Setting_birth" rel="modal:open"><button class="btn">設定生日</button></a></td>
+                            </tr>
+                        </table>
+                        <table class="setting-info-table">
+                            <tr>
+                                <td>變更密碼</td>
+                                <td>*****</td>
+                                <td><a href="#Setting_password" rel="modal:open"><button class="btn">變更密碼</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>Line ID</td>
+                                <td>ABCDEFG</td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">設定ID</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>微信 ID</td>
+                                <td>X</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Telegram ID</td>
+                                <td>X</td>
+                                <td></td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+
+                    <!--Modal-設定生日-->
+                    <div id="Setting_birth" class="modal">
+                        <div class="title">設定生日</div>
+                        <div class="input-info">
+                            <input type="date">
+                        </div>
+                        <div class="modal-btn">
+                            <button class="btn enter">確定</button>
+                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                        </div>
+                    </div>
+                    <!--Modal-變更密碼-->
+                    <div id="Setting_password" class="modal">
+                        <div class="title">變更密碼</div>
+                        <div class="input-info">
+                            <input type="text" placeholder="輸入原密碼">
+                            <input type="text" placeholder="設定新密碼">
+                        </div>
+                        <div class="modal-btn">
+                            <button class="btn enter">確定</button>
+                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                        </div>
+                    </div>
+                    <!--Modal-設定ID-->
+                    <div id="Setting_socialID" class="modal">
+                        <div class="title">設定ID</div>
+                        <div class="input-info">
+                            <input type="text" placeholder="Line ID">
+                            <input type="text" placeholder="微信 ID">
+                            <input type="text" placeholder="Telegram ID">
+                        </div>
+                        <div class="modal-btn">
+                            <button class="btn enter">確定</button>
+                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="CoinP" class="MemActionRecord" style="display:none;">
+                <div class="row wrap justify-align-center">
+                    <div class="coinP-direction">
+                        <p>活動幣規則說明</p>
+                        <ul class="coinP-direction-list" style="list-style-type: decimal;">
+                            <li>說明1</li>
+                            <li>說明2說明2</li>
+                            <li>說明3說明3說明3</li>
+                            <li>說明4說明4說明4說明4</li>
+                            <li>說明5說明5說明5說明5說明5<span>說明5說明5</span>說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5說明5</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
               
             <script>
                 //頁籤-ALL會員中心
@@ -820,7 +876,7 @@
                     $(this).addClass('active');
                     });
                 });
-                //頁籤-存提款紀錄
+                //頁籤-存托售紀錄
                 function openTabTransact(TransactAction) {
                     var i;
                     var x = document.getElementsByClassName("Transact_record");
@@ -854,31 +910,184 @@
         </div>
     </div>
 
-    <div id="customDialog" class="login-error-dialog">
-        <div class="error-dialog-box" >
-            <div class="error-dialog-body">
-                <div class="error-dialog-icon warning">
-                    <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+    <!--Modal-儲值-->
+    <div id="deposit_modal" class="modal">
+        <div class="title">儲值</div>
+        <div class="btnBox account-bind">
+            <a href="./account_bind.html" class="btn bind">綁定帳戶</a>
+        </div>
+        <div class="deposit-way">
+            儲值方式
+            <div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-building-columns fa-3x"></i>
+                    <div class="deposit-way-Box-text">銀行轉帳</div>
                 </div>
-                <div class="error-dialog-content" id="customDialog_content">請先登入會員</div>
-                <div class="error-dialog-btn" >
-                    <div class="enter">
-                        <span>確定</span>
-                    </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                    <div class="deposit-way-Box-text">USDT</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-regular fa-credit-card fa-3x"></i>
+                    <div class="deposit-way-Box-text">信用卡</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-store fa-3x"></i>
+                    <div class="deposit-way-Box-text">超商儲值</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-gift fa-3x"></i>
+                    <div class="deposit-way-Box-text">禮品卡</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-brands fa-line fa-3x"></i>
+                    <div class="deposit-way-Box-text">Line Pay</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-money-check-dollar fa-3x"></i>
+                    <div class="deposit-way-Box-text">GASH卡</div>
+                </div>
+                <div class="deposit-way-Box btn">
+                    <i class="fa-solid fa-file-invoice-dollar fa-3x"></i>
+                    <div class="deposit-way-Box-text">電信帳單</div>
                 </div>
             </div>
-            <div class="warning-dialog-cover"></div>
+        </div>
+        <div>
+            <select class="deposit-way-Box-select">
+                <option value="0">選擇方式</option>
+                <option value="1">方式1</option>
+                <option value="2">方式2</option>
+            </select>
+        </div>
+        <div class="input-info">
+            <input type="text" placeholder="儲值金額" maxlength="" name="">
+        </div>
+        <div class="btn-deposit">
+            <button class="btn amount">$ 100</button>
+            <button class="btn amount">$ 1000</button>
+            <button class="btn amount">$ 5000</button>
+            <button class="btn amount">$ 10000</button>
+        </div>
+        <div class="btn-withdraw">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
         </div>
     </div>
+    <!--Modal-托售-->
+    <div id="withdraw_modal" class="modal">
+        <div class="title">托售申請</div>
+        <div class="withdraw-way">
+            托售方式
+            <div>
+                <div class="withdraw-way-Box btn">
+                    <i class="fa-solid fa-building-columns fa-3x"></i>
+                    <div class="withdraw-way-Box-text">銀行轉帳</div>
+                </div>
+                <div class="withdraw-way-Box btn">
+                    <i class="fa-solid fa-dollar-sign fa-3x"></i>
+                    <div class="withdraw-way-Box-text">USDT</div>
+                </div>
+            </div>
+        </div>
+        <div class="input-info">
+            <input type="text" placeholder="托售金額" maxlength="" name="">
+        </div>
+        <div class="text-notice">
+            注意事項：<br>
+            1.每日托售次數上限2次。<br>
+            2.第2次需收取10%手續費。(手續費未滿一百元，以一百元計)
+        </div>
+        <div class="btn-withdraw">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+        </div>
+    </div>
+    <!--Modal-遊戲轉點-->
+    <div id="wallet_transfer_modal" class="modal">
+        <div class="title">遊戲轉點</div>
+        <div class="wallet-transfer-way">
+            來源錢包
+            <select class="wallet-transfer-select">
+                <option value="0">選擇轉出錢包</option>
+                <option value="1">錢包1</option>
+                <option value="2">錢包2</option>
+            </select>
+        </div>
+        <div class="wallet-transfer-way">
+            目的錢包
+            <select class="wallet-transfer-select">
+                <option value="0">選擇轉入錢包</option>
+                <option value="1">錢包1</option>
+                <option value="2">錢包2</option>
+            </select>
+        </div>
+        <div class="input-info">
+            <input type="text" placeholder="輸入金額" maxlength="" name="">
+        </div>
+        <div class="btn-transfertogame">
+            <button class="btn amount">$ 100</button>
+            <button class="btn amount">$ 1000</button>
+            <button class="btn amount">$ 5000</button>
+            <button class="btn amount">$ 10000</button>
+        </div>
+        <div class="btn-wallet-transfer">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+        </div>
+    </div>
+
+    <!--Modal-新增好友-->
+    <div id="addfriends_modal" class="modal">
+        <div class="title">新增好友</div>
+        <div class="deposit-way">
+            儲值方式
+            <select class="deposit-select">
+                <option value="0">選擇儲值方式</option>
+                <option value="1">通道1</option>
+                <option value="2">通道2</option>
+            </select>
+        </div>
+        <div class="input-info">
+            <input type="text" placeholder="儲值金額" maxlength="" name="">
+        </div>
+        <div class="btn-deposit">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+        </div>
+    </div>
+
+    
 
     </div>
     <footer class="tablet">
         <p>© 2022 天亞娛樂 All Rights Reserved 版權所有</p>
-    </footer> 
+        <div class="row wrap justify-align-center over18-Box">
+            <img src="./assets/img/over18.png">
+            <div class="over18-text">
+                限制行為能力人及無行為能力者，消費前應經法定代理人同意或代為之。<br>
+                遊戲為免費使用，另提供購買遊戲幣、物品等付費服務，遊戲內容情節涉及棋牌益智及娛樂，非現金交易賭博。<br>
+                提醒您，適度遊玩理智消費，此為機會中獎商品，消費者購買或參與活動不代表即可獲得特定商品。<br>
+                ※手機作業系統版本最低需求：iOS 7.0/Android 4.1 記憶體最低需求：1GB 存放空間大小最低需求：500MB
+            </div>
+        </div>
+    </footer>
         
     <div data-s-0="" class="back-top row justify-align-center" style="display: none;"><i class="fas fa-arrow-up"></i></div> 
         
-        <aside>
+    <aside>
+        <div class="row justify-align-center aside-wallet-action" style="display: none;">
+            <div class="btnBox wallet-withdraw">
+                <a href="#withdraw_modal" rel="modal:open" class="btn withdraw">托售</a>
+            </div>
+            <div class="btnBox wallet-deposit">
+                <a href="#deposit_modal" rel="modal:open" class="btn deposit">儲值</a>
+            </div>
+            <div class="btnBox wallet-transfer">
+                <a href="#wallet_transfer_modal" rel="modal:open" class="btn transfer">轉點</a>
+            </div>
+        </div>
+        <div class="aside-Box">
             <ul class="container container_aside row justify-align-center">
                 <li class="nav-item">
                     <a href="#">
@@ -893,19 +1102,18 @@
                     </a>
                 </li> 
                 <li class="nav-item">
-                    <a href="#">
+                    <a>
                         <div class="DepositWithdraw row justify-align-center">
                             <p class="title">存提</p>
                         </div>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="noLogin">
+                    <a href="#" class="">
                         <i class="fa-solid fa-user-gear"></i>
                         <p class="title">會員</p>
                     </a>
                 </li> 
-                
                 <li class="nav-item">
                     <a href="#">
                         <i class="fa-solid fa-headset"></i>
@@ -913,8 +1121,22 @@
                     </a>
                 </li>
             </ul>
-        </aside>
-        <div class="asideBox"></div>
+        </div>
+    </aside>
+    <div class="asideBox"></div>
+
+    <script>
+        //存提Btn-顯示/隱藏
+        $(".DepositWithdraw").click(function ()
+        {
+            if ($(".aside-wallet-action").is(":hidden")) {
+                $(".aside-wallet-action").show();
+            }
+            else {
+                $(".aside-wallet-action").hide();
+            }
+        });
+    </script>
     
 </body>
 </html>

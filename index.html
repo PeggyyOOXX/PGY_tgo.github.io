@@ -63,6 +63,18 @@
                     <div class="logoBox">
                         <a href="./index.html">天亞</a>
                     </div>
+                    <div class="marqueeBox tablet">
+                        <div class="container row justify-between align-center">
+                            <div class="row align-center">
+                                <marquee>
+                                    <a>歡迎光臨天亞遊戲網，遊戲最多，勝率最高，歡迎加入天亞會員獲得更多優惠。</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <a>天亞與您一起幫2022卡達世界盃足球賽隊伍加油！</a>
+                                    &nbsp;&nbsp;&nbsp;
+                                </marquee>
+                            </div>
+                        </div>
+                    </div>
 
                     <!--PC-->
                     <!--登入-->
@@ -81,7 +93,19 @@
                     <!--登出-->
                     <div class="signout-box desktop" style="display: none;">
                         <div class="memName">abc123</div>
-                        <div class="memPoint">餘額：0000.0</div>
+                        <div class="memPoint">$50799 / $0 </div> <a><i class="fa-solid fa-arrows-rotate"></i></a>
+                        <div class="btnBox account-bind">
+                            <a href="./account_bind.html" class="btn bind">綁定帳戶</a>
+                        </div>
+                        <div class="btnBox wallet-transfer">
+                            <a href="#wallet_transfer_modal" rel="modal:open" class="btn transfer">轉點</a>
+                        </div>
+                        <div class="btnBox wallet-deposit">
+                            <a href="#deposit_modal" rel="modal:open" class="btn deposit">儲值</a>
+                        </div>
+                        <div class="btnBox wallet-withdraw">
+                            <a href="#withdraw_modal" rel="modal:open" class="btn withdraw">托售</a>
+                        </div>
                         <div class="btnBox">
                             <a href="#" class="btn btn-signout">登出</a>
                         </div>
@@ -91,15 +115,15 @@
 
                     <!--mobile-->
                     <!--登入-->
-                    <div class="login-box mobile desktop-hidden">
+                    <div class="login-box mobile desktop-hidden" style="display: none;">
                         <div class="btnBox">
-                            <a href="#login_modal" rel="modal:open" class="btn login">登入</a> 
-                            <a href="./register.html" class="btn register">註冊</a>
+                            <a href="#login_modal" rel="modal:open" class="btn">登入</a> 
+                            <a href="./register.html" class="btn">註冊</a>
                         </div>
                     </div>
                     <!--//登入-->
                     <!--登出-->
-                    <div class="signout-box mobile desktop-hidden" style="display: none;">
+                    <div class="signout-box mobile desktop-hidden">
                         <div class="memName">abc123</div>
                         <div class="memPoint">餘額：0000.0</div>
                         <div class="btnBox">
@@ -160,6 +184,27 @@
                 </div>
             </div>
         </div>
+
+        <!--忘記密碼Modal-->
+        <div id="forgetpassword_modal" class="modal">
+            <div class="title">忘記密碼</div>
+            <div class="forgetpassword-way">
+                新密碼寄送方式
+                <select class="forgetpassword-select">
+                  <option value="0">選擇方式</option>
+                  <option value="1">手機號碼</option>
+                  <option value="2">電子郵箱</option>
+                </select>
+            </div>
+            <div class="input-info">
+                <input type="text" placeholder="輸入" maxlength="" name="">
+            </div>
+            <div class="btn-forgetpassword">
+                <button class="btn enter">確定</button>
+                <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+            </div>
+        </div>
+        <!--//忘記密碼Modal-->
 
         <header>
             <div class="container row justify-between align-center wrap">
@@ -257,6 +302,7 @@
                     <a href="#" class="game-item"><img src="./assets/img/index/fish.png" alt="捕魚機"><p>捕魚機</p></a>
                 </div>
             </div>
+            <!--
             <div class="desktop hotgames">
                 <div class="container">
                     <p class="title">熱門遊戲</p> 
@@ -273,7 +319,7 @@
                     </div>
                 </div>
             </div>
-
+            -->
             <div class="mobile GameRoom-M">
                 <div class="container row">
                     <div class="tab">
@@ -513,81 +559,119 @@
                     <a href="#">服務條款</a> 
                     <a href="#">常見問題</a>
                 </div>
-                <li class="ico-item"><img src="./assets/img/gameLogo/AB.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/SA.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/DG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/WM.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/OB.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/YB.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/MR.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/QL.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/WG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/HG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/BNG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/RSG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/SUPER.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/M8.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/OG.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/GR.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/AE.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/SIMP.png" alt="廠商logo"></li>
-                <li class="ico-item"><img src="./assets/img/gameLogo/QT.png" alt="廠商logo"></li>
+                <img src="./assets/img/index/vendor-logo.png">
             </ul>
         </div>
     </div>
-    
+
+    <div class="row wrap justify-align-center tablet footer-game">
+        <table class="">
+            <tr class="footer-game-category">
+                <th>體育投注</th>
+                <th>真人視訊</th>
+                <th>電子遊戲</th>
+                <th>彩票遊戲</th>
+                <th>棋牌遊戲</th>
+                <th>捕 魚 機</th>
+            </tr>
+            <tr class="footer-game-vendor">
+                <td>AFB<br>BE<br>M8<br>OB亞博體育<br>OB亞博電競<br>QT<br>SUPER<br>WG贏家</td>
+                <td>AB歐博<br>BE<br>DG夢幻<br>HS鴻鑫<br>MC蒙地卡羅<br>MRT名人廳<br>OB亞博視訊<br>OG東方<br>QL全利<br>QT<br>SA沙龍<br>WG贏家<br>WM完美<br>YB億博</td>
+                <td>AE阿米巴<br>AT必贏<br>BE<br>BNG<br>BT倍特<br>DGS<br>F8<br>GR好路<br>I8愛發<br>MARIO<br>OB亞博電遊<br>QT<br>RSG皇家<br>SIMPLEPLAY</td>
+                <td>OB亞博彩票<br>VSL越南彩<br>WG贏家</td>
+                <td>BL博樂<br>GR好路</td>
+                <td>AT必贏<br>BE<br>GR好路<br>I8愛發<br>OB亞博<br>QT<br>RSG皇家<br>SIMPLEPLAY</td>
+            </tr>
+          </table>
+    </div>    
     <footer class="tablet">
         <p>© 2022 天亞娛樂 All Rights Reserved 版權所有</p>
-    </footer> 
+        <div class="row wrap justify-align-center over18-Box">
+            <img src="./assets/img/over18.png">
+            <div class="over18-text">
+                限制行為能力人及無行為能力者，消費前應經法定代理人同意或代為之。<br>
+                遊戲為免費使用，另提供購買遊戲幣、物品等付費服務，遊戲內容情節涉及棋牌益智及娛樂，非現金交易賭博。<br>
+                提醒您，適度遊玩理智消費，此為機會中獎商品，消費者購買或參與活動不代表即可獲得特定商品。<br>
+                ※手機作業系統版本最低需求：iOS 7.0/Android 4.1 記憶體最低需求：1GB 存放空間大小最低需求：500MB
+            </div>
+        </div>
+    </footer>
         
     <div data-s-0="" class="back-top row justify-align-center" style="display: none;"><i class="fas fa-arrow-up"></i></div> 
         
     <aside>
-        <ul class="container container_aside row justify-align-center">
-            <li class="nav-item">
-                <a href="#">
-                    <i class="fa-solid fa-tags"></i>
-                    <p class="title">優惠</p>
-                </a>
-            </li> 
-            <li class="nav-item">
-                <a href="#">
-                    <i class="fa-solid fa-bullhorn"></i>
-                    <p class="title">公告</p>
-                </a>
-            </li> 
-            <li class="nav-item">
-                <a href="#">
-                    <div class="DepositWithdraw row justify-align-center">
-                        <p class="title">存提</p>
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="noLogin">
-                    <i class="fa-solid fa-user-gear"></i>
-                    <p class="title">會員</p>
-                </a>
-            </li> 
-                
-            <li class="nav-item">
-                <a href="#">
-                    <i class="fa-solid fa-headset"></i>
-                    <p class="title">客服</p>
-                </a>
-            </li>
-        </ul>
+        <div class="row justify-align-center aside-wallet-action" style="display: none;">
+            <div class="btnBox wallet-withdraw">
+                <a href="#withdraw_modal" rel="modal:open" class="btn withdraw">托售</a>
+            </div>
+            <div class="btnBox wallet-deposit">
+                <a href="#deposit_modal" rel="modal:open" class="btn deposit">儲值</a>
+            </div>
+            <div class="btnBox wallet-transfer">
+                <a href="#wallet_transfer_modal" rel="modal:open" class="btn transfer">轉點</a>
+            </div>
+        </div>
+        <div class="aside-Box">
+            <ul class="container container_aside row justify-align-center">
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-tags"></i>
+                        <p class="title">優惠</p>
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <p class="title">公告</p>
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a>
+                        <div class="DepositWithdraw row justify-align-center">
+                            <p class="title">存提</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <p class="title">會員</p>
+                    </a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#">
+                        <i class="fa-solid fa-headset"></i>
+                        <p class="title">客服</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </aside>
     <div class="asideBox"></div>
+
+    <script>
+        //存提Btn-顯示/隱藏
+        $(".DepositWithdraw").click(function ()
+        {
+            if ($(".aside-wallet-action").is(":hidden")) {
+                $(".aside-wallet-action").show();
+            }
+            else {
+                $(".aside-wallet-action").hide();
+            }
+        });
+    </script>
     
+    <!--
     <div class="quick-deposit desktop">
         <div class="quick-deposit-icon"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
         <div class="quick-deposit-txt">儲值</div>
     </div>
     <div class="quick-withdraw desktop">
         <div class="quick-withdraw-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-        <div class="quick-withdraw-txt">提款</div>
+        <div class="quick-withdraw-txt">托售</div>
     </div>
+    -->
     
 </body>
 </html>
