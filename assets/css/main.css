@@ -41,6 +41,7 @@ body{
     background-size: cover;
     min-width:360px;
     font-family:Arial, Helvetica, sans-serif;
+    font-size: 16px;
 }
 html, body {height: 100%;margin: 0;color: #fff;}
 .wrapper {min-height: calc(100% - 52px); /*減去footer(footer貼底)*/}
@@ -294,7 +295,28 @@ body.hide{overflow:hidden;height: 100%;margin: 0;}
 .TopBar>div .right{color:#fff;width:250px;font-size:1rem;text-align:right}
 
 .marqueeBox a{font-size:1rem;color:#fff}
-.marqueeBox marquee{margin-left:10px;width:calc(100% - 35px)}
+.marqueeBox marquee{margin-left:0em;width:calc(100% - 0px);}
+@media screen and (max-width: 2200px){
+    .marqueeBox marquee{width:calc(100% - 100px);}
+}
+@media screen and (max-width: 2000px){
+    .marqueeBox marquee{width:calc(100% - 200px);}
+}
+@media screen and (max-width: 1800px){
+    .marqueeBox marquee{width:calc(100% - 300px);}
+}
+@media screen and (max-width: 1600px){
+    .marqueeBox marquee{width:calc(100% - 400px);}
+}
+@media screen and (max-width: 1400px){
+    .marqueeBox marquee{width:calc(100% - 500px);}
+}
+@media screen and (max-width: 1300px){
+    .marqueeBox marquee{width:calc(100% - 650px);}
+}
+@media screen and (max-width: 950px){
+    .marqueeBox marquee{width:calc(100% - 400px);}
+}
 .marqueeBox marquee .ann{color:#fff;margin:0 5px;font-size:0.9rem;padding:3px 5px}
 .marqueeBox marquee .ann.ann1{background-color:#EA2027}
 .marqueeBox marquee .ann.ann2{background-color:#009432}
@@ -322,6 +344,7 @@ header .left .logoBox img{width:100%;height:100%;-o-object-fit:contain;object-fi
 header .nav{width:100%}
 header .nav .nav-item{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
 header .nav .nav-item:hover .dropdownBox{height:250px !important}
+header ul, header li{list-style-type: none;}
 @media screen and (max-width: 1440px){
     header .nav .nav-item:hover .dropdownBox{height:210px !important}
 }
@@ -444,20 +467,23 @@ aside{
     left: 0;
     z-index: 9;
     width: 100%;
+}
+aside .aside-Box{
     background: linear-gradient(50deg, #fbe6c1 10%,  #d09b42 20%, #40280f 30%, #d09b42 40%, #fbe6c1 50%, #d09b42 60%, #40280f 70%, #d09b42 80%, #fbe6c1 90%) 100% 0;
     border-radius: 10px;
     padding: 2px 2px;
 }
-aside>ul{
+aside .aside-Box ul{
     padding: 10px 0;
     border-radius: 10px;
     background-image: url(../img/Background/header.jpg);
     background-size: cover;
 }
+.aside-Box ul, .aside-Box li{list-style-type: none;}
 .container_aside{
     width: 100%;
 }
-aside>ul .nav-item{flex:1;text-align:center}
+aside ul .nav-item{flex:1;text-align:center}
 aside .DepositWithdraw{
     margin: 1px;
     width: 50px;
@@ -2589,14 +2615,14 @@ article.vipContent{margin:60px 0 30px;display:-webkit-box;display:-ms-flexbox;di
 @media screen and (max-width: 480px){
     .back-top{right:10px;width:40px;height:40px;font-size:2rem}
 }
-footer{
+footer p{
     height: 50px;
     line-height: 50px;
     background-image:url(../img/Background/bar.jpg);
-    border-top: solid 2px;
+    border-top: solid 1px;
     border-image: linear-gradient(90deg, #40280f 10%,  #d09b42 20%, #fbe6c1 30%, #d09b42 40%, #40280f 50%, #d09b42 60%, #fbe6c1 70%, #d09b42 80%, #40280f 90%) 100% 0;
 }
-footer>p{margin:0;text-align:center;color:#ccc;font-size:0.8rem}
+footer>p{margin:0;text-align:center;color:#aaa;font-size:0.8rem}
 footer>p a{color:#ccc;-webkit-transition:0.3s;transition:0.3s}
 footer>p a:hover{color:#DC6100}
 
@@ -2816,7 +2842,7 @@ form .disable-from .disable_text{
 }
 .mobile{display:none}
 @media screen and (max-width: 950px){
-    .tablet{display:none}
+    .tablet{display:none!important}
 }
 @media screen and (max-width: 480px){
     .desktop{display:none!important}
@@ -2950,7 +2976,8 @@ form .disable-from .disable_text{
     background-position: center;
     background-size: cover;
 }
-.GameRoom{position:relative;padding-bottom:50px;overflow:hidden}
+.GameRoom{position:relative;padding:2em 0;overflow:hidden}
+.GameRoom .container{max-width: 1600px;}
 .GameRoom .title{
     position:absolute; 
     margin: 2em 0;
@@ -2963,14 +2990,14 @@ form .disable-from .disable_text{
     -webkit-text-fill-color: transparent;
 }
 .GameRoom .games{margin-bottom:40px}
+.GameRoom .GameRoom-imgBox{margin: 1em 0;color:#dfb77b;}
 .GameRoom .GameRoom-imgBox p{
     text-align: center;
     font-size: 1.2rem;
     font-weight:400;
     
 }
-.GameRoom .GameRoom-imgBox{margin: 3em 0;color:#dfb77b;}
-.GameRoom .GameRoom-imgBox img{width:100%;padding:0px 30px}
+.GameRoom .GameRoom-imgBox img{width:100%;padding:0 1em;}
 .GameRoom .GameRoom-imgBox p{
     text-align:center;
     margin:0;
@@ -2984,10 +3011,10 @@ form .disable-from .disable_text{
 .GameRoom .GameRoom-imgBox:hover p a,.GameRoom .GameRoom-imgBox:active p a{color:#fff}
 .GameRoom .GameRoom-imgBox:hover img{filter: drop-shadow(0 0 10px rgba(255,255,255,.8));}
 .transfertogame-btn{
-    background-color: #810000;
+    background-color: #14815e;
     color: #fff;
     border: none;
-    box-shadow: 1px 1px 1px #555;
+    text-shadow: 0 0 2px #000;
     border-radius: 5px;
     height: 30px;
     width: 30px;
@@ -2995,7 +3022,8 @@ form .disable-from .disable_text{
     cursor: pointer;
 }
 .transfertogame-btn:hover{
-    background-color: #ff8585;
+    background-color: #1ebf8c;
+    color: #000;
 }
 /*
 .transfertogame-btn:hover::before{
@@ -3022,8 +3050,8 @@ form .disable-from .disable_text{
 .GameRoom-M .GameRoomBox{position: relative;}
 .GameRoom-M .GameRoomName{position:absolute; left:30px; top:60px; color:#fff;font-weight: 600;letter-spacing: 2px;}
 /*外部遊戲大廳*/
-.Slots_lobby{
-    background-image:url(../img/Background/slots_lobby_bg.jpg);
+.game_lobby{
+    background-image:url(../img/Background/lobby_bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -3144,31 +3172,67 @@ form .disable-from .disable_text{
     color: #fff;
     text-shadow: 0 0 5px #000;
 }
-.MemActionRecord{color: #fff;text-shadow: 0 0 5px #000;margin-top: 2em;}
-/*錢包列表*/
+.MemActionRecord{color: #fff;margin-top: 2em;/*text-shadow: 0 0 5px #000;*/}
+/*錢包管理*/
 .Wallet_Box{
-    width: 200px;
-    background-color: #fff8;
+    width: 250px;
+    background-color: #0006;
     padding: 1em;
     margin: .5em;
     border: #fff solid 1px;
     border-radius: 5px;
+    position: relative;
 }
-.Wallet_Box .BoxName{padding: 5px 0;}
-.Wallet_Box .BoxMon{padding: 5px 0;font-size: 1.5em;}
 .Wallet-Box-total{
-    width: 20em;
-    background-color: #dfb77b44;
+    width: 100%;
     padding: 1em;
     margin: .5em;
-    border: #dfb77b solid 1px;
-    border-radius: 5px;
+    border-bottom: #dfb77b solid 1px;
+    position: relative;
 }
+.Wallet-Box-total .Wallet-Bal-text{display: inline-block;}
+.Wallet-Box-total .Wallet-Act-text{display: inline-block;margin-left: 1em;}
 .Wallet-Box-total .BoxName{font-size: 1.5em;padding: 5px 0;}
 .Wallet-Box-total .BoxMon{font-size: 1.5em;padding: 5px 0;}
-.Wallet-TakeBack{text-align: right;}
+.Wallet_Box .BoxName{padding: 5px 0;font-size: 1.3em;display: inline-block;}
+.Wallet_Box .BoxMon{padding: 5px 0;font-size: 1.5em;display: inline-block;color: #f0e6c2;}
+.Wallet_Box .Wallet-turnback{display: inline-block;position: absolute; right: 20px;font-size: 1.3em;color: #c9edff;}
+.Wallet_Box .Wallet-turnback:hover{color: #efd0a1;cursor: pointer;}
+.Wallet_Box .Wallet-turntogame{display: inline-block;position: absolute; right: 60px;font-size: 1.3em;color: #fff5d0;}
+.Wallet_Box .Wallet-turntogame a{color: #fff5d0;}
+.Wallet_Box .Wallet-turntogame a:hover{color: #efd0a1;cursor: pointer;}
+.Wallet_Box .Wallet-renew{display: inline-block;position: absolute; right: 23px;top: 55px; font-size: 1.3em;}
+.Wallet_Box .Wallet-renew:hover{cursor: pointer;}
+.Wallet_Box .Wallet-gotogame{text-align: center;}
+.Wallet_Box .btn.gotogame{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    margin-top: 10px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    background-color: #fff3;
+    box-shadow: 0 1px 1px #555;
+    border: #dfb77b 1px solid;
+    border-radius: 15px;
+}
+.Wallet_Box .btn.gotogame:hover{background-color: #fff5;}
+.Wallet-UpdateBal{display: inline-block;margin-left: 1em;}
+.Wallet-TakeBack{display: inline-block;margin-left: 1em;}
+.Wallet-UpdateBal .btn{
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    background-color: #fff7;
+    border: #fff5 1px solid; 
+    box-shadow: 0 2px 1px #555;
+    border-radius: 5px;
+}
 .Wallet-TakeBack .btn{
-    width: 90px;
+    width: auto;
     height: 30px;
     line-height: 30px;
     color: #fff;
@@ -3178,26 +3242,9 @@ form .disable-from .disable_text{
     border: none;
     border-radius: 5px;
 }
-.WalletAction{margin-left: 2em;}
-@media screen and (max-width: 713px) {
-    .WalletAction{margin-left: 0;}
-}
-.WalletAction .btn.transfer {
-    width: 100px;
-    height: 40px;
-    line-height: 40px;
-    color: #fff;
-    text-shadow: 0 0 5px #000;
-    font-weight: 600;
-    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
-    box-shadow: 0 2px 1px #555;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.1em;
-    margin-right: 5px;
-}
+.Wallet-iconnotes{width: 100%;text-align: right;font-size: .9em;color:#ccc;}
 .WalletAll{margin: 2em 0;}
-/*交易紀錄*/
+/*儲值紀錄*/
 .Transact_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transact_btn{
     width: 33.33%;
@@ -3214,23 +3261,25 @@ form .disable-from .disable_text{
     text-shadow: 0 0 5px #000;
 }
 .Transact_record p{font-size: 1.5em;}
-.Transact_table{
+.Transact-table{
     width: 100%;
     table-layout:fixed;
     border-collapse: collapse;
     background-color: #fff5;
 }
-.Transact_table tr{
+.Transact-table tr{
     text-align: center;
 }
-.Transact_table th{
+.Transact-table th{
     background-color: #0005;
     border-bottom: #000 solid 1px;
 }
-.Transact_table td{
+.Transact-table td{
     border-bottom: #aaa solid 1px;
 }
-.Transact_table tr th, .Transact_table tr td{padding: 1em 0;}
+.Transact-table tr th, .Transact-table tr td{padding: 1em 0;}
+table tr.data_grid:hover{background-color: #efd0a155;}
+table tr.ggrid:hover{background-color: #efd0a155;}
 /*轉點紀錄*/
 .Transfer_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transfer_btn{
@@ -3364,13 +3413,19 @@ form .disable-from .disable_text{
 
 .Chat-table-starmark {
     position: relative;
-  }
+}
 .Chat-table-starmark::before {
     content: '\f0c2';
   font-family: 'Font Awesome 6 free';
   font-weight: 900;
-  }
-.Chat-table-content{width: 20em;}
+}
+.Chat-table th:nth-child(1){width: 5%;}
+.Chat-table th:nth-child(2){width: 10%;}
+.Chat-table th:nth-child(3){width: 10%;}
+.Chat-table th:nth-child(4){width: 10%;}
+.Chat-table th:nth-child(5){width: 40%;}
+.Chat-table th:nth-child(6){width: 10%;}
+.Chat-table th:nth-child(7){width: 15%;}
 /*公告*/
 .News-record p{font-size: 1.5em;}
 .News-table{
@@ -3400,12 +3455,12 @@ form .disable-from .disable_text{
     .Tab_MemActionRecord{width: 100%;margin-top: 2em;}
     .Tab_MemActionRecord_btn{width: 49%;padding: .5em 0;border-bottom: 1px solid #fff1;margin:0;}
     .MemActionRecord{margin-top: 1em;}
-    .Wallet_Box{width: 110px;}
+    .Wallet_Box{width: 150px;}
     .GamesRecord-Box{width: 150px;}
     .GamesRecord-down{margin-top: 1em;}
 }
 /*TopBar*/
-.TopBar .logoBox{width:10em;height:50px;display: flex;align-items: center;}
+.TopBar .logoBox{width:8em;height:50px;display: flex;align-items: center;}
 .TopBar .logoBox a{color: #fff;font-size: 2em;}
 .TopBar .btnBox .btn.login {
     display: inline-block;
@@ -3435,7 +3490,7 @@ form .disable-from .disable_text{
 }
 .TopBar .btnBox .btn-signout{
     display: inline-block;
-    width: 80px;
+    width: 60px;
     height: 35px;
     line-height: 35px;
     color: #fff;
@@ -3446,7 +3501,7 @@ form .disable-from .disable_text{
     box-shadow: 0px 2px 1px #555;
     border-radius: 5px;
 }
-.TopBar .btnBox .deposit{
+.TopBar .wallet-deposit .deposit{
     display: inline-block;
     width: 50px;
     height: 35px;
@@ -3460,8 +3515,9 @@ form .disable-from .disable_text{
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
+    margin: 0;
 }
-.TopBar .btnBox .withdraw{
+.TopBar .wallet-withdraw .withdraw{
     display: inline-block;
     width: 50px;
     height: 35px;
@@ -3475,7 +3531,24 @@ form .disable-from .disable_text{
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
+    margin: 0;
     margin-right: 2em;
+}
+.TopBar .wallet-transfer .transfer{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #14815e 0%, #1ebf8c 70%, #14815e 100%);
+    box-shadow: 0px 2px 1px #555;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 0;
 }
 .TopBar .btnBox .btn.bind {
     display: inline-block;
@@ -3488,7 +3561,7 @@ form .disable-from .disable_text{
     text-align: center;
     background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
     box-shadow: 0px 2px 1px #555;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 #deposit_modal .title{display: inline-block;}
 #deposit_modal .account-bind{display: inline-block;position:absolute; right: 4em;top: 2em;}
@@ -3503,19 +3576,19 @@ form .disable-from .disable_text{
     text-align: center;
     background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
     box-shadow: 0px 2px 1px #555;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 .TopBar .login-box, .TopBar .signout-box{position: absolute;right: 6em;}
 .TopBar .login-box .txtBox, .TopBar .login-box .btnBox,
 .TopBar .signout-box .memBox, .TopBar .signout-box .btnBox{display: inline-block;}
-.TopBar .signout-box .memName, .TopBar .signout-box .memPoint{color: #fff;display:inline-block;margin: 0 1em;}
+.TopBar .signout-box .memName, .TopBar .signout-box .memPoint{color: #fff;display:inline-block;margin: 0 0 0 1em;}
 .TopBar .mobile .btn{width: 50px;}
 .txtBox input{
     padding: 5px;
     padding-left: 10px;
     border: #ddd solid 1px;
     border-radius: 5px;
-    background-color: #fff3;
+    background-color: #333;
     color: #fff;
 }
 .txtBox input:focus{
@@ -3586,9 +3659,10 @@ form .disable-from .disable_text{
 .TopBar-language:hover .main-language {
     background-color: #dfb77b55;
 }
-@media (min-width: 480px) and (max-width: 950px){
+@media screen and (max-width: 950px){
     .TopBar-language{right: .3em;}
     .main-language{width: 40px;}
+    .TopBar .login-box, .TopBar .signout-box{position: absolute;right: 3em;}
 }
 /*錯誤訊息彈跳*/
 .login-error-dialog.WarningActive {
@@ -3596,7 +3670,7 @@ form .disable-from .disable_text{
 }
 .login-error-dialog {
     display: none;
-    z-index: 999;
+    z-index: 101;
     position: fixed;
     left: 0;
     right: 0;
@@ -3636,6 +3710,11 @@ form .disable-from .disable_text{
     padding: 0 1em 1em;
     color: #000;
 }
+.valid-dialog-content {
+    display: inline-block;
+    padding: 0 1em 1em;
+    color: #000;
+}
 .error-dialog-btn {
     display: flex;
 }
@@ -3655,7 +3734,7 @@ form .disable-from .disable_text{
     color: #fff;
 }
 .warning-dialog-cover {
-    background-color: rgba(0,0,0,.75);
+    background-color: rgba(0,0,0,.8);
     position: absolute;
     left: 0;
     top: 0;
@@ -3668,7 +3747,7 @@ form .disable-from .disable_text{
 }
 .message-remind-dialog {
     display: none;
-    z-index: 999;
+    z-index: 99;
     position: fixed;
     left: 0;
     right: 0;
@@ -3732,7 +3811,7 @@ form .disable-from .disable_text{
 }
 .MemLogin-error-dialog {
     display: none;
-    z-index: 500;
+    z-index: 100;
     position: absolute;
     left: 0;
     right: 0;
@@ -3745,8 +3824,8 @@ form .disable-from .disable_text{
 .MemLogin-error-dialog .remind-dialog-body {
     padding: 2em 0;
 }
-.warning-dialog-cover {
-    background-color: rgba(0,0,0,1);
+.MemLogin-error-dialog .warning-dialog-cover {
+    background-color: rgba(0,0,0,.8);
     position: absolute;
     left: 0;
     top: 0;
@@ -3794,7 +3873,7 @@ form .disable-from .disable_text{
     margin-top: 2em;
 }
 .maintenance .maintenance_cancel:hover{position:relative;top:2px;cursor: pointer;}
-/*快速存提款*/
+/*快速存托售*/
 .quick-deposit{
     background-color: #f00;
     position:fixed;
@@ -3852,7 +3931,7 @@ form .disable-from .disable_text{
     text-align: center;
     padding: 5px 0;
 }
-/*綁定銀行帳號*/
+/*綁定銀行帳戶*/
 .AccountBind{overflow:hidden}
 .AccountBind-Box{width: 50em;}
 .AccountBind-Box .title{font-size: 1.5em;margin: 2em 0;}
@@ -3876,7 +3955,6 @@ form .disable-from .disable_text{
 }
 
 .AccountBind-content p{font-size: 1.2em;text-align: left;}
-.AccountBind-content-way{margin-bottom: 1em;}
 .AccountBind-content-select{
     width: 100%;
     padding: 10px;
@@ -3891,6 +3969,7 @@ form .disable-from .disable_text{
     border: #dfb77b solid 1px;
     border-bottom: #dfb77b solid 2px;
 }
+.text-notice{color: #f0e6c2;margin: 1em;font-size: .9em;}
 .AccountBind-input-info input{
     padding: 10px;
     width: 100%;
@@ -3907,7 +3986,34 @@ form .disable-from .disable_text{
 .AccountBind-input-info input::placeholder{
     color: #ddd;
 }
-.AccountBind-upload .upload{
+.AccountBind-input-btn input{
+    padding: 10px;
+    margin: 1em 0 0 0;
+    width: 50%;
+    border: none;
+    border-bottom: #ddd solid 1px;
+    background-color: transparent;
+    color: #fff;
+}
+.AccountBind-input-btn input:focus{
+    outline: none;
+    border-bottom: #dfb77d solid 1px;
+}
+.AccountBind-input-btn input::placeholder{
+    color: #ddd;
+}
+.AccountBind-input-btn .input-btn{
+    width: 100px;
+    height: 40px;
+    color: #ddd;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
+    border: none;
+}
+.upload-btn{
     width: 150px;
     height: 40px;
     line-height: 35px;
@@ -3920,11 +4026,176 @@ form .disable-from .disable_text{
     border: none;
     margin: 2em 0;
 }
-.AccountBind-upload .upload:hover{position:relative;top:2px;cursor: pointer;}
+.upload-file-btn input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+.AccountBind-upload .upload-file-btn{
+    background-color: #084cdf;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px 12px;
+    cursor: pointer;
+}
 .AccountBind-img{max-width: 600px;height: auto;}
-
-
-
+/*18+聲明*/
+.over18-Box{background-color: #000;padding: 1em 0;margin-top: -3px;}
+.over18-text{font-size: .7rem;line-height: 15px;color: #999;}
+/*手機版-存托售Box*/
+.aside-wallet-action{
+    background-color: #0009;
+}
+.wallet-withdraw .withdraw{
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #3c73e2 0%, #3cabe2 70%, #3c73e2 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 1em ;
+}
+.wallet-deposit .deposit{
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ffaa16 0%, #ffd016 70%, #ffaa16 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 1em;
+}
+.wallet-transfer .transfer{
+    display: inline-block;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #14815e 0%, #1ebf8c 70%, #14815e 100%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin: 1em;
+}
+/*紀錄-報表日期選取*/
+.Date-Box{margin-bottom: 1em;}
+.Date-Box input{
+    padding: 5px 5px 5px 15px;
+    border-radius: 3px;
+    border: 1px solid #dfb77b;
+}
+.Date-Box .search-btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 50%, #dfb77b 100%);
+    border-radius: 3px;
+    border: none;
+    padding: 7px 15px;
+    margin-right: 2em;
+}
+.Date-Box .DateRange-btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #efd0a1 0%, #dca85a 50%, #efd0a1 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+    margin: 0 5px;
+}
+/*個人資訊*/
+.personal-info p{font-size: 1.5em; text-align: center;}
+.personal-info-table{
+    width: 100%;
+    max-width: 800px;
+    table-layout:fixed;
+    border-collapse: collapse;
+}
+.personal-info-table tr{
+    text-align: center;
+}
+.personal-info-table td{
+    border-bottom: #333 solid 1px;
+}
+.personal-info-table tr td{padding: 1em 0}
+.personal-info-table .btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 50%, #dfb77b 100%);
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+.setting-info-table{
+    margin-top: 2em;
+    width: 100%;
+    max-width: 800px;
+    table-layout:fixed;
+    border-collapse: collapse;
+}
+.setting-info-table tr{
+    text-align: center;
+}
+.setting-info-table td{
+    border-bottom: #333 solid 1px;
+}
+.setting-info-table tr td{padding: 1em 0}
+.setting-info-table .btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 50%, #dfb77b 100%);
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+.personal-info-table td:nth-child(1), .setting-info-table td:nth-child(1){
+    color: #dfb77b;
+    font-weight: 600;
+}
+/*活動幣說明*/
+.coinP-direction{max-width: 800px;}
+.coinP-direction p{font-size: 1.5em; text-align: center;}
+.coinP-direction-list{list-style-type: decimal!important;}
+.coinP-direction-list li{margin: 10px 0;}
+.coinP-direction-list span{color: #efd0a1;}
+/*footer Game Category Vendor*/
+.footer-game{
+    background-color: #111c;
+    width: 100%;
+    padding: 10px;
+}
+.footer-game table{border-spacing: 20px 0;}
+.footer-game th{
+    color: #ccc;
+    width: 100px;
+    font-size: .9em;
+    border-bottom: #777 1px solid;
+}
+.footer-game-vendor{
+    line-height: 18px;
+    font-size: .8em;
+    vertical-align:text-top;
+}
+.footer-game-vendor td{color: #aaa;padding:0 10px;}
 
 
 

@@ -7,7 +7,7 @@
     width:100%;
     height:100%;
     overflow:auto;
-    z-index:10;
+    z-index:200;
     padding:20px;
     box-sizing:border-box;
     background-color:#000;
@@ -100,6 +100,7 @@
 .modal-spinner .rect4{-webkit-animation-delay:-0.9s;animation-delay:-0.9s}
 @-webkit-keyframes sk-stretchdelay{0%,40%,100%{-webkit-transform:scaleY(0.5)}20%{-webkit-transform:scaleY(1.0)}}
 @keyframes sk-stretchdelay{0%,40%,100%{transform:scaleY(0.5);-webkit-transform:scaleY(0.5)}20%{transform:scaleY(1.0);-webkit-transform:scaleY(1.0)}}
+.modal-btn{text-align: center;}
 /*遊戲轉點modal*/
 .wallet-transfer-way{margin-top: 2em;}
 .wallet-transfer-select{
@@ -165,37 +166,111 @@
 }
 /*儲值modal*/
 .deposit-way{margin-top: 2em;}
-.deposit-select{
-    width: 100%;
-    padding: 10px;
-    border: #ddd solid 1px;
-    border-bottom: #ddd solid 2px;
+.deposit-way-Box{
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    padding: .5em;
+    box-shadow: 0 0 5px #ccc;
+    margin: 10px 5px;
     border-radius: 5px;
-    color: #666;
 }
-.deposit-select:focus{
-    border: #dfb77b solid 1px;
-    border-bottom: #dfb77b solid 2px;
-}
+.deposit-way-Box:hover{box-shadow: 0 0 10px inset #dfb77b;}
+.deposit-way-Box svg{color: #65440a;}
+.deposit-way-Box-text{padding-top: 1em;}
+.deposit-way-Box.active{box-shadow: 0 0 10px inset #dfb77b;}
 #deposit_modal .input-info input{width: 100%;}
+#deposit_modal .text-notice{color: #dfb77b;text-shadow: #aaa 0 0 1px;}
 .btn-deposit{text-align: center;}
-
-/*提款modal*/
-.withdraw-way{margin-top: 2em;}
-.withdraw-select{
+.btn-deposit .bind {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 10px;
+    border: none;
+}
+.btn-deposit .btn.amount{
+    width: 100px;
+    height: 40px;
+    line-height: 35px;
+    color: #000;
+    text-align: center;
+    background: linear-gradient(180deg, #ffe4af 0%, #ffd89b 75%, #ffe4af 100%);
+    box-shadow: 2px 2px 3px #ddd;
+    border: none;
+    margin: 5px;
+}
+.btn-deposit .btn.amount:hover{
+    color: #fff;
+    background: linear-gradient(180deg, #ffbe59 0%, #ffbe59 100%);
+}
+.deposit-way-Box-select{
     width: 100%;
     padding: 10px;
     border: #ddd solid 1px;
     border-bottom: #ddd solid 2px;
     border-radius: 5px;
     color: #666;
+    margin-top: 1em;
 }
-.withdraw-select:focus{
+.deposit-way-Box-select:focus{
     border: #dfb77b solid 1px;
     border-bottom: #dfb77b solid 2px;
 }
+/*托售modal*/
+.withdraw-way{margin-top: 2em;}
+.withdraw-way-Box{
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 0 5px #ccc;
+    margin: 10px 5px;
+    border-radius: 5px;
+}
+.withdraw-way-Box:hover{
+    box-shadow: 0 0 10px inset #dfb77b;
+}
+.withdraw-way-Box svg{color: #14264a;}
+.withdraw-way-Box-text{padding-top: 1em;}
+.withdraw-way-Box.active{box-shadow: 0 0 10px inset #dfb77b;}
 #withdraw_modal .input-info input{width: 100%;}
+#withdraw_modal .text-notice{color: #dfb77b;text-shadow: #aaa 0 0 1px;}
 .btn-withdraw{text-align: center;}
+.btn-withdraw .bind {
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 10px;
+    border: none;
+}
+/*存/提/轉Modal-RWD*/
+@media screen and (max-width: 506px){
+    .deposit-way-Box, .withdraw-way-Box{width: 46%;}
+}
+@media screen and (max-width: 468px){
+    .modal .btn.enter, .modal .btn.cancel{width: 100px;}
+}
+@media screen and (max-width: 406px){
+    .deposit-way-Box, .withdraw-way-Box{width: 45%;}
+}
+@media screen and (max-width: 370px){
+    .modal .btn.enter, .modal .btn.cancel{margin: 0em;margin-top: 2em;}
+}
 /*忘記密碼-modal*/
 .btn-forgetpassword{text-align: center;}
 .forgetpassword-way{margin-top: 2em;}
@@ -223,4 +298,24 @@
 .btn-transfertogame .btn.amount:hover{
     color: #fff;
     background: linear-gradient(180deg, #ffbe59 0%, #ffbe59 100%);
+}
+/*變更資料Modal*/
+.getVcode-btn{
+    width: 20%;
+    height: 40px;
+    color: #ddd;
+    text-shadow: 0 0 3px #000;
+    text-align: center;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 75%, #dfb77b 100%);
+    box-shadow: 0px 2px 1px #555;
+    border-radius: 5px;
+    border: none;
+}
+.getVcode-input{
+    color: #f00;
+    width: 70%!important;
+}
+@media screen and (max-width: 480px){
+    .getVcode-btn{width: 35%;font-size: .9em;}
+    .getVcode-input{width: 50%!important;}
 }
