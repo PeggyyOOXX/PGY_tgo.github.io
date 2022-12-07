@@ -234,19 +234,19 @@
                         </a>
                     </li> 
                     <li class="nav-item nav-poker">
-                        <a href="#">
+                        <a href="./poker.html">
                             <p class="name">棋牌遊戲</p> 
                             <div class="engName">POKER</div>
                         </a>
                     </li>
                     <li class="nav-item nav-poker">
-                        <a href="#">
+                        <a href="./fish.html">
                             <p class="name">捕魚機</p> 
                             <div class="engName">FISH</div>
                         </a>
                     </li>
                     <li class="nav-item tablet">
-                        <a href="#">
+                        <a href="./promotions.html">
                             <p class="name">優惠活動</p> 
                             <div class="engName">PROMOTIONS</div>
                         </a>
@@ -264,16 +264,16 @@
         <div class="slick-BANNER">
             <div>
                 <a href="#">
-                    <img src="./assets/img/BANNER/BANNER1.jpg" alt="alt" class="banner-desktop banner-img" style="width: 100%;"> 
-                    <img src="./assets/img/BANNER/BANNER1-M.jpg" alt="alt" class="banner-mobile banner-img" style="width: 100%;">
+                    <img src="./assets/img/BANNER/BANNER1.jpg" alt="天亞遊戲網" class="banner-desktop banner-img" style="width: 100%;"> 
+                    <img src="./assets/img/BANNER/BANNER1-M.jpg" alt="天亞遊戲網" class="banner-mobile banner-img" style="width: 100%;">
                 </a>
             </div>
-            <!--<div>
+            <div>
                 <a href="#">
-                    <img src="./assets/img/BANNER2.jpg" alt="alt" class="banner-desktop banner-img" style="width: 100%;"> 
-                    <img src="./assets/img/BANNER2-M.jpg" alt="alt" class="banner-mobile banner-img" style="width: 100%;">
+                    <img src="./assets/img/BANNER/BANNER2.jpg" alt="天亞遊戲網" class="banner-desktop banner-img" style="width: 100%;"> 
+                    <img src="./assets/img/BANNER/BANNER2-M.jpg" alt="天亞遊戲網" class="banner-mobile banner-img" style="width: 100%;">
                 </a>
-            </div>-->
+            </div>
         </div>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -323,14 +323,15 @@
             <div class="mobile GameRoom-M">
                 <div class="container row">
                     <div class="tab">
-                        <div class="tablinks" onclick="opengameNav(event, 'gameNavHot')" id="defaultOpen"><a>熱門</a></div>
-                        <div class="tablinks" onclick="opengameNav(event, 'gameNavLive')">真人</div>
+                        <!--<div class="tablinks" onclick="opengameNav(event, 'gameNavHot')"><a>熱門</a></div>-->
+                        <div class="tablinks" onclick="opengameNav(event, 'gameNavLive')" id="defaultActive">真人</div>
                         <div class="tablinks" onclick="opengameNav(event, 'gameNavSport')">體育</div>
                         <div class="tablinks" onclick="opengameNav(event, 'gameNavSlot')">電子</div>
                         <div class="tablinks" onclick="opengameNav(event, 'gameNavLottery')">彩票</div>
                         <div class="tablinks" onclick="opengameNav(event, 'gameNavPoker')">棋牌</div>
                         <div class="tablinks" onclick="opengameNav(event, 'gameNavFish')">捕魚</div>
                     </div>
+                    <!--
                     <div id="gameNavHot" class="tabcontent">
                         <a href="#"><img src="./assets/img/box.png" alt="Hot Games"></a>
                         <a href="#"><img src="./assets/img/box.png" alt="Hot Games"></a>
@@ -338,6 +339,7 @@
                         <a href="#"><img src="./assets/img/box.png" alt="Hot Games"></a>
                         <a href="#"><img src="./assets/img/box.png" alt="Hot Games"></a>
                     </div>
+                    -->
                     <div id="gameNavLive" class="tabcontent Live-item">
                         <a href="#">
                             <div class="GameRoomBox">
@@ -421,20 +423,14 @@
                     <div id="gameNavSport" class="tabcontent">
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">SUPER體育</div>
-                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-SUPER.png" alt="Sports">
+                                <div class="GameRoomName">OB亞博體育</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-OB.png" alt="Sports">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">全壘打體育</div>
-                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-HR.png" alt="Sports">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="GameRoomBox">
-                                <div class="GameRoomName">贏家體育</div>
-                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-WIN.png" alt="Sports">
+                                <div class="GameRoomName">BE體育</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-BE.png" alt="Sports">
                             </div>
                         </a>
                         <a href="#">
@@ -449,86 +445,218 @@
                                 <img src="./assets/img/GameRoom/mobile/sports/sportsM-AFB.png" alt="Sports">
                             </div>
                         </a>
-                    </div>
-                    <div id="gameNavSlot" class="tabcontent">
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">I8電子</div>
-                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-I8.png" alt="Slots">
+                                <div class="GameRoomName">AVIA泛亞</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-AVIA.png" alt="Sports">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">好路電子</div>
+                                <div class="GameRoomName">SUPER體育</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-SUPER.png" alt="Sports">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">PINNACLE平博</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-PINN.png" alt="Sports">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">QT體育</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-QT.png" alt="Sports">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">WGSP體育</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-WGSP.png" alt="Sports">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">OB亞博電競</div>
+                                <img src="./assets/img/GameRoom/mobile/sports/sportsM-OBESPORT.png" alt="Sports">
+                            </div>
+                        </a>
+                    </div>
+                    <div id="gameNavSlot" class="tabcontent">
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">GR好路</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-GR.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">AMEBA電子</div>
+                                <div class="GameRoomName">AMEBA(AE)阿米巴</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-AE.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">DGS電子</div>
+                                <div class="GameRoomName">DGS</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-DGS.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">QT電子</div>
+                                <div class="GameRoomName">I8愛發</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-I8.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">QTech</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-QT.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">SIMPLEPLAY電子</div>
+                                <div class="GameRoomName">SIMPLEPLAY</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-SIMP.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">BE電子</div>
-                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-BE.png" alt="Slots">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="GameRoomBox">
-                                <div class="GameRoomName">RSG電子</div>
-                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-RSG.png" alt="Slots">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div class="GameRoomBox">
-                                <div class="GameRoomName">BNG電子</div>
+                                <div class="GameRoomName">BNG</div>
                                 <img src="./assets/img/GameRoom/mobile/slots/slotsM-BNG.png" alt="Slots">
                             </div>
                         </a>
                         <a href="#">
                             <div class="GameRoomBox">
-                                <div class="GameRoomName">AV電子</div>
-                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-AV.png" alt="Slots">
+                                <div class="GameRoomName">RSG皇家</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-RSG.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">AT必贏</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-AT.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">BE</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-BE.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">AV(F8)</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-F8.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">OB亞博</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-OBEGAME.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">四方天地小瑪莉</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-MARIO.png" alt="Slots">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">BT倍特</div>
+                                <img src="./assets/img/GameRoom/mobile/slots/slotsM-BT.png" alt="Slots">
                             </div>
                         </a>
                     </div>
-
-
                     <div id="gameNavLottery" class="tabcontent">
-                        <a href="#"><img src="./assets/img/box.png" alt="Lottery"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Lottery"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Lottery"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Lottery"></a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">OB亞博</div>
+                                <img src="./assets/img/GameRoom/mobile/lottery/lotteryM-OB.png" alt="Lottery">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">VSL越南彩</div>
+                                <img src="./assets/img/GameRoom/mobile/lottery/lotteryM-VSL.png" alt="Lottery">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">WGSP贏家</div>
+                                <img src="./assets/img/GameRoom/mobile/lottery/lotteryM-WG.png" alt="Lottery">
+                            </div>
+                        </a>
                     </div>
                     <div id="gameNavPoker" class="tabcontent">
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">BL博樂</div>
+                                <img src="./assets/img/GameRoom/mobile/poker/PokerM-BL.png" alt="Poker">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">GR好路</div>
+                                <img src="./assets/img/GameRoom/mobile/poker/PokerM-GR.png" alt="Poker">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">BS百勝</div>
+                                <img src="./assets/img/GameRoom/mobile/poker/PokerM-BS.png" alt="Poker">
+                            </div>
+                        </a>
                     </div>
                     <div id="gameNavFish" class="tabcontent">
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
-                        <a href="#"><img src="./assets/img/box.png" alt="Poker"></a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">AT必贏</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-AT.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">BE</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-BE.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">GR好路</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-GR.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">I8愛發</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-I8.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">OB亞博</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-OBFISH.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">QTech</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-QT.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">RSG皇家</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-RSG.png" alt="Fish">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="GameRoomBox">
+                                <div class="GameRoomName">SIMPLEPLAY</div>
+                                <img src="./assets/img/GameRoom/mobile/fish/fishM-SIMP.png" alt="Fish">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -546,13 +674,12 @@
                     document.getElementById(gameCate).style.display = "block";
                     evt.currentTarget.className += " active";
                 }
-                // Get the element with id="defaultOpen" and click on it
-                document.getElementById("defaultOpen").click();
+                document.getElementById("defaultActive").click();
             </script>
         </div>
 
         <div class="vendorBox desktop">
-            <ul class="row justify-align-center wrap">
+            <div class="row justify-align-center wrap">
                 <div class="row justify-align-center wrap footerNav">
                     <a href="#">關於我們</a> 
                     <a href="#">隱私政策</a>
@@ -560,7 +687,7 @@
                     <a href="#">常見問題</a>
                 </div>
                 <img src="./assets/img/index/vendor-logo.png">
-            </ul>
+            </div>
         </div>
     </div>
 
@@ -575,11 +702,11 @@
                 <th>捕 魚 機</th>
             </tr>
             <tr class="footer-game-vendor">
-                <td>AFB<br>BE<br>M8<br>OB亞博體育<br>OB亞博電競<br>QT<br>SUPER<br>WG贏家</td>
+                <td>AFB<br>BE<br>M8<br>OB亞博體育<br>OB亞博電競<br>QT<br>SUPER<br>WG贏家<br>AVIA泛亞<br>PINNACLE平博</td>
                 <td>AB歐博<br>BE<br>DG夢幻<br>HS鴻鑫<br>MC蒙地卡羅<br>MRT名人廳<br>OB亞博視訊<br>OG東方<br>QL全利<br>QT<br>SA沙龍<br>WG贏家<br>WM完美<br>YB億博</td>
                 <td>AE阿米巴<br>AT必贏<br>BE<br>BNG<br>BT倍特<br>DGS<br>F8<br>GR好路<br>I8愛發<br>MARIO<br>OB亞博電遊<br>QT<br>RSG皇家<br>SIMPLEPLAY</td>
                 <td>OB亞博彩票<br>VSL越南彩<br>WG贏家</td>
-                <td>BL博樂<br>GR好路</td>
+                <td>BL博樂<br>GR好路<br>BS百勝</td>
                 <td>AT必贏<br>BE<br>GR好路<br>I8愛發<br>OB亞博<br>QT<br>RSG皇家<br>SIMPLEPLAY</td>
             </tr>
           </table>
@@ -614,7 +741,7 @@
         <div class="aside-Box">
             <ul class="container container_aside row justify-align-center">
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="./promotions.html">
                         <i class="fa-solid fa-tags"></i>
                         <p class="title">優惠</p>
                     </a>
@@ -633,7 +760,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="">
+                    <a href="./member.html" class="">
                         <i class="fa-solid fa-user-gear"></i>
                         <p class="title">會員</p>
                     </a>

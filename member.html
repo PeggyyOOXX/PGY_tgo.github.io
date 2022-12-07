@@ -213,19 +213,19 @@
                     </a>
                 </li> 
                 <li class="nav-item nav-poker">
-                    <a href="#">
+                    <a href="./poker.html">
                         <p class="name">棋牌遊戲</p> 
                         <div class="engName">POKER</div>
                     </a>
                 </li>
                 <li class="nav-item nav-poker">
-                    <a href="#">
+                    <a href="./fish.html">
                         <p class="name">捕魚機</p> 
                         <div class="engName">FISH</div>
                     </a>
                 </li>
                 <li class="nav-item tablet">
-                    <a href="#">
+                    <a href="./promotions.html">
                         <p class="name">優惠活動</p> 
                         <div class="engName">PROMOTIONS</div>
                     </a>
@@ -243,27 +243,8 @@
     <div class="MemberConter">
         <div class="container row wrap justify-align-center">
             <h1>會員中心</h2>
-            <!--Modal-好友轉點-->
-            <div id="p2p_transfer_modal" class="modal">
-                <div class="title">好友轉點</div>
-                <div class="p2p-transfer-way">
-                    好友轉點
-                    <select class="p2p-transfer-select">
-                      <option value="0">選擇好友</option>
-                      <option value="1">好友1</option>
-                      <option value="2">好友2</option>
-                    </select>
-                </div>
-                <div class="input-info">
-                    <input type="text" placeholder="輸入金額" maxlength="" name="">
-                </div>
-                <div class="btn-p2p-transfer">
-                    <button class="btn enter">確定</button>
-                    <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
-                </div>
-            </div>
         </div>
-        <div class="container wrap justify-align-center">
+        <div class="container wrap justify-align-center MemActionRecord-Box">
             <div class="Tab_MemActionRecord">
                 <button class="Tab_MemActionRecord_btn active" onclick="openTab('Wallet')">錢包管理</button>
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('Transfer')">轉點紀錄</button>
@@ -278,14 +259,16 @@
                 <button class="Tab_MemActionRecord_btn" onclick="openTab('PersonalInfo')" style="cursor:pointer;">個人資訊</button>
             </div>
               
-            <div id="Wallet" class="MemActionRecord">
+            <div id="Wallet" class="MemActionRecord" style="display:none;">
                 <div class="row wrap justify-align-center">
                     <div class="Wallet-Box-total">
                         <div class="BoxName">主錢包</div>
                         <div class="Wallet-Bal-text">餘額：<span class="BoxMon">50000</span></div>
                         <div class="Wallet-Act-text">活動幣：<span class="BoxMon">50000</span></div>
-                        <div class="Wallet-UpdateBal"><button class="btn">更新全部餘額</button></div>
-                        <div class="Wallet-TakeBack"><button class="btn">全部轉回主錢包</button></div>
+                        <div class="Wallet-Btn-Box">
+                            <div class="Wallet-UpdateBal"><button class="btn">更新全部餘額</button></div>
+                            <div class="Wallet-TakeBack"><button class="btn">全部轉回主錢包</button></div>
+                        </div>
                     </div>
                     <div class="Wallet-iconnotes">
                         <i class="fa-solid fa-circle-dollar-to-slot"></i>：轉入遊戲錢包&emsp;
@@ -297,7 +280,7 @@
                 <div class="row wrap justify-align-center WalletAll">
                     <div class="Wallet_Box">
                         <div>
-                            <div class="BoxName">館1</div>
+                            <div class="BoxName">館1館1館1</div>
                             <div class="Wallet-turntogame" title="轉入遊戲錢包">
                                 <a href="#wallet_transfer_modal" rel="modal:open"><i class="fa-solid fa-circle-dollar-to-slot"></i></a>
                             </div>
@@ -313,7 +296,7 @@
                     </div>
                     <div class="Wallet_Box">
                         <div>
-                            <div class="BoxName">館2</div>
+                            <div class="BoxName">蒙地卡羅手臂</div>
                             <div class="Wallet-turntogame" title="轉入遊戲錢包"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
                             <div class="Wallet-turnback" title="轉回主錢包"><i class="fa-solid fa-share-from-square"></i></div>
                         </div>
@@ -384,12 +367,14 @@
                             <input type="date" value="2022-01-01" /> ~
                             <input type="date" value="2022-01-01" />
                             <button class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i> 查詢</button>
-                            <button class="btn DateRange-btn">今日</button>
-                            <button class="btn DateRange-btn">昨日</button>
-                            <button class="btn DateRange-btn">本週</button>
-                            <button class="btn DateRange-btn">上週</button>
-                            <button class="btn DateRange-btn">本月</button>
-                            <button class="btn DateRange-btn">上月</button>
+                            <div class="DateRange-Btn-Box">
+                                <button class="btn DateRange-btn">今日</button>
+                                <button class="btn DateRange-btn">昨日</button>
+                                <button class="btn DateRange-btn">本週</button>
+                                <button class="btn DateRange-btn">上週</button>
+                                <button class="btn DateRange-btn">本月</button>
+                                <button class="btn DateRange-btn">上月</button>
+                            </div>
                         </div>
                         <table class="Transact-table">
                             <tr class="thead">
@@ -695,33 +680,57 @@
                     </div>
                 </div>
             </div>
-            <div id="Chat" class="MemActionRecord" style="display:none;">
+            <div id="Chat" class="MemActionRecord">
                 <div class="row wrap justify-align-center">
                     <div class="Chat-record">
-                        <p>私訊紀錄</p>
-                            <div class="Date-Box">
-                                <button class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i>更新</button>
+                        <a href="#ChatSend-modal" rel="modal:open"><button class="btn Chat-btn chat-send-btn">發送私訊</button></a>
+                        <div class="Date-Box Chat-Box">
+                            <a class="title">私訊紀錄</a>
+                            <button class="btn Chat-btn chat-update-btn"><i class="fa-solid fa-magnifying-glass"></i> 更新</button>
+                            <button class="btn Chat-btn chat-read-btn">全部已讀</button>
+                            <button class="btn Chat-btn chat-delete-btn">全部刪除</button>
+                            <div class="Chat-Box-notes">
+                                未以<i class="fa-solid fa-star"></i>標記之訊息將於三個月後自動刪除 
                             </div>
-                            <table class="Chat-table">
-                                <tr class="thead">
-                                    <th><i class="fa-regular fa-star"></i></th>
-                                    <th>發訊日期</th>
-                                    <th>發訊者</th>
-                                    <th>收訊者</th>
-                                    <th class="Chat-table-content">內容</th>
-                                    <th>狀態</th>
-                                    <th>功能</th>
-                                </tr>
-                                <tr class="data_grid">
-                                    <td>1</td>
-                                    <td>2022-09-25 20:18:15</td>
-                                    <td>天下第一</td>
-                                    <td>007007</td>
-                                    <td>內容</td>
-                                    <td>已讀</td>
-                                    <td>星號/刪除</td>
-                                </tr>
-                            </table>
+                        </div>
+                        
+                        <table class="Chat-table">
+                            <tr class="thead">
+                                <th><i class="fa-regular fa-star"></i></th>
+                                <th>發訊日期</th>
+                                <th>發訊者</th>
+                                <th class="Chat-table-content">內容</th>
+                                <th>狀態</th>
+                                <th>功能</th>
+                            </tr>
+                            <tr class="data_grid">
+                                <td>1</td>
+                                <td>2022-09-25 20:18:15</td>
+                                <td>天下第一</td>
+                                <td>內容</td>
+                                <td>已讀</td>
+                                <td>星號/刪除</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--Modal-發送私訊-->
+                    <div id="ChatSend-modal" class="modal">
+                        <div class="title">發送訊息</div>
+                        <div class="Chat-Sendfor">
+                            收訊者
+                            <select class="Chat-Sendfor-select">
+                                <option value="0">選擇收訊者</option>
+                                <option value="1">平台</option>
+                                <option value="2">好友1</option>
+                            </select>
+                        </div>
+                        <div class="Chat-Sendtext">
+                            <textarea placeholder="輸入訊息"></textarea>
+                        </div>
+                        <div class="modal-btn">
+                            <button class="btn enter">確定發送</button>
+                            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -765,43 +774,95 @@
 
                         <table class="personal-info-table">
                             <tr>
+                                <td>推廣碼(點擊複製)</td>
+                                <td id="refercode"></td>
+                                <td><button class="btn" onclick="copyTo('refercode');return false;">複製</button></td>
+                            </tr>
+                            <tr>
+                                <td>推廣碼註冊朋友人數</td>
+                                <td id="refercount"></td>
+                                <td>加油加油~</td>
+                            </tr>
+                            <tr>
+                                <td>註冊手機</td>
+                                <td id="mobileno"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
                                 <td>會員等級</td>
-                                <td>1</td>
+                                <td id="level"></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>註冊日</td>
-                                <td>2022/01/01</td>
+                                <td id="registerdate"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>會員天數</td>
+                                <td id="memberdays"></td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td>生日</td>
-                                <td>2022/01/01</td>
-                                <td><a href="#Setting_birth" rel="modal:open"><button class="btn">設定生日</button></a></td>
+                                <td id="birthday"></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>距離生日禮金天數</td>
+                                <td id="daystobirthday"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>登入IP</td>
+                                <td id="ip"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>登入次數</td>
+                                <td id="logincount"></td>
+                                <td></td>
                             </tr>
                         </table>
+
                         <table class="setting-info-table">
                             <tr>
                                 <td>變更密碼</td>
                                 <td>*****</td>
-                                <td><a href="#Setting_password" rel="modal:open"><button class="btn">變更密碼</button></a></td>
+                                <td><a href="#Setting_password" rel="modal:open"><button
+                                            class="btn">變更密碼</button></a></td>
+                            </tr>
+                            <tr>
+                                <td>暱稱</td>
+                                <td id='nick'></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td id='email'></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Line ID</td>
-                                <td>ABCDEFG</td>
-                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">設定ID</button></a></td>
-                            </tr>
-                            <tr>
-                                <td>微信 ID</td>
-                                <td>X</td>
-                                <td></td>
+                                <td id='line_id'></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Telegram ID</td>
-                                <td>X</td>
-                                <td></td>
+                                <td id='telegram_id'></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
                             </tr>
-                            
+                            <tr>
+                                <td>微信 ID</td>
+                                <td id='wechat_id'></td>
+                                <td><a href="#Setting_socialID" rel="modal:open"><button class="btn">修改</button></a>
+                                </td>
+                            </tr>
                         </table>
                     </div>
 
@@ -820,24 +881,32 @@
                     <div id="Setting_password" class="modal">
                         <div class="title">變更密碼</div>
                         <div class="input-info">
-                            <input type="text" placeholder="輸入原密碼">
-                            <input type="text" placeholder="設定新密碼">
+                            <input type="password" placeholder="輸入原密碼" id="moldpid">
+                            <input type="password" placeholder="設定新密碼 (6字以上英文/數字/符號, 區分大小寫)" id="mnewpid">
+                            <input type="password" placeholder="再輸入一遍新密碼" id="mnewpid2">
                         </div>
                         <div class="modal-btn">
-                            <button class="btn enter">確定</button>
+                            <button class="btn enter" onclick="modifypid();return false;">確定</button>
                             <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
                         </div>
                     </div>
                     <!--Modal-設定ID-->
                     <div id="Setting_socialID" class="modal">
-                        <div class="title">設定ID</div>
+                        <div class="title">變更資料</div>
                         <div class="input-info">
-                            <input type="text" placeholder="Line ID">
-                            <input type="text" placeholder="微信 ID">
-                            <input type="text" placeholder="Telegram ID">
+                            <input type="text" placeholder="生日(格式例如 1995-03-09)，僅能修改一次" id='mbirthday'>
+                            <input type="text" placeholder="暱稱" id='mnick'>
+                            <input type="text" placeholder="Email" id="memail">
+                            <input type="text" placeholder="Line ID" id="mline_id">
+                            <input type="text" placeholder="Telegram ID" id="mtelegram_id">
+                            <input type="text" placeholder="微信 ID" id="mwechat_id">
+                            <input type="text" placeholder="簡訊驗證碼" maxlength="4" name="vn" id="vn"
+                                autocomplete="off" class="getVcode-input">
+                            <button class="btn getVcode-btn" id="btn_getVcode" namd="btn_getVcode"
+                                onclick="getVcode();">獲取驗證碼</button>
                         </div>
                         <div class="modal-btn">
-                            <button class="btn enter">確定</button>
+                            <button class="btn enter" onclick="modifyinfo();return false;">確定</button>
                             <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
                         </div>
                     </div>
@@ -1056,6 +1125,25 @@
             <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
         </div>
     </div>
+    <!--Modal-好友轉點-->
+    <div id="p2p_transfer_modal" class="modal">
+        <div class="title">好友轉點</div>
+        <div class="p2p-transfer-way">
+            好友轉點
+            <select class="p2p-transfer-select">
+              <option value="0">選擇好友</option>
+              <option value="1">好友1</option>
+              <option value="2">好友2</option>
+            </select>
+        </div>
+        <div class="input-info">
+            <input type="text" placeholder="輸入金額" maxlength="" name="">
+        </div>
+        <div class="btn-p2p-transfer">
+            <button class="btn enter">確定</button>
+            <a href="#close-modal" rel="modal:close"><button class="btn cancel">取消</button></a>
+        </div>
+    </div>
 
     
 
@@ -1090,7 +1178,7 @@
         <div class="aside-Box">
             <ul class="container container_aside row justify-align-center">
                 <li class="nav-item">
-                    <a href="#">
+                    <a href="./promotions.html">
                         <i class="fa-solid fa-tags"></i>
                         <p class="title">優惠</p>
                     </a>
@@ -1109,7 +1197,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="">
+                    <a href="./member.html" class="">
                         <i class="fa-solid fa-user-gear"></i>
                         <p class="title">會員</p>
                     </a>
