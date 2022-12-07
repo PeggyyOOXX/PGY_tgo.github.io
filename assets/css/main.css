@@ -611,41 +611,6 @@ aside .nav-item svg{font-size: 1.5em;}
     .slick-BANNER .banner-desktop{display:block}
     .slick-BANNER .banner-mobile{display:none}
 }
-
-.tab {
-    float: left;
-    width: 20%;
-    margin-left: .5em;
-}
-.tablinks {
-    display: block;
-    background: linear-gradient(90deg, #dfb77b 0%, #efd0a1 60%, #dfb77b 100%);
-    box-shadow: 0 2px 1px #555;
-    color: black;
-    margin: 10px 0;
-    width:  60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 5px;
-    border: none;
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 600;
-}
-.tablinks.active {
-    color: #fff;
-    text-shadow: 0 0 5px #000;
-    border: solid #fbe6c1 2px;
-}
-.tabcontent {
-    margin-top: .6em;
-    width: 75%;
-}
-.tabcontent img {
-    margin-bottom: .5em;
-    width: 100%;
-}
-
 .swiper-container .banner-img{width:100%}
 .swiper-container .swiper-pagination-bullet{background:#7CA0C1;opacity:0.4}
 .swiper-container .swiper-pagination-bullet-active{background:#7CA0C1;opacity:1}
@@ -903,7 +868,7 @@ aside .nav-item svg{font-size: 1.5em;}
     .gameLogoBox ul{width:450px}
     .gameLogoBox ul .ico-item{width:25%}
 }
-.footerNav{margin:20px auto;max-width:1400px;width:97%;margin-bottom: 3em;}
+.footerNav{margin:20px auto;width:97%;margin-bottom: 3em;}
 .footerNav a{margin:0 20px;font-size:0.95rem;color:#ccc}
 .footerNav a:hover{color:#dfb77b;}
 .gameBox{position:relative;padding:40px 0;width:100%}
@@ -2944,34 +2909,26 @@ form .disable-from .disable_text{
 .smalltext{font-size: 14px;}
 /*Game Vendor*/
 .vendorBox{margin:20px 0;position:relative}
-.vendorBox ul{margin:0 auto;width:600px}
-.vendorBox ul .ico-item{width:15%;text-align:center}
-.vendorBox ul .ico-item>img{width:90%}
-@media screen and (max-width: 1200px){
-    .vendorBox ul{width:450px}
-    .vendorBox ul .ico-item{width:25%}
+@media screen and (max-width: 950px){
+    .vendorBox img{width: 60%;}
 }
 /*遊戲廳*/
 .Live{
-    background-image:url(../img/Background/live_bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .Sports{
-    background-image:url(../img/Background/sports_bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .Slots{
-    background-image:url(../img/Background/slots_bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 .Lottery{
-    background-image:url(../img/Background/lottery_bg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -3044,11 +3001,6 @@ form .disable-from .disable_text{
 @media screen and (max-width: 600px){
     .GameRoom .Game-item img{padding:0px 10px}
 }
-.GameRoom-M{margin-top: 10px;}
-.GameRoom-M .title{margin:0 0 10px 0;color:#dfb77b;font-size: 1.5em;font-weight:600;text-align:center}
-.GameRoom-M img{width:100%;}
-.GameRoom-M .GameRoomBox{position: relative;}
-.GameRoom-M .GameRoomName{position:absolute; left:30px; top:60px; color:#fff;font-weight: 600;letter-spacing: 2px;}
 /*外部遊戲大廳*/
 .game_lobby{
     background-image:url(../img/Background/lobby_bg.jpg);
@@ -3153,7 +3105,8 @@ form .disable-from .disable_text{
 .MemberConter-M .Mem_WalletAction{margin: 0;}
 .MemberConter-M .Mem_WalletAction button{margin: 5px;}
 .MemberConter-M .Mem_WalletAction .btn{width: 80px;}
-/*頁籤-會員紀錄*/
+/*頁籤-會員操作紀錄*/
+.MemActionRecord-Box{margin-top: -2em;}
 .Tab_MemActionRecord{
     margin-top: 3em;
     background-color: #fff3;
@@ -3201,7 +3154,7 @@ form .disable-from .disable_text{
 .Wallet_Box .Wallet-turntogame{display: inline-block;position: absolute; right: 60px;font-size: 1.3em;color: #fff5d0;}
 .Wallet_Box .Wallet-turntogame a{color: #fff5d0;}
 .Wallet_Box .Wallet-turntogame a:hover{color: #efd0a1;cursor: pointer;}
-.Wallet_Box .Wallet-renew{display: inline-block;position: absolute; right: 23px;top: 55px; font-size: 1.3em;}
+.Wallet_Box .Wallet-renew{display: inline-block;position: absolute; right: 23px;bottom: 65px; font-size: 1.3em;}
 .Wallet_Box .Wallet-renew:hover{cursor: pointer;}
 .Wallet_Box .Wallet-gotogame{text-align: center;}
 .Wallet_Box .btn.gotogame{
@@ -3218,6 +3171,7 @@ form .disable-from .disable_text{
     border-radius: 15px;
 }
 .Wallet_Box .btn.gotogame:hover{background-color: #fff5;}
+.Wallet-Btn-Box{display: inline-block;}
 .Wallet-UpdateBal{display: inline-block;margin-left: 1em;}
 .Wallet-TakeBack{display: inline-block;margin-left: 1em;}
 .Wallet-UpdateBal .btn{
@@ -3244,6 +3198,11 @@ form .disable-from .disable_text{
 }
 .Wallet-iconnotes{width: 100%;text-align: right;font-size: .9em;color:#ccc;}
 .WalletAll{margin: 2em 0;}
+@media screen and (max-width: 480px){
+    .Wallet_Box .BoxName{padding-top: 30px;}
+    .Wallet-Btn-Box{display: block;}
+    .Wallet-UpdateBal{margin: 10px 0;}
+}
 /*儲值紀錄*/
 .Transact_Tab{width: 100%;border-bottom: #dfb77b solid 1px;}
 .Transact_btn{
@@ -3422,10 +3381,9 @@ table tr.ggrid:hover{background-color: #efd0a155;}
 .Chat-table th:nth-child(1){width: 5%;}
 .Chat-table th:nth-child(2){width: 10%;}
 .Chat-table th:nth-child(3){width: 10%;}
-.Chat-table th:nth-child(4){width: 10%;}
-.Chat-table th:nth-child(5){width: 40%;}
-.Chat-table th:nth-child(6){width: 10%;}
-.Chat-table th:nth-child(7){width: 15%;}
+.Chat-table th:nth-child(4){width: 40%;}
+.Chat-table th:nth-child(5){width: 10%;}
+.Chat-table th:nth-child(6){width: 15%;}
 /*公告*/
 .News-record p{font-size: 1.5em;}
 .News-table{
@@ -4112,6 +4070,7 @@ table tr.ggrid:hover{background-color: #efd0a155;}
     padding: 7px 15px;
     margin-right: 2em;
 }
+.DateRange-Btn-Box{display: inline-block;}
 .Date-Box .DateRange-btn{
     color: #fff;
     text-shadow: 0 0 5px #000;
@@ -4121,6 +4080,12 @@ table tr.ggrid:hover{background-color: #efd0a155;}
     border: none;
     padding: 5px 15px;
     margin: 0 5px;
+}
+@media screen and (max-width: 480px){
+    .Date-Box input{padding: 5px 5px 5px 5px;max-width: 125px;vertical-align:middle;}
+    .Date-Box .search-btn{margin-right: 0;padding: 7px 5px;vertical-align:middle;}
+    .DateRange-Btn-Box{display: block;}
+    .Date-Box .DateRange-btn{margin:0 2px; margin-top: 10px;padding: 5px 8px;}
 }
 /*個人資訊*/
 .personal-info p{font-size: 1.5em; text-align: center;}
@@ -4195,8 +4160,125 @@ table tr.ggrid:hover{background-color: #efd0a155;}
     font-size: .8em;
     vertical-align:text-top;
 }
-.footer-game-vendor td{color: #aaa;padding:0 10px;}
-
+.footer-game-vendor td{color: #aaa;padding:0 5px;}
+/*私訊紀錄*/
+.Chat-Box{margin: 1.5em 0 0 0;}
+.Chat-Box .title{font-size: 1.5em;margin-right: 1em;}
+.chat-update-btn{
+    padding: 5px 10px;
+    color: #fff;
+    text-shadow: 0 0 3px #000;
+    background-color: #fff5;
+    border: #fff5 1px solid;
+    box-shadow: 0 2px 1px #555;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+.chat-read-btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #dfb77b 0%, #ae7d35 50%, #dfb77b 100%);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 2px 1px #555;
+    padding: 5px 15px;
+}
+.chat-delete-btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #888 0%, #aaa 75%, #888 100%);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 2px 1px #555;
+    padding: 5px 15px;
+}
+.Chat-Box-notes{width: 100%;text-align: right;font-size: .9em;color:#ccc;}
+.chat-send-btn{
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    background: linear-gradient(180deg, #ffd016 0%, #ffaa16 100%);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 2px 1px #555;
+    padding: 7px 15px;
+}
+/*優惠活動列表*/
+.Promotion-Activity{padding:2em 0;overflow:hidden}
+.Activity-Box{
+    position: relative;
+    margin: 10px;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+    overflow:hidden;
+}
+.Activity-Box img{
+    width: 100%;
+    max-width: 430px;
+    transition: all .5s ease-out;
+}
+.Activity-Box img:hover{
+    transform:scale(1.1);
+}
+.Activity-Box .imgActivity-title{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom-left-radius: 40px;
+    z-index: 9;
+}
+/*手機版-GameRoom*/
+.tab {
+    float: left;
+    width: 20%;
+    margin-left: .5em;
+    margin-top: 1.5em;
+}
+.tablinks {
+    display: block;
+    background: linear-gradient(90deg, #dfb77b 0%, #efd0a1 60%, #dfb77b 100%);
+    box-shadow: 0 2px 1px #555;
+    color: black;
+    margin: 10px 0;
+    width:  60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.tablinks.active {
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    border: solid #fbe6c1 2px;
+}
+.tabcontent {
+    margin-top: .6em;
+    width: 75%;
+}
+.tabcontent img {
+    width: 100%;
+}
+.GameRoom-M{margin-top: -5px;}
+.GameRoom-M .title{margin:0 0 10px 0;color:#dfb77b;font-size: 1.5em;font-weight:600;text-align:center}
+.GameRoom-M img{width:100%;}
+.GameRoom-M .GameRoomBox{position: relative;}
+.GameRoom-M .GameRoomName{
+    position:absolute; 
+    left:30px; 
+    top:60px; 
+    color:#fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #000;
+}
 
 
 

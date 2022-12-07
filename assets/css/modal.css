@@ -44,7 +44,7 @@
 }
 @media screen and (max-width: 470px){
     .modal .input-info input{
-        width: 90%;
+        width: 98%;
     }
 }
 .modal .input-info a{
@@ -91,7 +91,7 @@
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center center;
-    background-image:url("../img/X.png")
+    background-image:url("../img/X.png");
 }
 .modal-spinner{display:none;position:fixed;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);padding:12px 16px;border-radius:5px;background-color:#111;height:20px}
 .modal-spinner>div{border-radius:100px;background-color:#fff;height:20px;width:2px;margin:0 1px;display:inline-block;-webkit-animation:sk-stretchdelay 1.2s infinite ease-in-out;animation:sk-stretchdelay 1.2s infinite ease-in-out}
@@ -318,4 +318,41 @@
 @media screen and (max-width: 480px){
     .getVcode-btn{width: 35%;font-size: .9em;}
     .getVcode-input{width: 50%!important;}
+    #Setting_socialID .input-info input::placeholder{font-size: .8em;}
 }
+/*發送訊息Modal*/
+.Chat-Sendfor{margin-top: 2em;}
+.Chat-Sendfor-select{
+    width: 100%;
+    padding: 10px;
+    border: #ddd solid 1px;
+    border-bottom: #ddd solid 2px;
+    border-radius: 5px;
+    color: #666;
+}
+.Chat-Sendfor-select:focus{
+    border: #dfb77b solid 1px;
+    border-bottom: #dfb77b solid 2px;
+}
+.Chat-Sendtext{margin-top: 1em;}
+.Chat-Sendtext textarea{
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border-color: #ccc;
+    border-radius: 5px;
+    color: #666;
+    outline: none;
+}
+.Chat-Sendtext textarea:focus{
+    border: #dfb77b solid 1px;
+}
+/*優惠活動modal*/
+.Activity-modal{
+    max-width: 1000px;
+    word-break: break-all;
+    overflow: scroll;
+}
+.Activity-title{color: #ae824d;font-weight: 600;}
+.Activity-content p{margin: 0;}
+.Activity-subtitle{color: #dfb77b;font-size: 1.2em;font-weight: 600;margin-top: .8em!important;}
